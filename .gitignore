@@ -2,3 +2,6 @@
 .*
 !.gitignore
 
+others/
+temp/
+tools/
