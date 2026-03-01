@@ -2,6 +2,90 @@
 
 [English](README.en.md) | 简体中文
 
+---
+
+## 如何克隆本仓库（含子模块）
+
+本仓库包含多个 **Git 子模块**：
+
+- `OpenclawAgents/awesome-openclaw-agents`
+- `OpenclawAgents/awesome-openclaw-usecases`
+- `OpenclawAgents/awesome-openclaw-usecases-moltbook`
+- `Skills/Openclaw/awesome-openclaw-skills`
+- `Skills/Openclaw/awesome-openclaw-skills-sundial-org`
+- `Skills/Openclaw/skills`
+
+根据你的使用场景，选择下面任意一种方式克隆。
+
+### 情况一：第一次克隆，直接把子模块一起拉下来（推荐）
+
+**HTTPS：**
+
+```bash
+git clone --recurse-submodules https://github.com/dongshuyan/Awesome-Prompts.git
+```
+
+**SSH：**
+
+```bash
+git clone --recurse-submodules git@github.com:dongshuyan/Awesome-Prompts.git
+```
+
+克隆完成后，为防止子模块有遗漏，建议再执行一次：
+
+```bash
+cd Awesome-Prompts
+git submodule update --init --recursive
+```
+
+### 情况二：已经 `git clone` 过，但当时没带 `--recurse-submodules`
+
+如果你之前只是简单执行了：
+
+```bash
+git clone https://github.com/dongshuyan/Awesome-Prompts.git
+```
+
+那么只需要在仓库根目录执行：
+
+```bash
+cd Awesome-Prompts
+git submodule update --init --recursive
+```
+
+就会自动把 `OpenclawAgents/` 和 `Skills/Openclaw/` 里的所有子模块拉下来。
+
+### 情况三：只想快速浏览 Prompt，不需要下载所有子模块
+
+子模块（尤其 `Skills/Openclaw/awesome-openclaw-skills` 和 `Skills/Openclaw/skills`）体积很大，如果你**暂时只想看自己写的 Prompt 文件**，可以：
+
+```bash
+git clone https://github.com/dongshuyan/Awesome-Prompts.git
+cd Awesome-Prompts
+# 不执行 git submodule update，则不会拉取各大仓库的内容
+```
+
+此时：
+
+- 根目录下的各种 `*.txt` / `*.md` Prompt 文件可以直接使用；
+- `OpenclawAgents/` 与 `Skills/Openclaw/` 里的子目录只是“占位符”，不会占用太多空间，等需要时再按“情况二”执行 `git submodule update --init --recursive` 即可。
+
+### 情况四：子模块目录被你手动删掉了，想恢复
+
+如果你误删了某个子模块目录（例如 `rm -rf Skills/Openclaw/awesome-openclaw-skills`），不需要重新 `git submodule add`，只需要在仓库根目录执行：
+
+```bash
+git submodule update --init Skills/Openclaw/awesome-openclaw-skills
+```
+
+或直接恢复全部子模块：
+
+```bash
+git submodule update --init --recursive
+```
+
+---
+
 一个用于收集和整理优质 Prompt 的个人仓库。这里汇集了我自己设计的以及从互联网各处发现的有趣、实用的提示词。
 
 ---
