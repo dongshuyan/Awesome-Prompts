@@ -70,20 +70,6 @@ cd Awesome-Prompts
 - 根目录下的各种 `*.txt` / `*.md` Prompt 文件可以直接使用；
 - `OpenclawAgents/` 与 `Skills/Openclaw/` 里的子目录只是“占位符”，不会占用太多空间，等需要时再按“情况二”执行 `git submodule update --init --recursive` 即可。
 
-#### 子模块目录被你手动删掉了，想恢复
-
-如果你误删了某个子模块目录（例如 `rm -rf Skills/Openclaw/awesome-openclaw-skills`），不需要重新 `git submodule add`，只需要在仓库根目录执行：
-
-```bash
-git submodule update --init Skills/Openclaw/awesome-openclaw-skills
-```
-
-或直接恢复全部子模块：
-
-```bash
-git submodule update --init --recursive
-```
-
 ---
 
 一个用于收集和整理优质 Prompt 的个人仓库。这里汇集了我自己设计的以及从互联网各处发现的有趣、实用的提示词。
