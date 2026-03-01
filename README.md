@@ -202,3 +202,9 @@ prompts/
 - 如有需要，可要求下架相关内容
 
 尊重原创，感谢所有 Prompt 创作者的分享精神。
+
+---
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=dongshuyan/Awesome-Prompts&type=Date)](https://star-history.com/#dongshuyan/Awesome-Prompts&Date)

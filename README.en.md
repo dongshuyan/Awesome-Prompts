@@ -202,3 +202,9 @@ If you are the author of a prompt included here:
 - You can ask for removal.
 
 Credit to all prompt creators.
+
+---
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=dongshuyan/Awesome-Prompts&type=Date)](https://star-history.com/#dongshuyan/Awesome-Prompts&Date)
