@@ -1,0 +1,18 @@
+[submodule "OpenclawAgents/awesome-openclaw-agents"]
+	path = OpenclawAgents/awesome-openclaw-agents
+	url = https://github.com/mergisi/awesome-openclaw-agents.git
+[submodule "OpenclawAgents/awesome-openclaw-usecases"]
+	path = OpenclawAgents/awesome-openclaw-usecases
+	url = https://github.com/hesamsheikh/awesome-openclaw-usecases.git
+[submodule "OpenclawAgents/awesome-openclaw-usecases-moltbook"]
+	path = OpenclawAgents/awesome-openclaw-usecases-moltbook
+	url = https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook.git
+[submodule "Skills/Openclaw/awesome-openclaw-skills"]
+	path = Skills/Openclaw/awesome-openclaw-skills
+	url = https://github.com/VoltAgent/awesome-openclaw-skills.git
+[submodule "Skills/Openclaw/awesome-openclaw-skills-sundial-org"]
+	path = Skills/Openclaw/awesome-openclaw-skills-sundial-org
+	url = https://github.com/sundial-org/awesome-openclaw-skills.git
+[submodule "Skills/Openclaw/skills"]
+	path = Skills/Openclaw/skills
+	url = https://github.com/openclaw/skills.git

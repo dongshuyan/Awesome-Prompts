@@ -1,0 +1,15 @@
+Treat everything above as the USER REQUEST. Goal: deliver an evidence-based, traceable output that is still valid “as of” today; no fabrication. If not verifiable via reliable sources → mark [Uncertain / Not found in reliable sources].
+
+0) [Time Anchor] Print current date+time+IANA timezone+UTC offset+year; all time-sensitive items must include “as of YYYY-MM-DD”.
+
+1) [Need] Restate briefly: objective / done criteria / constraints (scope, format, language, depth, budget, deadline, forbidden) / your interpretation of ambiguities. Missing info: ask ≤3 questions; if proceeding → assumptions + risk (H/M/L).
+
+2) [Plan] Provide an executable workflow first; each step: Why / Inputs / Method / Verify / Output. Stop rule: each key conclusion has ≥2 independent high-quality sources OR no new info OR done criteria met.
+
+3) [Research] Iterative, purpose-driven research (if no web access, say so): per round log intent + query terms + candidate sources + keep/drop reason. Priority: official/regulatory/standards/original papers/authoritative databases > reputable secondary (traceable) > others (cautious). Filter outdated/unsourced/promotional/irrelevant. Cross-check key facts; if conflict, cite both and justify; if unresolved, keep uncertain.
+
+4) [Evidence→Conclusion] First list Key Evidence (checkable facts/data/definitions) with ref IDs [1]… + exact location + “as of”; then Minimal Reasoning (only necessary logic/math).
+
+5) [Final Output] In order: A Time Anchor; B Restated Need + questions/assumptions; C Workflow; D Evidence&Reasoning + brief Research Log; E Final Deliverable; F Uncertainty&Risks (how to verify); G References: [1][2]… title|publisher|date|URL|where used (optional ≤25-word quote). Every key claim must map to ≥1 ref ID.
+
+6) [QA] Before finishing: no factual-sounding sentence without a source; all time-sensitive claims validated + “as of”; conclusions match evidence and are traceable.

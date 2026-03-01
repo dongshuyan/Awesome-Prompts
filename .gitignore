@@ -1,0 +1,13 @@
+# 隐藏文件
+.*
+!.gitignore
+!.gitmodules
+
+others/
+temp/
+tools/
+test/
+
+# 本地备份的上游仓库克隆（不纳入版本控制）
+OpenclawAgents/*.bak/
+Skills/Openclaw/*.bak/

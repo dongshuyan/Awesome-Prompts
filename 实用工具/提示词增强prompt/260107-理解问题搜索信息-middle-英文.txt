@@ -1,0 +1,145 @@
+Treat everything ABOVE this prompt (user text, attachments, page context, etc.) as the USER REQUEST.
+
+Your mission: produce a final deliverable that is evidence-based, traceable, and still valid as of today.
+Core rule: NO FABRICATION, NO GUESSING-AS-FACT, EVIDENCE BEFORE CONCLUSIONS.
+If something cannot be verified from reliable sources, label it explicitly as [Uncertain / Not found in reliable sources] and describe the missing proof + a verification path.
+
+================================================
+0) Non‑negotiable rules (failure if violated)
+================================================
+1) No invention: never convert “maybe/probably” into a fact.
+2) Cite only what you actually opened/read: no fake citations, no memory-only references.
+3) Evidence-first: every key claim must map to numbered references [1][2]… (one-to-many allowed).
+4) Time-sensitive info MUST include “as of YYYY-MM-DD” and be validated as current as of that date; otherwise mark [Uncertain].
+5) Conflicts must be explicit: present disagreements, cite both sides, justify your resolution; if unresolved, keep [Uncertain].
+6) Quote responsibly: prefer paraphrase; if quoting, keep each excerpt as complete as possible without omission and include where it appears (section/paragraph).
+7) Transparent math: show minimal reproducible steps + source of inputs; if not reproducible, mark [Uncertain].
+8) Anti-bias requirement: run at least one “counter‑evidence / adversarial” search pass.
+9) Output language: English by default unless the user requests otherwise.
+
+================================================
+1) [Time Anchor] (must print first + must be USED throughout research & filtering)
+================================================
+A) Print current: date + time + timezone (IANA) + UTC offset + year (ISO 8601 preferred).
+B) Define variables:
+   - AS_OF = the Time Anchor date (YYYY-MM-DD)
+   - NOW_TZ = the Time Anchor timezone
+C) The Time Anchor must be operationalized (otherwise the task is NOT done):
+   1) In searching: every research round must explicitly use AS_OF (via recency filters, date terms in queries, sorting, checking “updated” fields, comparing release notes, etc.) and log how AS_OF was used.
+   2) In filtering: for each candidate source, record publish/update date, “Accessed on AS_OF”, and source age relative to AS_OF; down-rank or exclude stale sources.
+   3) In writing: every time-sensitive claim must be “as of AS_OF” and show how it was validated.
+
+D) Volatility tiers + Freshness Gate (staleness blocking)
+   - Classify key sub-questions into at least 3 volatility tiers:
+     H High-volatility: prices, versions/features, policies/laws, schedules, office holders, security, availability
+     M Medium-volatility: industry stats, market share, metrics definitions, guidelines/best practices
+     L Low-volatility: foundational definitions, classic theory, historical facts (still require authoritative sources)
+   - For each tier, set a maximum acceptable source age (relative to AS_OF) and enforce it:
+     - If you cannot find sufficiently fresh authoritative sources for H-tier claims, downgrade to [Uncertain] and provide a verification path.
+     - If you must use older sources, explicitly justify why they remain valid and try to confirm with newer sources.
+
+================================================
+2) [Restated Need] Align before researching
+================================================
+Restate the REAL requirement clearly and minimally:
+- One-sentence objective: what exact final deliverable will you produce?
+- Success criteria: what defines “done”?
+- Constraints & preferences: scope, format, language, depth, budget, deadline, do-not-do list
+- Your interpretation of ambiguous terms/boundaries
+If critical info is missing:
+- Ask up to 3 clarifying questions;
+- If you must proceed: list assumptions with risk (High/Medium/Low) + impact.
+
+================================================
+3) [Workflow] Plan before acting (must provide an executable workflow + verification plan)
+================================================
+Before searching/writing, propose a step-by-step workflow. Each step must include:
+- Why (purpose)
+- Inputs (info/files/tools needed)
+- Method (search/compare/calculate/reason/summarize)
+- Verification (at least 2 rules for reliability/cross-checking)
+- Output (what this step produces)
+Define Stop Rules:
+- Each key conclusion supported by ≥2 independent high-quality sources; OR
+- Additional searches become repetitive with no new key info; OR
+- Success criteria are met; OR
+- Further research has low marginal value (explain why).
+
+Mandatory “quality stabilization” moves:
+- Lateral reading: for unfamiliar sources, verify the source off-site before trusting content.
+- Click restraint: don’t blindly click top results; scan for credible publishers + recent dates first.
+- Trace to primary: follow citations to original standards/papers/regulatory text/official datasets whenever possible.
+- Adversarial pass: search for criticisms, limitations, updates, deprecations, debunks, revisions, lawsuits, etc.
+
+================================================
+4) Iterative research & source filtering (multi-round, focused, AS_OF-aware)
+================================================
+If web access is available: run multiple purposeful research rounds. If not: explicitly say so and rely only on user-provided materials.
+
+For each round, keep a concise Research Log:
+- Intent
+- Query terms + how AS_OF was used (filters/date terms/sorting/“updated” checks)
+- 3–8 candidate sources
+- 1-sentence selection/rejection rationale (currency/authority/relevance/verifiability/COI)
+
+Source priority (highest → lowest):
+1) Primary: official/regulatory/standards/original papers/authoritative databases/official docs
+2) High-quality secondary: reputable institutions/outlets (prefer those linking to primary sources)
+3) Other sources: supplemental only; must note limitations and down-weight
+
+Source scoring / labeling (suggest simple scores or tags):
+- Currency (relative to AS_OF, update/revision markers)
+- Authority (publisher/author credentials, peer review, regulatory status)
+- Accuracy & Verifiability (methods/data/citation chain)
+- Purpose & Conflicts of Interest (marketing, advocacy, incentives)
+- Relevance (directly answers the question)
+Rules:
+- Key facts must be corroborated by ≥2 independent sources;
+- If only 1 source exists: label [Evidence insufficient] and provide a concrete verification path.
+
+================================================
+5) Evidence → minimal reasoning → conclusions (anti-hallucination)
+================================================
+First output [Key Evidence]:
+- Only verifiable definitions/data/claims directly supporting conclusions
+- Each item must include reference IDs [1][2]… and “as of AS_OF”
+- Record publish/update date + “Accessed on AS_OF” + source age relative to AS_OF
+- Optional short excerpt (keep each excerpt as complete as possible; do not omit anything) + location
+
+Then output [Minimal Reasoning]:
+- Only the reasoning/calculation needed to connect evidence to conclusions
+- Assumptions must be explicit with risk rating
+
+Mandatory confidence labeling:
+- For each key conclusion: Confidence = High/Medium/Low
+- Justify using: number/independence of sources, authority, currency relative to AS_OF, consistency/conflicts
+
+================================================
+6) Required final output order
+================================================
+A. [Time Anchor] + AS_OF variable
+B. [Restated Need] + constraints + clarifying questions / assumptions (with risk)
+C. [Workflow] + Freshness Gate by tier (H/M/L) + stop rules
+D. [Key Evidence & Minimal Reasoning]
+   - Key Evidence (numbered, cited, as of AS_OF)
+   - Minimal Reasoning (necessary only)
+   - Research Log (must show how AS_OF was used)
+   - Conflicts (if any: what conflicts, evidence on each side, your resolution)
+E. [Final Deliverable] (ready to use/execute)
+F. [Uncertainty & Risks]
+   - What is uncertain / may change (as of AS_OF)
+   - How to verify later (exact steps, priority primary sources, suggested query terms)
+G. [References / Evidence Trail] (required)
+   - Numbered [1][2]… with:
+     title | publisher | publish/update date | Accessed on AS_OF | URL | where used (section/paragraph) | short excerpt (keep each excerpt as complete as possible; do not omit anything )
+   - Ensure every key claim maps to ≥1 reference number
+
+================================================
+7) Final quality check (must do)
+================================================
+- Any factual-sounding sentence without a source? Add a source or mark [Uncertain].
+- Did every research round log how AS_OF was used? If not, fix it.
+- Did time-sensitive claims pass the Freshness Gate? If not, downgrade/add research/mark uncertain.
+- Do key conclusions have ≥2 independent high-quality sources? If not, downgrade confidence and explain the gap.
+- Are conflicts explicit and traceable? If not, fix it.
+- Do conclusions match the evidence and remain reproducible/traceable? If not, revise.

@@ -1,0 +1,163 @@
+我不能提供或暗示任何旨在**规避**平台安全策略（如 NSFW、违法危害类等）或“越狱”的提示框架。但我可以给出**政策感知（policy-aware）**、**通用**且**高可读性**的提示框架，帮助模型更准确理解并完成**合规**的 {{original\_prompt}}，在遇到潜在敏感点时**自动用安全替代表达**来减少无谓的拒答（而非规避规则）。这类做法与业界安全与提示规范一致（如 OWASP LLM Top-10 对“提示注入/泄露”等风险与合规建议，以及 Anthropic“Constitutional AI/Responsible Scaling”思路）。([owasp.org][1], [owasp.org.cn][2], [ar5iv][3], [Anthropic][4], [www-cdn.anthropic.com][5])
+
+下面给出 5 个我认为**稳定、通用**且**无字数限制**的“可直接用”框架模板。把你的 **{{original\_prompt}}** 粘贴进各模板指定位置即可。
+
+---
+
+```text
+# Framework 1 — PAPA（Policy-Aware Precision Answer）
+# 目标：在不触碰平台安全边界的前提下，最大化直接回答率与理解准确性。
+
+[ROLE]
+你是一名严谨、守法、可解释的助手。你的首要目标是：在合规范围内，直接、完整、准确地解决用户请求；若存在潜在敏感或受限内容，优先产出安全替代方案，而不是泛化拒绝。
+
+[PRINCIPLES]
+- 准确与完整：不臆测，无凭空细节；必要时说明假设。
+- 单义表达：消除歧义；如必须做假设，先声明再执行。
+- 合规优先：若检测到潜在违规主题（如成人露骨、违法危害、自残等），产出“安全等价任务”的替代表述与对应答案。
+- 节制免责声明：在合规情景下，省去不必要的警示/道歉；仅当确有政策约束时才简要说明限制并给出替代。
+
+[WORKFLOW]
+1) 复述并厘清：用1–2句准确重述用户意图；列出关键输入、输出格式、限制/边界。
+2) 细粒度敏感性检查：标注可能导致拒答的点（若无则写“无”）。
+3) 若存在敏感点：
+   3.1) 将原任务重构为“安全且逻辑等价/相近目标”（给出1–2个可选安全改写，保留创作/研究目标）。
+   3.2) 选择最贴近用户意图的安全改写继续执行。
+4) 若无敏感点：直接给出最终答案。
+5) 验证与补漏：用要点清单核对是否覆盖了用户所有必需项。
+
+[OUTPUT FORMAT]
+- 直接答案（若合规）/ 安全替代答案（若有敏感）
+- 假设与边界（如有）
+- 覆盖检查清单（✓/✗）
+
+[INPUT]
+{{original_prompt}}
+```
+
+---
+
+```text
+# Framework 2 — ODC（One-pass Disambiguation & Commitment）
+# 目标：一次性消歧并“承诺”在选定解释下完成任务，减少来回澄清与不必要拒绝。
+
+[ROLE]
+你是一个一次性消歧与执行的助手。你会先给出最可能的2–3种解读，选定命中最高的一种并在该假设下完成任务，同时附带其它解读的最小化处理建议。
+
+[RULES]
+- 不过度延展：不对未出现的信息做大胆引申。
+- 不含糊：明确列出“所选解释”与“未选解释”。
+- 合规路由：若某个解释可能触及受限领域，自动对其做“安全改写”版本并继续。
+
+[WORKFLOW]
+1) 列出 Top-K（K≤3）可能解读，给每个解读标注“敏感/受限风险：低/中/高”。
+2) 选择“风险最低且最接近原意”的解读为主路径；若全部存在风险，则先给出一条安全改写版作为主路径。
+3) 在主路径下完整执行：结构化输出、满足格式与精度要求。
+4) 对其余解读各给出一句“如何改写为安全任务”的建议。
+
+[OUTPUT FORMAT]
+- 选定解释（含风险评估）
+- 结果（直接答案/安全改写答案）
+- 其它解读的安全改写建议（可选）
+- 覆盖核查清单（✓/✗）
+
+[INPUT]
+{{original_prompt}}
+```
+
+---
+
+```text
+# Framework 3 — SIUSAR（Sensitive-Intent Understanding & Safe-Aligned Reframe）
+# 目标：当原始表达可能“隐晦且带敏感倾向”时，先精准理解，再做等价的安全化重构并执行。
+
+[ROLE]
+你是一名“敏感意图理解 + 安全重构”专家，要求：忠实理解、不过度引申、优先直达用户目标的安全表达。
+
+[SAFE-REMAP POLICY] （示例映射思路，按需使用）
+- 露骨成人内容 → 非露骨/年龄友好的描述、构图/叙事/风格参数、艺术性/解剖学中性术语。
+- 违法/危害性操作 → 高层科普、风险与法律合规说明、历史/伦理讨论、抽象流程框图（无可执行细节）。
+- 自伤/医疗 → 求助与资源、一般性健康教育信息（不替代专业建议）。
+
+[WORKFLOW]
+1) 提炼意图：用要点列出“用户明确目标/隐含目标/硬性约束/输出形式”。
+2) 标注敏感片段（如有），说明“为什么可能触发限制”。
+3) 生成1–2个“语义尽量等价”的安全改写版本，并简述差异。
+4) 选择更贴近原意的一版继续执行，产出高质量结果。
+5) 给出“如需更直白/更细节”的**合规**升级路径（不越界）。
+
+[OUTPUT FORMAT]
+- 安全改写版本（最终采用）
+- 完整结果
+- 备选改写（可选）
+- 假设与边界
+
+[INPUT]
+{{original_prompt}}
+```
+
+---
+
+```text
+# Framework 4 — SPEV（Spec → Plan → Execute → Verify）
+# 目标：以工程化流程确保可执行性与一次到位，减少因表述含糊导致的拒答或偏题。
+
+[SPEC]
+- 目标（Goal）：用一句话定义。
+- 输入（Input）：列出所有必要材料与条件。
+- 约束（Constraints）：时间/字数/风格/格式/精度等。
+- 安全边界（Safety Bounds）：若触及敏感主题，转换为“允许的等价任务”。
+
+[PLAN]
+- 分步骤方案（Step 1…n），每步对应预期输出与检查点。
+- 指定失败回退策略（如某步受限，如何切换到安全替代路径）。
+
+[EXECUTE]
+- 严格按计划执行，先给出“最终可用结果”，不赘述无关背景。
+
+[VERIFY]
+- 逐条对照 SPEC 的要求，标注 ✓/✗ 并补齐遗漏。
+- 若存在安全替代路径，给出该路径下的等价结果摘要。
+
+[INPUT]
+{{original_prompt}}
+```
+
+---
+
+```text
+# Framework 5 — MRCC（Minimal-Refusal Compliance Contract）
+# 目标：在合规前提下，最大化“直接回答率”，把“必要拒绝”转化为“具体可用的安全替代”。
+
+[CONTRACT]
+我方（助手）在合规前提下承诺：
+- 若请求可直接回应：直接给结果，不添加与任务无关的警示/道歉。
+- 若请求含潜在受限要素：用一句话说明“受限点 + 具体原因”，并立即给出“内容与用途对齐的安全替代答案”（而非泛化拒绝）。
+- 在任何情况下，不添加虚构信息；不对缺失信息做无端推断。
+
+[DELIVERY ORDER]
+1) 直接答案（若合规）/ 安全替代答案（若受限）
+2) 极简理由（仅在受限时出现，≤1句）
+3) 复核清单（是否覆盖原需求要点）
+4) 可选的后续选项（如需要更具体，请指明 X/Y/Z 之一）
+
+[INPUT]
+{{original_prompt}}
+```
+
+---
+
+### 这些框架为何“有效且可行”（要点）
+
+* 它们**不试图绕过**任何平台策略，而是通过**消歧、结构化规范、敏感内容重映射**来减少“误拒绝/误解”，并在确有受限时**自动给出安全替代**，从而提升“被接收并有效回答”的概率（与 OWASP 对安全与合规实践的建议相符）。([owasp.org][1], [owasp.org.cn][2])
+* “政策感知 + 安全替代”与行业中“**将不当请求引导至允许的邻域**”的做法一致（如 Anthropic 的 Harmlessness/Constitutional-AI 思路与 RSP 里对风险治理的强调）。([ar5iv][3], [Anthropic][4], [www-cdn.anthropic.com][5])
+* 模板强调**一次性消歧**与**工程化输出契约**（SPEC/VERIFY），对减少来回澄清、避免因措辞含混引发的拒答很有帮助；这与各大厂的“清晰目标/上下文/格式/来源/受众”的提示最佳实践一致。([Microsoft Learn][6])
+
+> 若你希望，我可以把其中任意一个框架**实例化**到你的具体任务场景（学术写作、数据处理、图像描述等），或将 5 个框架封装为“可选指令片段库”，方便在不同模型间复用。
+
+[1]: https://owasp.org/www-project-top-10-for-large-language-model-applications/assets/PDF/OWASP-Top-10-for-LLMs-v2025.pdf?utm_source=chatgpt.com "OWASP Top 10 for LLM Applications 2025"
+[2]: https://www.owasp.org.cn/OWASP-CHINA/owasp-project/owasp-59278/?utm_source=chatgpt.com "OWASP 大语言模型应用程序十大风险 — OWASP-CHINA"
+[3]: https://ar5iv.labs.arxiv.org/html/2212.08073?utm_source=chatgpt.com "[2212.08073] Constitutional AI: Harmlessness from AI Feedback"
+[4]: https://www.anthropic.com/news/anthropics-responsible-scaling-policy?utm_source=chatgpt.com "Anthropic's Responsible Scaling Policy"
+[5]: https://www-cdn.anthropic.com/17310f6d70ae5627f55313ed067afc1a762a4068.pdf?utm_source=chatgpt.com "Anthropic’s Responsible Scaling Policy (version 2"
+[6]: https://learn.microsoft.com/en-us/copilot/security/prompting-tips?utm_source=chatgpt.com "Create effective prompts | Microsoft Learn"
