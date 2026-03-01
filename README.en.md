@@ -2,6 +2,92 @@
 
 [简体中文](README.md) | English
 
+---
+
+## How to clone this repo (with submodules)
+
+This repo contains several **Git submodules**:
+
+- `OpenclawAgents/awesome-openclaw-agents`
+- `OpenclawAgents/awesome-openclaw-usecases`
+- `OpenclawAgents/awesome-openclaw-usecases-moltbook`
+- `Skills/Openclaw/awesome-openclaw-skills`
+- `Skills/Openclaw/awesome-openclaw-skills-sundial-org`
+- `Skills/Openclaw/skills`
+
+Choose one of the following, depending on your situation.
+
+### Case 1: First time cloning, want everything (recommended)
+
+**HTTPS:**
+
+```bash
+git clone --recurse-submodules https://github.com/dongshuyan/Awesome-Prompts.git
+```
+
+**SSH:**
+
+```bash
+git clone --recurse-submodules git@github.com:dongshuyan/Awesome-Prompts.git
+```
+
+After cloning, to be safe, run once:
+
+```bash
+cd Awesome-Prompts
+git submodule update --init --recursive
+```
+
+### Case 2: Already ran `git clone` without `--recurse-submodules`
+
+If you previously did:
+
+```bash
+git clone https://github.com/dongshuyan/Awesome-Prompts.git
+```
+
+just run in the repo root:
+
+```bash
+cd Awesome-Prompts
+git submodule update --init --recursive
+```
+
+This will pull all submodules under `OpenclawAgents/` and `Skills/Openclaw/`.
+
+### Case 3: Only want to quickly browse prompts, not download all submodules
+
+Some submodules are large (especially `Skills/Openclaw/awesome-openclaw-skills` and `Skills/Openclaw/skills`).  
+If you **only want to browse the prompt files I wrote**, you can:
+
+```bash
+git clone https://github.com/dongshuyan/Awesome-Prompts.git
+cd Awesome-Prompts
+# Do NOT run git submodule update yet
+```
+
+In this mode:
+
+- Root-level `*.txt` / `*.md` prompt files are directly usable.
+- Folders under `OpenclawAgents/` and `Skills/Openclaw/` are just “placeholders”; they won’t take much space until you later run `git submodule update --init --recursive` (see Case 2).
+
+#### If you accidentally deleted a submodule directory and want to restore it
+
+If you removed a submodule directory (for example `rm -rf Skills/Openclaw/awesome-openclaw-skills`), you **do not** need to run `git submodule add` again.  
+From the repo root, just run:
+
+```bash
+git submodule update --init Skills/Openclaw/awesome-openclaw-skills
+```
+
+Or restore all submodules:
+
+```bash
+git submodule update --init --recursive
+```
+
+---
+
 A personal repo for collecting and organizing useful prompts: both ones I wrote and ones found around the web.
 
 ---
