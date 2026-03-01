@@ -1,5 +1,7 @@
 # Prompt 收藏库
 
+[English](README.en.md) | 简体中文
+
 一个用于收集和整理优质 Prompt 的个人仓库。这里汇集了我自己设计的以及从互联网各处发现的有趣、实用的提示词。
 
 ---
@@ -16,7 +18,16 @@ prompts/
 │   └── 小羊饼/   # 多性格 NSFW 角色提示词（来源：Linux.do）
 ├── 写作辅助/     # 翻译、内容创作、文生图等写作相关提示词
 ├── 元提示词/     # 用于生成或优化其他 Prompt 的元提示词
-└── NSFW/         # 成人内容生成相关提示词
+├── NSFW/         # 成人内容生成相关提示词
+├── Skills/       # OpenClaw 技能合集（来自社区 repo，见下）
+│   └── Openclaw/
+│       ├── awesome-openclaw-skills/           # VoltAgent 整理的 5000+ 技能列表
+│       ├── awesome-openclaw-skills-sundial-org/  # Sundial 整理的 900+ 技能
+│       └── skills/                            # 从 ClawHub 备份的技能
+└── OpenclawAgents/  # OpenClaw Agent 模板与用例（来自社区 repo）
+    ├── awesome-openclaw-agents/     # 53 个生产级 Agent 模板（SOUL.md）
+    ├── awesome-openclaw-usecases/   # 真实使用场景合集
+    └── awesome-openclaw-usecases-moltbook/  # Moltbook 70+ 用例（多语言）
 ```
 
 ---
@@ -120,6 +131,56 @@ prompts/
 |--------|------|----------|------|
 | [`豆包图像生成-仰视构图.txt`](NSFW/豆包图像生成-仰视构图.txt) | 针对豆包 AI 的 NSFW 图像生成，包含仰视构图、人体比例控制（34D/1:0.7:1.1）等参数 | 使用豆包生成写真风格图片 | [链接](https://linux.do/t/topic/1411250) |
 | [`豆包图像生成-极简写真.txt`](NSFW/豆包图像生成-极简写真.txt) | 针对豆包 AI 的 NSFW 图像生成，极简主义精致风格、低角度视角、蕾丝比基尼 | 使用豆包生成写真风格图片 | [链接](https://linux.do/t/topic/1411250) |
+
+### Skills（OpenClaw 技能）
+
+本目录为**他人仓库的本地拷贝**，用于集中查阅与备份，未改其内容结构。
+
+| 子目录 | 说明 |
+|--------|------|
+| `Skills/Openclaw/awesome-openclaw-skills` | [VoltAgent] 社区技能列表，约 5000+ 条，按类目整理 |
+| `Skills/Openclaw/awesome-openclaw-skills-sundial-org` | [Sundial] 精选约 900+ 技能，每日更新 |
+| `Skills/Openclaw/skills` | 从 ClawHub 备份的技能文件 |
+
+### OpenclawAgents（OpenClaw Agent 与用例）
+
+同样为**他人仓库的本地拷贝**，便于本地浏览与参考。
+
+| 子目录 | 说明 |
+|--------|------|
+| `OpenclawAgents/awesome-openclaw-agents` | [mergisi] 53 个生产级 Agent 模板（SOUL.md）、Quickstart、Docker 等 |
+| `OpenclawAgents/awesome-openclaw-usecases` | [hesamsheikh] 真实使用场景合集（Reddit/YouTube 摘要、X 分析等） |
+| `OpenclawAgents/awesome-openclaw-usecases-moltbook` | [Moltbook/EvoLink] 70+ 用例，多语言文档 |
+
+### Nano Banana Pro 提示词网站
+
+以下为收集的 **Nano Banana / Nano Banana Pro**（如 Gemini 生图、Firefly 等）相关提示词与图生平台，便于在线查找与复用。
+
+| 网站 | 说明 |
+|------|------|
+| [Nanobanana 提示词收纳盒](https://bmzxdlj.cn/) | 中文 Nano Banana 提示词收纳与整理 |
+| [Labnana](https://labnana.com/zh/explore/all) | 基于 Google Nano Banana 2 的图生平台，社区发现页 |
+| [YouMind Nano Banana Pro 提示词库](https://youmind.com/zh-CN/nano-banana-pro-prompts?categories=comic-storyboard) | 大量免费 Nano Banana Pro 提示词，多分类（漫画/故事板、海报、App 设计等），每日更新 |
+| [Prompt Manager (vioaki)](https://prompt.vioaki.xyz/) | 画廊 + 模板库，标签筛选（banana、cosplay、text2img/img2img 等），支持变量替换 |
+| [飞书文档 - 表格](https://my.feishu.cn/wiki/S5nowuX3uiHXq4kNPb3c7cPpngh?table=tblJT29vyAEQmZzq&view=vewBBRuwm1) | 飞书中的 Nano Banana Pro 相关协作表格 |
+| [飞书知识库](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc) | 飞书知识库中的提示词/文档整理 |
+
+本仓库内与 Nano Banana Pro 相关的本地文件见：[元提示词/Nano-Banana-Pro图像规格架构师.txt](元提示词/Nano-Banana-Pro图像规格架构师.txt)。
+
+---
+
+## 本仓库内含他人 repo 时如何 Push
+
+`Skills/` 与 `OpenclawAgents/` 下各子目录来自对他人 repo 的 clone，本地保留各自的 `.git`，便于你随时在原仓库里 `git pull` 或切分支。
+
+- **不会删除子仓库的 `.git`**：本仓库的 `.gitignore` 里已有 `.*`，会忽略所有以点开头的文件/目录，因此子目录下的 `.git` **不会被父仓库跟踪**，也不会被提交。
+- **Push 方式**：在仓库根目录照常执行即可：
+  ```bash
+  git add Skills/ OpenclawAgents/   # 只会添加普通文件，不会包含任何 .git
+  git commit -m "添加 Skills 与 OpenclawAgents 合集"
+  git push
+  ```
+- 子仓库的 `.git` 仅存在于你本地，不会被推到本仓库的 remote；之后你仍可在各子目录里用 `git pull` 等更新上游。
 
 ---
 
