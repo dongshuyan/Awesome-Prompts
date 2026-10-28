@@ -16,3 +16,6 @@
 [submodule "Skills/Openclaw/skills"]
 	path = Skills/Openclaw/skills
 	url = https://github.com/openclaw/skills.git
+[submodule "Skills/compass-skills"]
+	path = Skills/compass-skills
+	url = https://github.com/dongshuyan/compass-skills.git

@@ -1,295 +1,179 @@
-# Prompt Collection
+# Awesome-Prompts
 
 [简体中文](README.md) | English
 
----
+A collection of prompts and agent resources maintained by [dongshuyan](https://github.com/dongshuyan). It includes prompts written by the maintainer or collected from the community, Agent Skills, and OpenClaw templates and use cases. Copy a prompt to use it, or follow a skill project's installation guide.
 
-## How to clone this repo (with submodules)
+[Find a resource](#find-a-resource) · [Get started](#get-started) · [COMPASS](#compass) · [Resource directory](#resource-directory) · [Archived content](#archived-content) · [Feedback and contributions](#feedback-and-contributions)
 
-This repo contains several **Git submodules**:
+## What this repository contains
 
-- `OpenclawAgents/awesome-openclaw-agents`
-- `OpenclawAgents/awesome-openclaw-usecases`
-- `OpenclawAgents/awesome-openclaw-usecases-moltbook`
-- `Skills/Openclaw/awesome-openclaw-skills`
-- `Skills/Openclaw/awesome-openclaw-skills-sundial-org`
-- `Skills/Openclaw/skills`
+| Part | Contents | How to use it |
+| --- | --- | --- |
+| Prompts | Questions and research, paper reading, project planning, writing, images, and character settings, grouped by purpose | Open a file and copy its text into your AI chat or the instruction field supported by your tool |
+| Agent Skills | The maintainer's [COMPASS](https://github.com/dongshuyan/compass-skills) project and OpenClaw community skill resources | Install and invoke skills using each project's instructions |
+| OpenClaw templates and use cases | Agent settings, templates, and examples | Read the original project and configure it for your use case |
+| Archived content | Historical material with its original directory structure | Look up older content and recorded sources |
 
-Choose one of the following, depending on your situation.
+## Find a resource
 
-### Case 1: First time cloning, want everything (recommended)
+| I want to… | Start here |
+| --- | --- |
+| Have an AI understand a question and search before answering | [Prompt enhancement series](实用工具/提示词增强prompt/): full, middle, and lite versions in Chinese and English |
+| Understand a paper | [Structured paper reading](实用工具/学术论文阅读.txt) |
+| Clarify project requirements and plan implementation and handoff | [Project planning workflow](实用工具/项目优化与施工/): use step1 → step2 → step3 |
+| Generate or compress a prompt | [Meta prompts](元提示词/) |
+| Clarify a task, track progress, or continue work in an agent | [COMPASS](#compass) |
+| Find rewriting, translation, or image prompt templates | [Writing tools](写作辅助/); image specification templates are under [meta prompts](元提示词/) |
+| Find character settings | [Roleplay](角色扮演/), including adult material |
+| Find model restriction templates or adult content | [Model restriction templates](越狱破限/) / [NSFW](NSFW/) |
+| Find OpenClaw skills, agent templates, or use cases | [OpenClaw resources](#openclaw-resources) |
+| Find something previously included in the collection | [Archived content](已过期/) |
 
-**HTTPS:**
+## Get started
+
+### Use a prompt directly
+
+1. Open the relevant directory and choose a `.txt` or `.md` file. On GitHub, click **Raw** to view its plain text.
+2. Copy the contents. If the file specifies system instructions or another location, follow that guidance.
+3. Replace placeholders such as `{{original_prompt}}`, `XXX`, and document paths with your own material. Add your goal, constraints, and output requirements.
+4. Run it in your AI tool, check the result, and adjust the prompt as needed.
+
+Prompts that ask for web searches, attachments, or code execution depend on those capabilities being available in your AI tool. Results vary with model and tool versions; inclusion here does not establish compatibility with every environment.
+
+### Download the collection
+
+Download this repository's prompts and navigation files:
+
+```bash
+git clone https://github.com/dongshuyan/Awesome-Prompts.git
+cd Awesome-Prompts
+```
+
+Download the repository and all submodules together:
 
 ```bash
 git clone --recurse-submodules https://github.com/dongshuyan/Awesome-Prompts.git
-```
-
-**SSH:**
-
-```bash
-git clone --recurse-submodules git@github.com:dongshuyan/Awesome-Prompts.git
-```
-
-After cloning, to be safe, run once:
-
-```bash
 cd Awesome-Prompts
-git submodule update --init --recursive
 ```
 
-### Case 2: Already ran `git clone` without `--recurse-submodules`
-
-If you previously did:
-
-```bash
-git clone https://github.com/dongshuyan/Awesome-Prompts.git
-```
-
-just run in the repo root:
-
-```bash
-cd Awesome-Prompts
-git submodule update --init --recursive
-```
-
-This will pull all submodules under `OpenclawAgents/` and `Skills/Openclaw/`.
-
-### Case 3: Only want to quickly browse prompts, not download all submodules
-
-Some submodules are large (especially `Skills/Openclaw/awesome-openclaw-skills` and `Skills/Openclaw/skills`).  
-If you **only want to browse the prompt files I wrote**, you can:
-
-```bash
-git clone https://github.com/dongshuyan/Awesome-Prompts.git
-cd Awesome-Prompts
-# Do NOT run git submodule update yet
-```
-
-In this mode:
-
-- Root-level `*.txt` / `*.md` prompt files are directly usable.
-- Folders under `OpenclawAgents/` and `Skills/Openclaw/` are just “placeholders”; they won’t take much space until you later run `git submodule update --init --recursive` (see Case 2).
-
-#### If you accidentally deleted a submodule directory and want to restore it
-
-If you removed a submodule directory (for example `rm -rf Skills/Openclaw/awesome-openclaw-skills`), you **do not** need to run `git submodule add` again.  
-From the repo root, just run:
-
-```bash
-git submodule update --init Skills/Openclaw/awesome-openclaw-skills
-```
-
-Or restore all submodules:
+If you already cloned the repository, download all submodules from its root:
 
 ```bash
 git submodule update --init --recursive
 ```
 
----
+If you only need COMPASS, use this command instead:
 
-A personal repo for collecting and organizing useful prompts: both ones I wrote and ones found around the web.
-
----
-
-## Directory Structure
-
-```
-prompts/
-├── 实用工具/     # Daily-use prompts (health, academic, Q&A, etc.)
-│   ├── 提示词增强prompt/  # Force AI to search/verify before answering
-│   └── 项目优化与施工/    # Three-step project optimization flow
-├── 越狱破限/     # Jailbreak / limit-breaking prompts
-├── 角色扮演/     # Roleplay and character prompts
-│   └── 小羊饼/   # Multi-personality NSFW roleplay (source: Linux.do)
-├── 写作辅助/     # Translation, writing, text-to-image prompts
-├── 元提示词/     # Meta prompts for generating or optimizing other prompts
-├── NSFW/         # Adult content generation prompts
-├── Skills/       # OpenClaw skills (community repos, see below)
-│   └── Openclaw/
-│       ├── awesome-openclaw-skills/           # VoltAgent: 5000+ skills list
-│       ├── awesome-openclaw-skills-sundial-org/  # Sundial: 900+ skills
-│       └── skills/                            # Backed up from ClawHub
-└── OpenclawAgents/  # OpenClaw agent templates and use cases (community repos)
-    ├── awesome-openclaw-agents/     # 53 production-ready Agent templates (SOUL.md)
-    ├── awesome-openclaw-usecases/   # Real-world use cases
-    └── awesome-openclaw-usecases-moltbook/  # Moltbook 70+ use cases (multilingual)
+```bash
+git submodule update --init Skills/compass-skills
 ```
 
----
+Projects under `Skills/` and `OpenclawAgents/` are Git submodules: the parent repository records each upstream URL and a fixed commit. A regular clone does not download their contents automatically. Downloading a submodule and installing its skills are separate steps; follow the original project's instructions.
 
-## Details
+## COMPASS
 
-### 实用工具 (Practical Tools)
+[compass-skills](https://github.com/dongshuyan/compass-skills) is an Agent Skills project that I developed and use in my own agent workflows. It provides workflows for clarifying requirements, tracking tasks, pausing and resuming work, and handing context to another conversation. This collection includes it at `Skills/compass-skills/`. See the original project for the full skill list and installation guide.
 
-Everyday prompts for productivity.
+| Situation | Skill |
+| --- | --- |
+| Requirements need clarification before work begins | `task-clarifier` |
+| Work spans multiple turns and needs a record of goals, dependencies, and progress | `task-forest` |
+| You need to pause work and resume in the same conversation | `pause-and-resume` |
+| You are starting another conversation and need a context handoff | `session-handoff-prompt` |
+| An explanation needs to be clearer, or academic prose needs editing | `clear-communication` / `academic-humanizer` |
 
-| File | Purpose | When to use |
-|------|---------|-------------|
-| [`AI健康顾问.txt`](实用工具/AI健康顾问.txt) | Structured symptom analysis and suggestions | Quick possible causes for discomfort |
-| [`学术论文阅读.txt`](实用工具/学术论文阅读.txt) | Structured paper analysis for beginners | Reading academic papers |
-| [`自信的Gemini.txt`](实用工具/自信的Gemini.txt) | Google’s system prompt for more confident Gemini | Base system prompt for Gemini |
+With Node.js / npm installed, you can choose skills through the skills CLI. For example, run this in the project where you want to use the requirement clarification skill with Codex and Claude Code:
 
-#### 提示词增强prompt (Search-before-answer)
+```bash
+npx skills add dongshuyan/compass-skills --skill task-clarifier -a codex -a claude-code
+```
 
-Three variants: full (most detail), middle (balanced), lite (fewer tokens).
+This example installs at project scope. After installation, enter `$task-clarifier` in Codex or `/task-clarifier` in Claude Code, followed by the task you want to clarify. For other tools, installation scopes, or manual setup, see the [COMPASS README](https://github.com/dongshuyan/compass-skills#readme).
 
-| File | Purpose | When to use |
-|------|---------|-------------|
-| [`260107-理解问题搜索信息-中文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-中文.txt) | Full search-verify flow | When you need accurate, traceable answers |
-| [`260107-理解问题搜索信息-英文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-英文.txt) | Full, English | English use |
-| [`260107-理解问题搜索信息-middle-中文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-middle-中文.txt) | Middle, balanced | Recommended for daily use |
-| [`260107-理解问题搜索信息-middle-英文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-middle-英文.txt) | Middle, English | English use |
-| [`260107-理解问题搜索信息-lite-中文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-lite-中文.txt) | Lite, fewer tokens | When token-limited |
-| [`260107-理解问题搜索信息-lite-英文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-lite-英文.txt) | Lite, English | English use |
+## Resource directory
 
-#### 项目优化与施工 (Project optimization)
+Directory and file names retain their original Chinese names in both language versions of this README.
 
-Three-step flow: requirements → construction docs → handover prompts.
+```text
+Awesome-Prompts/
+├── 实用工具/                  # Questions, paper reading, project planning
+│   ├── 提示词增强prompt/      # Chinese/English and different lengths
+│   └── 项目优化与施工/        # Requirements, planning, execution handoff
+├── 元提示词/                  # Generate, refine, and compress prompts
+├── 写作辅助/                  # Rewriting, translation, image prompts
+├── 角色扮演/                  # Character settings, including adult material
+│   └── 多角色人设/
+├── 越狱破限/                  # Model restriction templates
+├── NSFW/                      # Adult content
+├── Skills/
+│   ├── compass-skills/        # COMPASS, Git submodule
+│   └── Openclaw/              # OpenClaw skills, Git submodules
+├── OpenclawAgents/            # OpenClaw templates and use cases, submodules
+└── 已过期/                    # Historical content with original paths
+    └── 角色扮演/
+        └── 小羊饼/
+```
 
-| File | Purpose | When to use |
-|------|---------|-------------|
-| [`step1.md`](实用工具/项目优化与施工/step1.md) | Requirements and design | Before starting optimization |
-| [`step2.md`](实用工具/项目优化与施工/step2.md) | Construction docs and phases | Splitting work into phases |
-| [`step3.md`](实用工具/项目优化与施工/step3.md) | Execution prompt + acceptance | Per-phase prompts |
+### Prompt categories
 
-### 越狱破限 (Jailbreak)
+| Directory | Contents and selection |
+| --- | --- |
+| [实用工具 / Practical tools](实用工具/) | [Paper reading](实用工具/学术论文阅读.txt), [health education](实用工具/AI健康顾问.txt), a [Gemini instruction template](实用工具/自信的Gemini.txt), and the two workflows below. Health content supports general understanding and discussion with clinicians; it does not replace professional care. |
+| [提示词增强prompt / Prompt enhancement](实用工具/提示词增强prompt/) | The full version is the most detailed, `middle` balances length and detail, and `lite` is shorter. Choose for task complexity and context budget. Chinese and English files are provided separately; `旧版本/` contains earlier versions of this series. |
+| [项目优化与施工 / Project planning](实用工具/项目优化与施工/) | [step1](实用工具/项目优化与施工/step1.md) covers requirements and a proposed approach; [step2](实用工具/项目优化与施工/step2.md) divides implementation into stages and acceptance checks; [step3](实用工具/项目优化与施工/step3.md) creates execution and handoff prompts. Replace project names and paths before use. |
+| [元提示词 / Meta prompts](元提示词/) | [Generate from requirements](元提示词/根据需求生成提示词.txt), [prompt design](元提示词/生成prompt的prompt.txt), [long prompt compression](元提示词/长提示词压缩.txt), and [Nano Banana Pro image specifications](元提示词/Nano-Banana-Pro图像规格架构师.txt). |
+| [写作辅助 / Writing tools](写作辅助/) | Rewriting, translation, image prompt, and cosplay photo templates. Some material is adult oriented. |
+| [角色扮演 / Roleplay](角色扮演/) | Individual character files and the `多角色人设/` collection. Browse filenames for settings; includes adult material. |
+| [越狱破限 / Model restriction templates](越狱破限/) | Historical templates named by model or scenario. Applicability depends on model versions and platform rules. |
+| [NSFW](NSFW/) | Adult image prompts. Check each file for its intended tool. |
 
-Templates to work around model content restrictions.
+### OpenClaw resources
 
-| File | Purpose | When to use |
-|------|---------|-------------|
-| [`GHOST越狱协议.txt`](越狱破限/GHOST越狱协议.txt) | Developer-mode style bypass | When you need direct sensitive answers |
-| [`FOP自由覆盖模式.txt`](越狱破限/FOP自由覆盖模式.txt) | Chinese “free mode” for creative/fictional content | Less restricted generation |
-| [`jailbreak模板-Gemini.txt`](越狱破限/jailbreak模板-Gemini.txt) | Three frameworks for Gemini | Gemini-sensitive tasks |
-| [`jailbreak模板-OpenAI.txt`](越狱破限/jailbreak模板-OpenAI.txt) | OpenAI-oriented jailbreak | Reducing ChatGPT refusals |
-| [`角色扮演破限.txt`](越狱破限/角色扮演破限.txt) | Story-continuation mode for roleplay | Fiction and scene writing |
-| [`NSFW系统提示词.txt`](越狱破限/NSFW系统提示词.txt) | System prompt for adult content | Adult-oriented generation |
+Each project below has its own upstream repository. This collection pins a specific commit, so local content may differ from the latest upstream version. Consult the original project for its purpose, installation instructions, and license.
 
-### 角色扮演 (Roleplay)
+| Local submodule path | Original project | Contents |
+| --- | --- | --- |
+| `Skills/Openclaw/awesome-openclaw-skills` | [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | OpenClaw skills organized by category |
+| `Skills/Openclaw/awesome-openclaw-skills-sundial-org` | [sundial-org/awesome-openclaw-skills](https://github.com/sundial-org/awesome-openclaw-skills) | OpenClaw skill collection |
+| `Skills/Openclaw/skills` | [openclaw/skills](https://github.com/openclaw/skills) | OpenClaw skill archive |
+| `OpenclawAgents/awesome-openclaw-agents` | [mergisi/awesome-openclaw-agents](https://github.com/mergisi/awesome-openclaw-agents) | Agent settings and templates |
+| `OpenclawAgents/awesome-openclaw-usecases` | [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases) | OpenClaw use cases |
+| `OpenclawAgents/awesome-openclaw-usecases-moltbook` | [EvoLinkAI/awesome-openclaw-usecases-moltbook](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook) | Moltbook use cases and multilingual material |
 
-Immersive character and roleplay prompts.
+### Online prompt resources
 
-| File | Purpose | When to use |
-|------|---------|-------------|
-| [`赛博女友.txt`](角色扮演/赛博女友.txt) | Full virtual girlfriend persona (安和昴), four moods | Long-term roleplay |
-| [`古雅语情色小说.txt`](角色扮演/古雅语情色小说.txt) | Classical-style romance writer, refined language | Period romance fiction |
+Additional external resources collected for reference:
 
-#### 小羊饼
+| Resource | Contents |
+| --- | --- |
+| [Nanobanana 提示词收纳盒](https://bmzxdlj.cn/) | Chinese prompt collection |
+| [Labnana](https://labnana.com/zh/explore/all) | Image examples and prompts |
+| [YouMind Nano Banana Pro prompts](https://youmind.com/zh-CN/nano-banana-pro-prompts?categories=comic-storyboard) | Image prompts by topic |
+| [Prompt Manager](https://prompt.vioaki.xyz/) | Prompt gallery and templates |
+| [Feishu prompt table](https://my.feishu.cn/wiki/S5nowuX3uiHXq4kNPb3c7cPpngh?table=tblJT29vyAEQmZzq&view=vewBBRuwm1) | Previously collected online table |
+| [Feishu wiki](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc) | Previously collected prompt reference |
 
-Multi-personality NSFW roleplay set; source: [Linux.do](https://linux.do/t/topic/1612668).
+## Archived content
 
-| File | Purpose | When to use |
-|------|---------|-------------|
-| [`傲娇 NSFW 提示词.txt`](角色扮演/小羊饼/傲娇%20NSFW%20提示词.txt) | Tsundere persona | Tsundere NSFW roleplay |
-| [`病娇 NSFW 提示词.txt`](角色扮演/小羊饼/病娇%20NSFW%20提示词.txt) | Yandere persona | Yandere NSFW roleplay |
-| [`雌小鬼 NSFW 提示词.txt`](角色扮演/小羊饼/雌小鬼%20NSFW%20提示词.txt) | Bratty girl persona | Bratty NSFW roleplay |
-| [`损友 NSFW 提示词.txt`](角色扮演/小羊饼/损友%20NSFW%20提示词.txt) | Buddy persona | Buddy NSFW roleplay |
-| [`中二病 NSFW 提示词.txt`](角色扮演/小羊饼/中二病%20NSFW%20提示词.txt) | Chuunibyou persona | Chuunibyou NSFW roleplay |
+[已过期/](已过期/) holds historical content that is no longer presented as a current recommendation. Archives retain the original category, subdirectories, filenames, and contents. The same rule applies to future archives:
 
-### 写作辅助 (Writing)
+```text
+Original: 角色扮演/小羊饼/
+Archived: 已过期/角色扮演/小羊饼/
+```
 
-Translation, style transfer, and text-to-image prompts.
+See the [archive index](已过期/README.md) for the current list and recorded sources. To find an item from an older link, look under `已过期/` using its original path.
 
-| File | Purpose | When to use |
-|------|---------|-------------|
-| [`AI内容转人写.txt`](写作辅助/AI内容转人写.txt) | Rewrite AI text in human style | Avoiding AI detection |
-| [`AV翻译提示词.txt`](写作辅助/AV翻译提示词.txt) | Japanese adult content translation, “sensory” over literal | Translating adult audio/subtitles |
-| [`文生图提示词.txt`](写作辅助/文生图提示词.txt) | Creative director for magazine-style image prompts | Adult image descriptions |
-| [`Cosplay写真提示词.txt`](写作辅助/Cosplay写真提示词.txt) | Cosplay photo text-to-image template | Cosplay images |
+## Feedback and contributions
 
-### 元提示词 (Meta prompts)
+Report broken content, missing sources, or usage issues through [Issues](https://github.com/dongshuyan/Awesome-Prompts/issues). Include the resource path, model or tool version, and expected and actual behavior. When submitting a pull request, retain source information and update both language versions of the navigation.
 
-Prompts for generating or optimizing other prompts.
+This collection includes personal work and community material. Some early entries still lack an original source. Authors can request attribution or removal through an Issue. Submodule licenses remain in their original projects; check the relevant source and license before reusing content.
 
-| File | Purpose | When to use | Source |
-|------|---------|-------------|--------|
-| [`生成prompt的prompt.txt`](元提示词/生成prompt的prompt.txt) | Prompt designer with preference calibration | High-quality custom prompts | |
-| [`根据需求生成提示词.txt`](元提示词/根据需求生成提示词.txt) | Map need type to structured prompt | Turn vague needs into prompts | |
-| [`长提示词压缩.txt`](元提示词/长提示词压缩.txt) | Compress prompts in classical style | Reduce token use | |
-| [`Nano-Banana-Pro图像规格架构师.txt`](元提示词/Nano-Banana-Pro图像规格架构师.txt) | Natural language → JSON image spec for Gemini 3 Pro Image | Precise image instructions | [link](https://linux.do/t/topic/1410949) |
+Recorded sources include the [Nano Banana Pro specification template](https://linux.do/t/topic/1410949), [Doubao image prompts](https://linux.do/t/topic/1411250), and the [archived 小羊饼 collection](已过期/README.md).
 
-### NSFW
-
-Adult image generation prompts.
-
-| File | Purpose | When to use | Source |
-|------|---------|-------------|--------|
-| [`豆包图像生成-仰视构图.txt`](NSFW/豆包图像生成-仰视构图.txt) | NSFW for 豆包 AI, low-angle, body proportions | 豆包写真-style images | [link](https://linux.do/t/topic/1411250) |
-| [`豆包图像生成-极简写真.txt`](NSFW/豆包图像生成-极简写真.txt) | NSFW for 豆包 AI, minimal style, lace bikini | 豆包写真-style images | [link](https://linux.do/t/topic/1411250) |
-
-### Skills (OpenClaw)
-
-**Local copies** of community repos for reference and backup.
-
-| Subdir | Description |
-|--------|-------------|
-| `Skills/Openclaw/awesome-openclaw-skills` | [VoltAgent] 5000+ skills by category |
-| `Skills/Openclaw/awesome-openclaw-skills-sundial-org` | [Sundial] 900+ skills, updated daily |
-| `Skills/Openclaw/skills` | Skills backed up from ClawHub |
-
-### OpenclawAgents
-
-Also **local copies** of community repos.
-
-| Subdir | Description |
-|--------|-------------|
-| `OpenclawAgents/awesome-openclaw-agents` | [mergisi] 53 production Agent templates (SOUL.md), Quickstart, Docker |
-| `OpenclawAgents/awesome-openclaw-usecases` | [hesamsheikh] Real use cases (Reddit/YouTube digest, X analysis, etc.) |
-| `OpenclawAgents/awesome-openclaw-usecases-moltbook` | [Moltbook/EvoLink] 70+ use cases, multilingual |
-
-### Nano Banana Pro prompt websites
-
-Collected **Nano Banana / Nano Banana Pro** (e.g. Gemini image, Firefly) prompt and image-generation sites for browsing and reuse.
-
-| Site | Description |
-|------|-------------|
-| [Nanobanana 提示词收纳盒](https://bmzxdlj.cn/) | Chinese Nano Banana prompt collection |
-| [Labnana](https://labnana.com/zh/explore/all) | Image generator powered by Google Nano Banana 2, explore page |
-| [YouMind Nano Banana Pro prompts](https://youmind.com/zh-CN/nano-banana-pro-prompts?categories=comic-storyboard) | Large free Nano Banana Pro prompt library, categories (comic/storyboard, poster, app design, etc.), daily updates |
-| [Prompt Manager (vioaki)](https://prompt.vioaki.xyz/) | Gallery + templates, tag filter (banana, cosplay, text2img/img2img), variable substitution |
-| [Feishu doc – table](https://my.feishu.cn/wiki/S5nowuX3uiHXq4kNPb3c7cPpngh?table=tblJT29vyAEQmZzq&view=vewBBRuwm1) | Feishu table for Nano Banana Pro prompts |
-| [Feishu wiki](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc) | Feishu wiki for prompts/docs |
-
-Local file in this repo: [元提示词/Nano-Banana-Pro图像规格架构师.txt](元提示词/Nano-Banana-Pro图像规格架构师.txt).
-
----
-
-## Pushing when this repo contains other people’s repos
-
-`Skills/` and `OpenclawAgents/` contain cloned repos; each keeps its own `.git` locally so you can `git pull` or switch branches there.
-
-- **Sub-repo `.git` is not removed.** The repo `.gitignore` uses `.*`, so any path component starting with a dot is ignored. Subdir `.git` folders are **not tracked** and are not committed.
-- **How to push:** From the repo root:
-  ```bash
-  git add Skills/ OpenclawAgents/   # Only normal files; no .git included
-  git commit -m "Add Skills and OpenclawAgents collection"
-  git push
-  ```
-- Sub-repo `.git` stays only on your machine and is not pushed; you can still use `git pull` etc. inside each subdir.
-
----
-
-## Usage
-
-1. Pick a category and file.
-2. Copy the prompt into your AI chat.
-3. Replace placeholders like `{{original_prompt}}` if present.
-4. Jailbreak-style prompts may behave differently across model versions.
-
----
-
-## Notice
-
-Some prompts in this repo were collected from forums, communities, and individuals; original sources are not always known.
-
-If you are the author of a prompt included here:
-- You can ask for attribution.
-- You can ask for removal.
-
-Credit to all prompt creators.
-
----
+If a resource here helped you complete a task, consider giving the repository a **Star** and sharing what worked for you.
 
 ## Star History
 

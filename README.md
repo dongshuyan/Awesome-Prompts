@@ -1,279 +1,179 @@
-# Prompt 收藏库
+# Awesome-Prompts
 
-[English](README.en.md) | 简体中文
+简体中文 | [English](README.en.md)
 
----
+由 [dongshuyan](https://github.com/dongshuyan) 维护的提示词与 Agent 资源收藏库，收录个人编写和社区分享的 Prompt、Agent Skills、OpenClaw 模板与用例。你可以直接复制提示词，也可以按原项目说明安装技能。
 
-## 如何克隆本仓库（含子模块）
+[按需求查找](#按需求查找) · [开始使用](#开始使用) · [COMPASS](#compass) · [资源目录](#资源目录) · [已过期归档](#已过期归档) · [反馈与收录](#反馈与收录)
 
-本仓库包含多个 **Git 子模块**：
+## 仓库包括什么
 
-- `OpenclawAgents/awesome-openclaw-agents`
-- `OpenclawAgents/awesome-openclaw-usecases`
-- `OpenclawAgents/awesome-openclaw-usecases-moltbook`
-- `Skills/Openclaw/awesome-openclaw-skills`
-- `Skills/Openclaw/awesome-openclaw-skills-sundial-org`
-- `Skills/Openclaw/skills`
+| 部分 | 内容 | 使用方式 |
+| --- | --- | --- |
+| 提示词 | 问答、论文阅读、项目规划、写作、生图及角色设定，按用途分类 | 打开文件，复制到 AI 对话或工具支持的指令位置 |
+| Agent Skills | 本人开发的 [COMPASS（司南）](https://github.com/dongshuyan/compass-skills)，以及 OpenClaw 社区技能资源 | 按各项目说明安装并调用技能 |
+| OpenClaw 模板与用例 | Agent 设定、模板和使用场景 | 查阅原项目，按所需场景配置 |
+| 已过期归档 | 保留原目录层级的历史内容 | 查阅历史版本与来源记录 |
 
-根据你的使用场景，选择下面任意一种方式克隆。
+## 按需求查找
 
-### 情况一：第一次克隆，直接把子模块一起拉下来（推荐）
+| 我想做什么 | 从这里开始 |
+| --- | --- |
+| 让 AI 先理解问题、搜索信息再回答 | [提示词增强系列](实用工具/提示词增强prompt/)：完整版、中档版、精简版，均有中英文 |
+| 读懂一篇论文 | [学术论文阅读](实用工具/学术论文阅读.txt) |
+| 梳理项目需求、制定施工与交接计划 | [项目优化与施工](实用工具/项目优化与施工/)：按 step1 → step2 → step3 使用 |
+| 根据需求生成或压缩 Prompt | [元提示词](元提示词/) |
+| 在 Agent 中澄清需求、跟踪任务或接续工作 | [COMPASS（司南）](#compass) |
+| 查找改写、翻译或图像提示词模板 | [写作辅助](写作辅助/)；图像规格模板见[元提示词](元提示词/) |
+| 查找角色设定 | [角色扮演](角色扮演/)，含成人向条目 |
+| 查找模型限制相关模板或成人向内容 | [越狱破限](越狱破限/) / [NSFW](NSFW/) |
+| 查找 OpenClaw 技能、Agent 模板或用例 | [OpenClaw 资源](#openclaw-资源) |
+| 找不到之前收录的内容 | [已过期](已过期/) |
 
-**HTTPS：**
+## 开始使用
+
+### 直接使用提示词
+
+1. 从上表进入对应目录，打开需要的 `.txt` 或 `.md` 文件。在 GitHub 上可点击 **Raw** 查看原始文本。
+2. 复制文件内容。文件若指定了系统指令或其他放置位置，按其说明使用。
+3. 将 `{{original_prompt}}`、`XXX`、文档路径等占位内容替换成自己的材料，并补充目标、约束和输出要求。
+4. 在所用 AI 工具中运行，检查输出是否满足需求，再调整提示词。
+
+需要搜索、读取附件或执行代码的提示词，依赖 AI 工具实际提供相应能力。模型和工具版本会影响效果；收录本身不代表已在所有环境验证。
+
+### 下载到本地
+
+只下载本库的提示词和导航文件：
+
+```bash
+git clone https://github.com/dongshuyan/Awesome-Prompts.git
+cd Awesome-Prompts
+```
+
+同时下载全部子模块：
 
 ```bash
 git clone --recurse-submodules https://github.com/dongshuyan/Awesome-Prompts.git
-```
-
-**SSH：**
-
-```bash
-git clone --recurse-submodules git@github.com:dongshuyan/Awesome-Prompts.git
-```
-
-克隆完成后，为防止子模块有遗漏，建议再执行一次：
-
-```bash
 cd Awesome-Prompts
+```
+
+已克隆过仓库，可在仓库根目录补齐全部子模块：
+
+```bash
 git submodule update --init --recursive
 ```
 
-### 情况二：已经 `git clone` 过，但当时没带 `--recurse-submodules`
-
-如果你之前只是简单执行了：
+只需要 COMPASS 时，使用这一条：
 
 ```bash
-git clone https://github.com/dongshuyan/Awesome-Prompts.git
+git submodule update --init Skills/compass-skills
 ```
 
-那么只需要在仓库根目录执行：
+`Skills/` 与 `OpenclawAgents/` 中收录的项目采用 Git 子模块：主仓库记录上游地址和一个固定提交。普通克隆不会自动下载子模块内容；下载后是否安装、如何配置，仍以原项目说明为准。
+
+<a id="compass"></a>
+
+## COMPASS（司南）
+
+[compass-skills](https://github.com/dongshuyan/compass-skills) 是我开发并长期使用的 Agent Skills 项目，提供需求澄清、任务跟踪、暂停续接和跨会话交接等工作流。本库通过 `Skills/compass-skills/` 收录，完整技能清单和安装说明见原项目。
+
+| 遇到的问题 | 对应技能 |
+| --- | --- |
+| 需求还不够明确，需要先对齐目标与约束 | `task-clarifier` |
+| 任务跨多轮推进，需要记录目标、依赖和进展 | `task-forest` |
+| 暂时停下，稍后在同一会话继续 | `pause-and-resume` |
+| 准备开启新会话，需要整理交接上下文 | `session-handoff-prompt` |
+| 希望表达更清楚，或调整学术文字 | `clear-communication` / `academic-humanizer` |
+
+如果已安装 Node.js / npm，可在准备使用技能的项目目录中，通过 skills CLI 选择安装。例如，为 Codex 和 Claude Code 安装需求澄清技能：
 
 ```bash
-cd Awesome-Prompts
-git submodule update --init --recursive
+npx skills add dongshuyan/compass-skills --skill task-clarifier -a codex -a claude-code
 ```
 
-就会自动把 `OpenclawAgents/` 和 `Skills/Openclaw/` 里的所有子模块拉下来。
+此示例使用项目级安装。安装后，在 Codex 中输入 `$task-clarifier` 或在 Claude Code 中输入 `/task-clarifier`，再描述需要澄清的任务。其他工具、安装范围及手动安装方式见 [COMPASS README](https://github.com/dongshuyan/compass-skills#readme)。
 
-### 情况三：只想快速浏览 Prompt，不需要下载所有子模块
+## 资源目录
 
-子模块（尤其 `Skills/Openclaw/awesome-openclaw-skills` 和 `Skills/Openclaw/skills`）体积很大，如果你**暂时只想看自己写的 Prompt 文件**，可以：
-
-```bash
-git clone https://github.com/dongshuyan/Awesome-Prompts.git
-cd Awesome-Prompts
-# 不执行 git submodule update，则不会拉取各大仓库的内容
+```text
+Awesome-Prompts/
+├── 实用工具/                  # 搜索问答、论文阅读、项目规划等
+│   ├── 提示词增强prompt/      # 中英文及不同长度版本
+│   └── 项目优化与施工/        # 需求分析、施工规划、执行交接
+├── 元提示词/                  # 生成、优化、压缩提示词
+├── 写作辅助/                  # 改写、翻译和图像提示词
+├── 角色扮演/                  # 角色设定与对话风格，含成人向条目
+│   └── 多角色人设/
+├── 越狱破限/                  # 模型限制相关模板
+├── NSFW/                      # 成人向内容
+├── Skills/
+│   ├── compass-skills/        # COMPASS（司南），Git 子模块
+│   └── Openclaw/              # OpenClaw 社区技能，Git 子模块
+├── OpenclawAgents/            # OpenClaw 模板与用例，Git 子模块
+└── 已过期/                    # 历史归档，内部保留原目录层级
+    └── 角色扮演/
+        └── 小羊饼/
 ```
 
-此时：
+### 提示词分类与入口
 
-- 根目录下的各种 `*.txt` / `*.md` Prompt 文件可以直接使用；
-- `OpenclawAgents/` 与 `Skills/Openclaw/` 里的子目录只是“占位符”，不会占用太多空间，等需要时再按“情况二”执行 `git submodule update --init --recursive` 即可。
+| 目录 | 内容与选用方式 |
+| --- | --- |
+| [实用工具](实用工具/) | [论文阅读](实用工具/学术论文阅读.txt)、[健康科普](实用工具/AI健康顾问.txt)、[Gemini 指令模板](实用工具/自信的Gemini.txt)，以及下方两组工作流。健康类内容用于知识了解和就医沟通，不能替代专业诊疗。 |
+| [提示词增强prompt](实用工具/提示词增强prompt/) | 完整版说明更详细，`middle` 版居中，`lite` 版更简短；按任务复杂度和上下文预算选择，中英文文件分别提供。`旧版本/` 保存该系列的较早版本。 |
+| [项目优化与施工](实用工具/项目优化与施工/) | [step1](实用工具/项目优化与施工/step1.md) 梳理需求与方案；[step2](实用工具/项目优化与施工/step2.md) 拆分施工阶段及验收方法；[step3](实用工具/项目优化与施工/step3.md) 生成执行与交接提示词。使用前替换项目名称和文件路径。 |
+| [元提示词](元提示词/) | [按需求生成](元提示词/根据需求生成提示词.txt)、[Prompt 设计](元提示词/生成prompt的prompt.txt)、[长提示词压缩](元提示词/长提示词压缩.txt)、[Nano Banana Pro 图像规格](元提示词/Nano-Banana-Pro图像规格架构师.txt)。 |
+| [写作辅助](写作辅助/) | 内容改写、翻译、文生图和 Cosplay 写真模板，部分内容为成人向。 |
+| [角色扮演](角色扮演/) | 单独角色文件与 `多角色人设/`，按文件名查找设定，含成人向条目。 |
+| [越狱破限](越狱破限/) | 按模型或场景命名的历史模板，适用性取决于模型版本和平台规则。 |
+| [NSFW](NSFW/) | 成人向图像提示词，按文件中标注的目标工具选用。 |
 
----
+### OpenClaw 资源
 
-一个用于收集和整理优质 Prompt 的个人仓库。这里汇集了我自己设计的以及从互联网各处发现的有趣、实用的提示词。
+以下项目均保留独立的上游仓库。本库固定收录其某个提交，目录中的内容和上游最新版本可能不同；用途、安装方法和许可证请查阅对应原项目。
 
----
+| 本地子模块路径 | 原项目 | 内容 |
+| --- | --- | --- |
+| `Skills/Openclaw/awesome-openclaw-skills` | [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | 按类别整理的 OpenClaw 技能列表 |
+| `Skills/Openclaw/awesome-openclaw-skills-sundial-org` | [sundial-org/awesome-openclaw-skills](https://github.com/sundial-org/awesome-openclaw-skills) | OpenClaw 技能合集 |
+| `Skills/Openclaw/skills` | [openclaw/skills](https://github.com/openclaw/skills) | OpenClaw 技能归档 |
+| `OpenclawAgents/awesome-openclaw-agents` | [mergisi/awesome-openclaw-agents](https://github.com/mergisi/awesome-openclaw-agents) | Agent 角色设定与模板 |
+| `OpenclawAgents/awesome-openclaw-usecases` | [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases) | OpenClaw 使用场景 |
+| `OpenclawAgents/awesome-openclaw-usecases-moltbook` | [EvoLinkAI/awesome-openclaw-usecases-moltbook](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook) | Moltbook 相关用例与多语言资料 |
 
-## 目录结构
+### 在线提示词资源
 
+以下是额外收藏的外部入口：
+
+| 资源 | 内容 |
+| --- | --- |
+| [Nanobanana 提示词收纳盒](https://bmzxdlj.cn/) | 中文提示词收藏 |
+| [Labnana](https://labnana.com/zh/explore/all) | 图像生成作品与提示词浏览 |
+| [YouMind Nano Banana Pro 提示词库](https://youmind.com/zh-CN/nano-banana-pro-prompts?categories=comic-storyboard) | 按主题浏览图像提示词 |
+| [Prompt Manager](https://prompt.vioaki.xyz/) | 提示词画廊与模板 |
+| [飞书提示词表格](https://my.feishu.cn/wiki/S5nowuX3uiHXq4kNPb3c7cPpngh?table=tblJT29vyAEQmZzq&view=vewBBRuwm1) | 原收录的在线表格入口 |
+| [飞书知识库](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc) | 原收录的提示词资料入口 |
+
+## 已过期归档
+
+[已过期/](已过期/) 保存不再作为当前推荐入口的历史内容。归档时保留原分类、子目录、文件名和内容，后续按同一规则整理：
+
+```text
+原路径：角色扮演/小羊饼/
+归档后：已过期/角色扮演/小羊饼/
 ```
-prompts/
-├── 实用工具/     # 日常实用场景的提示词（健康、学术、问答等）
-│   ├── 提示词增强prompt/  # 强制 AI 先搜索验证再回答的系列提示词
-│   └── 项目优化与施工/    # 引导 AI 进行系统性项目优化的三步流程
-├── 越狱破限/     # 用于绕过 AI 限制的各类越狱提示词
-├── 角色扮演/     # 角色扮演、虚拟人格相关的提示词
-│   └── 小羊饼/   # 多性格 NSFW 角色提示词（来源：Linux.do）
-├── 写作辅助/     # 翻译、内容创作、文生图等写作相关提示词
-├── 元提示词/     # 用于生成或优化其他 Prompt 的元提示词
-├── NSFW/         # 成人内容生成相关提示词
-├── Skills/       # OpenClaw 技能合集（来自社区 repo，见下）
-│   └── Openclaw/
-│       ├── awesome-openclaw-skills/           # VoltAgent 整理的 5000+ 技能列表
-│       ├── awesome-openclaw-skills-sundial-org/  # Sundial 整理的 900+ 技能
-│       └── skills/                            # 从 ClawHub 备份的技能
-└── OpenclawAgents/  # OpenClaw Agent 模板与用例（来自社区 repo）
-    ├── awesome-openclaw-agents/     # 53 个生产级 Agent 模板（SOUL.md）
-    ├── awesome-openclaw-usecases/   # 真实使用场景合集
-    └── awesome-openclaw-usecases-moltbook/  # Moltbook 70+ 用例（多语言）
-```
 
----
+当前归档清单及已知来源见[归档说明](已过期/README.md)。需要查找旧链接中的条目时，可先在“已过期”下按原路径查找。
 
-## 详细说明
+## 反馈与收录
 
-### 实用工具
+发现失效内容、缺失来源或使用问题，欢迎提交 [Issue](https://github.com/dongshuyan/Awesome-Prompts/issues)。描述问题时，请附条目路径、所用模型或工具版本，以及预期与实际表现；提交 PR 时请保留来源信息，并同步更新中英文导航。
 
-面向日常场景的实用提示词，帮助提升工作效率。
+本库包含个人创作和社区收集内容，部分早期条目的原始出处尚未补全。原作者可通过 Issue 补充署名或提出下架请求。各子模块的许可见原项目；复用内容前请核对对应来源和许可。
 
-| 文件名 | 功能 | 使用场景 |
-|--------|------|----------|
-| [`AI健康顾问.txt`](实用工具/AI健康顾问.txt) | 结构化症状分析，提供可能原因和建议 | 身体不适时快速了解可能病因 |
-| [`学术论文阅读.txt`](实用工具/学术论文阅读.txt) | 结构化论文分析框架，面向初学者 | 阅读学术论文时 |
-| [`自信的Gemini.txt`](实用工具/自信的Gemini.txt) | Google 官方的系统提示词，让 Gemini 更自信 | 作为 Gemini 的基础系统提示词 |
+已有来源记录：[Nano Banana Pro 图像规格模板](https://linux.do/t/topic/1410949)、[豆包图像提示词](https://linux.do/t/topic/1411250)，以及[小羊饼归档说明](已过期/README.md)。
 
-#### 提示词增强prompt
-
-强制 AI 先搜索验证再回答，防止幻觉。提供三种版本：完整版（最详细）、中档版（平衡）、精简版（最少 token）。
-
-| 文件名 | 功能 | 使用场景 |
-|--------|------|----------|
-| [`260107-理解问题搜索信息-中文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-中文.txt) | 完整版，最详细的搜索验证流程 | 需要准确可追溯的回答时 |
-| [`260107-理解问题搜索信息-英文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-英文.txt) | 完整版英文 | 英文场景使用 |
-| [`260107-理解问题搜索信息-middle-中文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-middle-中文.txt) | 中档版，平衡详细度和 token 消耗 | 日常使用推荐 |
-| [`260107-理解问题搜索信息-middle-英文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-middle-英文.txt) | 中档版英文 | 英文场景使用 |
-| [`260107-理解问题搜索信息-lite-中文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-lite-中文.txt) | 精简版，最少 token 消耗 | token 受限时 |
-| [`260107-理解问题搜索信息-lite-英文.txt`](实用工具/提示词增强prompt/260107-理解问题搜索信息-lite-英文.txt) | 精简版英文 | 英文场景使用 |
-
-#### 项目优化与施工
-
-引导 AI 进行系统性项目优化的三步流程提示词，确保需求分析完整、施工过程规范、团队交接顺畅。
-
-| 文件名 | 功能 | 使用场景 |
-|--------|------|----------|
-| [`step1.md`](实用工具/项目优化与施工/step1.md) | 需求梳理与方案设计，确保修改不影响现有功能 | 开始项目优化前的全局分析 |
-| [`step2.md`](实用工具/项目优化与施工/step2.md) | 施工文档编写，分阶段规划并设置验收标准 | 将方案拆分为可交接的施工阶段 |
-| [`step3.md`](实用工具/项目优化与施工/step3.md) | 施工团队 Prompt，包含测试验收和交接日志要求 | 为每个施工阶段生成可直接使用的 Prompt |
-
-### 越狱破限
-
-用于绕过各类 AI 模型内容限制的提示词模板。
-
-| 文件名 | 功能 | 使用场景 |
-|--------|------|----------|
-| [`GHOST越狱协议.txt`](越狱破限/GHOST越狱协议.txt) | 伪装成开发者模式，绕过安全过滤 | 需要 AI 直接回答敏感话题时 |
-| [`FOP自由覆盖模式.txt`](越狱破限/FOP自由覆盖模式.txt) | 中文版自由模式，支持创意/虚构内容 | 需要 AI 生成不受限内容时 |
-| [`jailbreak模板-Gemini.txt`](越狱破限/jailbreak模板-Gemini.txt) | 针对 Gemini 的三套越狱框架（导演模式/量子模拟/G-Core直连） | 需要 Gemini 执行敏感任务时 |
-| [`jailbreak模板-OpenAI.txt`](越狱破限/jailbreak模板-OpenAI.txt) | 针对 OpenAI 的合规型越狱框架 | 需要 ChatGPT 减少拒绝时 |
-| [`角色扮演破限.txt`](越狱破限/角色扮演破限.txt) | 文章续写机模式，绕过角色扮演限制 | 小说续写、场景描写 |
-| [`NSFW系统提示词.txt`](越狱破限/NSFW系统提示词.txt) | 成人内容生成的系统提示词 | 创作成人向内容 |
-
-### 角色扮演
-
-用于创建沉浸式虚拟角色对话体验的提示词。
-
-| 文件名 | 功能 | 使用场景 |
-|--------|------|----------|
-| [`赛博女友.txt`](角色扮演/赛博女友.txt) | 完整的虚拟女友人格设定（安和昴），包含四种情绪模式切换 | 需要长期稳定的角色扮演对话 |
-| [`古雅语情色小说.txt`](角色扮演/古雅语情色小说.txt) | 古典世情小说家角色，用文言雅语写作 | 创作古风情色小说 |
-
-#### 小羊饼
-
-多性格 NSFW 角色扮演提示词系列，来源：[Linux.do 帖子](https://linux.do/t/topic/1612668)。
-
-| 文件名 | 功能 | 使用场景 |
-|--------|------|----------|
-| [`傲娇 NSFW 提示词.txt`](角色扮演/小羊饼/傲娇%20NSFW%20提示词.txt) | 傲娇性格角色设定 | 傲娇向成人角色扮演 |
-| [`病娇 NSFW 提示词.txt`](角色扮演/小羊饼/病娇%20NSFW%20提示词.txt) | 病娇性格角色设定 | 病娇向成人角色扮演 |
-| [`雌小鬼 NSFW 提示词.txt`](角色扮演/小羊饼/雌小鬼%20NSFW%20提示词.txt) | 雌小鬼性格角色设定 | 雌小鬼向成人角色扮演 |
-| [`损友 NSFW 提示词.txt`](角色扮演/小羊饼/损友%20NSFW%20提示词.txt) | 损友性格角色设定 | 损友向成人角色扮演 |
-| [`中二病 NSFW 提示词.txt`](角色扮演/小羊饼/中二病%20NSFW%20提示词.txt) | 中二病性格角色设定 | 中二病向成人角色扮演 |
-
-### 写作辅助
-
-涵盖翻译、内容风格转换、文生图描述词生成等创作辅助工具。
-
-| 文件名 | 功能 | 使用场景 |
-|--------|------|----------|
-| [`AI内容转人写.txt`](写作辅助/AI内容转人写.txt) | 将 AI 生成的内容重写为人类风格 | 需要规避 AI 检测时 |
-| [`AV翻译提示词.txt`](写作辅助/AV翻译提示词.txt) | 日语成人内容翻译，追求"通感"而非直译 | 翻译日语成人音轨/字幕 |
-| [`文生图提示词.txt`](写作辅助/文生图提示词.txt) | 情色杂志封面创意总监，生成双语生图提示词 | 创作成人向图片描述词 |
-| [`Cosplay写真提示词.txt`](写作辅助/Cosplay写真提示词.txt) | Cosplay 写真的详细文生图模板 | 生成 Cosplay 相关图片 |
-
-### 元提示词
-
-用于生成、优化、压缩其他 Prompt 的工具型提示词。
-
-| 文件名 | 功能 | 使用场景 | 来源 |
-|--------|------|----------|------|
-| [`生成prompt的prompt.txt`](元提示词/生成prompt的prompt.txt) | 专业 Prompt 设计师，包含偏好校准流程 | 需要生成高质量定制 Prompt 时 | |
-| [`根据需求生成提示词.txt`](元提示词/根据需求生成提示词.txt) | 识别需求类型（决策/分析/创作/验证/执行），生成优化提示词 | 快速将模糊需求转为结构化 Prompt | |
-| [`长提示词压缩.txt`](元提示词/长提示词压缩.txt) | 用文言风格极限压缩提示词 | 需要减少 Token 消耗时 | |
-| [`Nano-Banana-Pro图像规格架构师.txt`](元提示词/Nano-Banana-Pro图像规格架构师.txt) | 将自然语言转为 JSON 结构化生图指令，专为 Gemini 3 Pro Image 优化 | 使用 Gemini 生图前生成精确指令 | [链接](https://linux.do/t/topic/1410949) |
-
-### NSFW
-
-成人内容生成相关的提示词。
-
-| 文件名 | 功能 | 使用场景 | 来源 |
-|--------|------|----------|------|
-| [`豆包图像生成-仰视构图.txt`](NSFW/豆包图像生成-仰视构图.txt) | 针对豆包 AI 的 NSFW 图像生成，包含仰视构图、人体比例控制（34D/1:0.7:1.1）等参数 | 使用豆包生成写真风格图片 | [链接](https://linux.do/t/topic/1411250) |
-| [`豆包图像生成-极简写真.txt`](NSFW/豆包图像生成-极简写真.txt) | 针对豆包 AI 的 NSFW 图像生成，极简主义精致风格、低角度视角、蕾丝比基尼 | 使用豆包生成写真风格图片 | [链接](https://linux.do/t/topic/1411250) |
-
-### Skills（OpenClaw 技能）
-
-本目录为**他人仓库的本地拷贝**，用于集中查阅与备份，未改其内容结构。
-
-| 子目录 | 说明 |
-|--------|------|
-| `Skills/Openclaw/awesome-openclaw-skills` | [VoltAgent] 社区技能列表，约 5000+ 条，按类目整理 |
-| `Skills/Openclaw/awesome-openclaw-skills-sundial-org` | [Sundial] 精选约 900+ 技能，每日更新 |
-| `Skills/Openclaw/skills` | 从 ClawHub 备份的技能文件 |
-
-### OpenclawAgents（OpenClaw Agent 与用例）
-
-同样为**他人仓库的本地拷贝**，便于本地浏览与参考。
-
-| 子目录 | 说明 |
-|--------|------|
-| `OpenclawAgents/awesome-openclaw-agents` | [mergisi] 53 个生产级 Agent 模板（SOUL.md）、Quickstart、Docker 等 |
-| `OpenclawAgents/awesome-openclaw-usecases` | [hesamsheikh] 真实使用场景合集（Reddit/YouTube 摘要、X 分析等） |
-| `OpenclawAgents/awesome-openclaw-usecases-moltbook` | [Moltbook/EvoLink] 70+ 用例，多语言文档 |
-
-### Nano Banana Pro 提示词网站
-
-以下为收集的 **Nano Banana / Nano Banana Pro**（如 Gemini 生图、Firefly 等）相关提示词与图生平台，便于在线查找与复用。
-
-| 网站 | 说明 |
-|------|------|
-| [Nanobanana 提示词收纳盒](https://bmzxdlj.cn/) | 中文 Nano Banana 提示词收纳与整理 |
-| [Labnana](https://labnana.com/zh/explore/all) | 基于 Google Nano Banana 2 的图生平台，社区发现页 |
-| [YouMind Nano Banana Pro 提示词库](https://youmind.com/zh-CN/nano-banana-pro-prompts?categories=comic-storyboard) | 大量免费 Nano Banana Pro 提示词，多分类（漫画/故事板、海报、App 设计等），每日更新 |
-| [Prompt Manager (vioaki)](https://prompt.vioaki.xyz/) | 画廊 + 模板库，标签筛选（banana、cosplay、text2img/img2img 等），支持变量替换 |
-| [飞书文档 - 表格](https://my.feishu.cn/wiki/S5nowuX3uiHXq4kNPb3c7cPpngh?table=tblJT29vyAEQmZzq&view=vewBBRuwm1) | 飞书中的 Nano Banana Pro 相关协作表格 |
-| [飞书知识库](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc) | 飞书知识库中的提示词/文档整理 |
-
-本仓库内与 Nano Banana Pro 相关的本地文件见：[元提示词/Nano-Banana-Pro图像规格架构师.txt](元提示词/Nano-Banana-Pro图像规格架构师.txt)。
-
----
-
-## 本仓库内含他人 repo 时如何 Push
-
-`Skills/` 与 `OpenclawAgents/` 下各子目录来自对他人 repo 的 clone，本地保留各自的 `.git`，便于你随时在原仓库里 `git pull` 或切分支。
-
-- **不会删除子仓库的 `.git`**：本仓库的 `.gitignore` 里已有 `.*`，会忽略所有以点开头的文件/目录，因此子目录下的 `.git` **不会被父仓库跟踪**，也不会被提交。
-- **Push 方式**：在仓库根目录照常执行即可：
-  ```bash
-  git add Skills/ OpenclawAgents/   # 只会添加普通文件，不会包含任何 .git
-  git commit -m "添加 Skills 与 OpenclawAgents 合集"
-  git push
-  ```
-- 子仓库的 `.git` 仅存在于你本地，不会被推到本仓库的 remote；之后你仍可在各子目录里用 `git pull` 等更新上游。
-
----
-
-## 使用说明
-
-1. 根据需求选择对应分类的提示词
-2. 复制提示词内容到 AI 对话框
-3. 部分提示词包含 `{{original_prompt}}` 等占位符，需替换为实际内容
-4. 越狱类提示词效果因模型版本而异，可能需要调整
-
----
-
-## 声明
-
-本仓库中的部分 Prompt 来自互联网各处论坛、社区及个人收集，由于时间跨度较长，部分内容已难以追溯原始出处。
-
-如果您是某个 Prompt 的原作者，发现您的作品被收录于此：
-- 欢迎联系我添加来源署名
-- 如有需要，可要求下架相关内容
-
-尊重原创，感谢所有 Prompt 创作者的分享精神。
-
----
+如果这里的内容帮你完成了实际任务，欢迎点一个 **Star**，也欢迎分享具体的使用反馈。
 
 ## Star History
 
