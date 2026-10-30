@@ -2,6 +2,14 @@
 .*
 !.gitignore
 !.gitmodules
+!/.github/
+!/.github/workflows/
+!/.github/workflows/*.yml
+
+# Generated site and local research records
+/_site/
+/research/
+__pycache__/
 
 others/
 temp/

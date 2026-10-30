@@ -33,6 +33,28 @@
 
 PR请保留来源与许可，更新中英文导航。反馈既有问题时提供路径和中性描述，不在Issue中复制有问题的正文。原作者可通过Issue补充署名、授权或提出下架请求。
 
+### 网页与 README 同步维护
+
+收录决定仍由维护者审阅。正文保留在原文件，目录数据集中在 `catalog/resources.json`；网页沿用已选定的 B 版，源码在 `site/`。
+
+- 修改正文：编辑已登记的源文件。需要调整介绍或证据时同时更新目录，审阅日期不会由构建自动推进。
+- 修改介绍、分类或来源：编辑对应资源记录的 `title`、`description`、`category`、`url` 或 `versionUrl`；README 较长的说明在 `readmeDescription`。两种语言都需校对。
+- 新增条目：先确认收录，分配稳定 `id`，填齐现有字段；`readmeGroup` 设为 `practical-new`、`meta-new`、`writing-new`、`roleplay-new`、`jailbreak-new` 或 `nsfw-new`，可用 `readmeOrder` 调整同组顺序。默认 `preview: false`；正文预览需另行审阅，不能因目录位置相同而自动开启。新增本地文件还需填写 `sourcePath` 并先 `git add` 该文件。
+- 重命名或归档：保持 `id`，更新路径；归档同时设置 `archived: true`、`status: "archived"`、`preview: false`。不要直接改生成区块。
+
+更新后，在仓库根目录运行（Python 3.12+，Node.js 24）：
+
+```bash
+python3 scripts/site.py --write
+python3 -m unittest discover -s tests -p 'test_*.py'
+node --test tests/core.test.cjs
+python3 -m http.server 8000 --bind 127.0.0.1 --directory _site
+```
+
+打开 `http://127.0.0.1:8000/` 查看工作区预览。提交源文件、目录数据与生成的两份 README，不提交 `_site/`。旧分组、系列概述和精选位置在目录的 `readme.blocks` 与 `readme.groups` 中保留；新增条目用上述 `readmeGroup` 自动进入对应列表。分类标准的网页文字和 README 文字分别为 `categories[].criteria` 与 `readmeCriteria`。
+
+PR 只构建和检查。推送到 `master`（包括合并 PR）后自动发布到 [资源网页](https://dongshuyan.com/Awesome-Prompts/)，手动运行 workflow 也只允许发布当前 `master`。流水线使用本仓库的临时令牌，不访问你账号下的其他仓库或改变账号权限，不自动更新子模块或上游作品。发布前检查失败会停止部署；需要回滚时撤销有问题的提交并重新发布。
+
 ## English
 
 Submit your own work or suggest a specific prompt, prompt template or skill. Use the existing categories where possible; explain why a new category is necessary. Plugins and complete applications are outside the scope of new entries, although an accepted item can identify its original repository.
@@ -63,3 +85,25 @@ Verifiable feedback or firsthand results (“not tested” is acceptable):
 If you claim testing, give the model/tool version, date, task conditions and verifiable results. Additional execution is not required to submit. Maintainers read the content and assess available feedback; repository popularity is background information. An accepted entry identifies the original repository, selected item, purpose and limitations. Initial presentation favors descriptions and source links, without copying whole repositories.
 
 PRs should retain attribution and licenses and update both README languages. For existing-content issues, provide the path and a neutral description without reposting problematic text. Authors can use Issues to clarify attribution, provide permission or request removal.
+
+### Maintaining the website and README
+
+Maintainers still approve selection. Keep resource bodies in their original files and metadata in `catalog/resources.json`. The approved B homepage lives in `site/`.
+
+- Edit registered source files for body changes. Update descriptions or evidence when affected; builds never advance review dates.
+- Edit `title`, `description`, `category`, `url` or `versionUrl` in the resource record. Longer README prose belongs in `readmeDescription`. Review both languages.
+- For approved additions, assign a stable `id` and complete the existing fields. Set `readmeGroup` to `practical-new`, `meta-new`, `writing-new`, `roleplay-new`, `jailbreak-new` or `nsfw-new`; optional `readmeOrder` controls order within that group. Start with `preview: false`. Body previews need a separate content decision. For local resources, add `sourcePath` and stage the new file with `git add` before building.
+- Keep IDs on rename or archive. Update paths; archiving sets `archived: true`, `status: "archived"`, `preview: false`. Do not edit generated README blocks directly.
+
+From the repository root, using Python 3.12+ and Node.js 24:
+
+```bash
+python3 scripts/site.py --write
+python3 -m unittest discover -s tests -p 'test_*.py'
+node --test tests/core.test.cjs
+python3 -m http.server 8000 --bind 127.0.0.1 --directory _site
+```
+
+Open `http://127.0.0.1:8000/` for a working-tree preview. Commit source files, metadata and generated README changes, excluding `_site/`. Existing grouping and editorial placement are in `readme.blocks` and `readme.groups`; new records use `readmeGroup` to join the appropriate list automatically. Category criteria use explicit website and README fields: `categories[].criteria` and `readmeCriteria`.
+
+PRs only build and check. Pushes to `master`, including merged PRs, publish to the [resource website](https://dongshuyan.com/Awesome-Prompts/). Manual workflow runs can publish only current `master`. The workflow uses this repository's temporary token without accessing other repositories in the owner's account or changing account permissions; it does not update submodules or upstream works. Failed checks stop deployment. Revert a faulty commit and publish again to roll back.
