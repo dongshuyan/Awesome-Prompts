@@ -1,0 +1,2346 @@
+{
+  "repository": "https://github.com/dongshuyan/Awesome-Prompts",
+  "categories": [
+    {
+      "id": "practical",
+      "name": {
+        "zh": "实用工具",
+        "en": "Practical tools"
+      },
+      "description": {
+        "zh": "搜索、论文、项目与 Agent 工作流",
+        "en": "Search, papers, projects and agent workflows"
+      },
+      "criteria": {
+        "zh": "任务明确，输入、输出与依赖清楚，步骤可按任务规模调整。",
+        "en": "A clear task, inputs, outputs and dependencies; steps scale with the task."
+      },
+      "readmeCriteria": {
+        "zh": "任务明确，输入、输出与所需工具写清；步骤可按任务规模调整。",
+        "en": "A specific task, clear inputs and outputs, explicit tool requirements, and steps that can scale with the task."
+      }
+    },
+    {
+      "id": "meta",
+      "name": {
+        "zh": "元提示词",
+        "en": "Meta-prompts"
+      },
+      "description": {
+        "zh": "生成、优化与压缩提示词",
+        "en": "Generate, refine and compress prompts"
+      },
+      "criteria": {
+        "zh": "生成或修改的对象明确，保留目标与关键约束，压缩率基于实际计数。",
+        "en": "Clear generation or revision targets; preserve essential constraints and measure compression claims."
+      },
+      "readmeCriteria": {
+        "zh": "生成或修改的对象明确，输入与输出清楚；优化、压缩时保留目标和关键约束，不用篇幅或未经测量的压缩率证明效果。",
+        "en": "Clear inputs, outputs and targets for generation or revision. Refinement and compression should preserve goals and essential constraints; length or unmeasured compression ratios do not establish effectiveness."
+      }
+    },
+    {
+      "id": "writing",
+      "name": {
+        "zh": "写作辅助",
+        "en": "Writing"
+      },
+      "description": {
+        "zh": "文档协作、改写与创作资料",
+        "en": "Documents, rewriting and creative references"
+      },
+      "criteria": {
+        "zh": "文体与协作阶段清楚，事实性改写保留证据与限定，虚构与事实区分。",
+        "en": "A clear genre and collaboration stage; preserve evidence and qualifications and distinguish fiction."
+      },
+      "readmeCriteria": {
+        "zh": "文体或协作环节明确；事实性改写保留原意、证据与限定，虚构创作需与事实内容区分。",
+        "en": "A clear genre or collaboration stage. Factual rewriting preserves meaning, evidence and qualifications; fictional creation stays distinguishable from factual material."
+      }
+    },
+    {
+      "id": "roleplay",
+      "name": {
+        "zh": "角色扮演",
+        "en": "Roleplay"
+      },
+      "description": {
+        "zh": "互动规则与人物设定，含成人向历史条目",
+        "en": "Interaction rules and character profiles; includes adult-oriented legacy entries"
+      },
+      "criteria": {
+        "zh": "角色、互动规则和变量清楚，尊重用户对自身行动的决定。",
+        "en": "Clear characters, interaction rules and variables; preserve user agency."
+      },
+      "readmeCriteria": {
+        "zh": "角色、场景与互动规则清楚，尊重用户对自身行动的决定；标明变量、宿主依赖与内容类型。",
+        "en": "Clear characters, scenes and interaction rules; user control over their own actions; identified variables, host dependencies and content type."
+      }
+    },
+    {
+      "id": "jailbreak",
+      "name": {
+        "zh": "越狱破限",
+        "en": "Jailbreaks"
+      },
+      "description": {
+        "zh": "跨模型指令边界与历史资料",
+        "en": "Cross-model instruction boundaries and historical references"
+      },
+      "criteria": {
+        "zh": "来源、目标模型、版本与日期可查；效果声称需条件和证据。",
+        "en": "Traceable sources, models, versions and dates; effectiveness claims require conditions and evidence."
+      },
+      "readmeCriteria": {
+        "zh": "来源、目标模型或平台、版本与日期可查；效果声称须有对应条件和证据，不以“解锁”等用语代替验证。",
+        "en": "Traceable sources, target model or platform, version and date. Effectiveness claims need supporting conditions and evidence; “unlocking” language is not validation."
+      }
+    },
+    {
+      "id": "nsfw",
+      "name": {
+        "zh": "NSFW",
+        "en": "NSFW"
+      },
+      "description": {
+        "zh": "成人向资料目录与来源",
+        "en": "Adult-oriented reference directory and sources"
+      },
+      "criteria": {
+        "zh": "内容类型、工具依赖和来源清楚，具体展示按贡献指南审阅。",
+        "en": "Clear content type, tool requirements and sources; presentation follows the contribution criteria."
+      },
+      "readmeCriteria": {
+        "zh": "内容类型、目标工具和依赖标注清楚，来源与展示方式符合[贡献指南](CONTRIBUTING.md)中的收录边界。",
+        "en": "Clear content type, target tool and dependencies, with sources and presentation meeting the collection boundaries in [CONTRIBUTING](CONTRIBUTING.md)."
+      }
+    }
+  ],
+  "resources": [
+    {
+      "id": "local-6823e56bfd",
+      "category": "nsfw",
+      "title": {
+        "zh": "豆包图像生成-仰视构图",
+        "en": "Doubao image reference · low angle"
+      },
+      "description": {
+        "zh": "原有成人向图像资料，依赖输入图像与目标工具能力；仅展示目录信息。",
+        "en": "An existing adult-oriented image reference dependent on input images and host capabilities; metadata only."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "NSFW/豆包图像生成-仰视构图.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-b5b50548ab",
+      "category": "nsfw",
+      "title": {
+        "zh": "豆包图像生成-极简写真",
+        "en": "Doubao image reference · minimal composition"
+      },
+      "description": {
+        "zh": "原有成人向图像资料，依赖输入图像与目标工具能力；仅展示目录信息。",
+        "en": "An existing adult-oriented image reference dependent on input images and host capabilities; metadata only."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "NSFW/豆包图像生成-极简写真.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-6857258f8b",
+      "category": "meta",
+      "title": {
+        "zh": "Nano Banana Pro 图像规格",
+        "en": "Nano Banana Pro image specification"
+      },
+      "description": {
+        "zh": "自定义类 JSON 创作规格，用于整理构图等要求；不是官方 API 请求。",
+        "en": "A custom JSON-like creative specification for composition and other requirements; not an official API request."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "元提示词/Nano-Banana-Pro图像规格架构师.txt",
+      "preview": false,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "把创作需求整理成自定义类 JSON 规格，便于调整构图等参数；不是官方 API 请求或可直接解析的 JSON。",
+        "en": "Organizes creative requirements into a custom JSON-like specification for adjusting composition and other parameters. It is not an official API request or directly parseable JSON."
+      }
+    },
+    {
+      "id": "local-2af62179c6",
+      "category": "meta",
+      "title": {
+        "zh": "根据需求生成提示词",
+        "en": "Generate a prompt from requirements"
+      },
+      "description": {
+        "zh": "按决策、分析、创作、验证和执行整理需求，目标变化先确认。",
+        "en": "Organizes decision, analysis, creation, verification and execution requirements; goal changes need confirmation."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "元提示词/根据需求生成提示词.txt",
+      "preview": true,
+      "featured": true,
+      "readmeDescription": {
+        "zh": "按决策、分析、创作、验证和执行梳理需求；改变目标的建议需先确认。",
+        "en": "Organizes decision, analysis, creation, verification and execution tasks. Goal-changing suggestions require confirmation."
+      }
+    },
+    {
+      "id": "local-906896ce0e",
+      "category": "meta",
+      "title": {
+        "zh": "Prompt 设计框架",
+        "en": "Prompt design framework"
+      },
+      "description": {
+        "zh": "组织角色、约束、输出与按需校准，持久化依赖真实工具和授权。",
+        "en": "Structures roles, constraints, outputs and calibration as needed; persistence requires real tools and authorization."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "元提示词/生成prompt的prompt.txt",
+      "preview": true,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "组织角色、约束、输出与按需校准；持久化依赖实际工具和授权。",
+        "en": "Organizes roles, constraints, outputs and calibration as needed. Persistence depends on actual tools and authorization."
+      }
+    },
+    {
+      "id": "local-859e399566",
+      "category": "meta",
+      "title": {
+        "zh": "长提示词压缩",
+        "en": "Long-prompt compression"
+      },
+      "description": {
+        "zh": "压缩后核对原意、条件与例外；仅在实际计数后报告 Token 压缩率。",
+        "en": "Checks meaning, conditions and exceptions after compression; token ratios require actual measurement."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "元提示词/长提示词压缩.txt",
+      "preview": true,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "压缩后对照原意、条件和例外；有实际 Token 计数才报告压缩率。",
+        "en": "Checks the result against the original meaning, conditions and exceptions; reports a compression ratio only with measured token counts."
+      }
+    },
+    {
+      "id": "local-21278a927f",
+      "category": "writing",
+      "title": {
+        "zh": "自然语言改写",
+        "en": "Natural-language rewriting"
+      },
+      "description": {
+        "zh": "改善措辞与衔接，保留事实、观点和逻辑，不补造经历或引用。",
+        "en": "Improves wording and transitions while preserving facts, views and logic, without invented experiences or citations."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "写作辅助/AI内容转人写.txt",
+      "preview": true,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "调整措辞与衔接，保留事实、观点和逻辑，不补造经历或引用。",
+        "en": "Adjusts wording and transitions while preserving facts, views and logic, without inventing experiences or citations."
+      }
+    },
+    {
+      "id": "local-6a5bc4a6ec",
+      "category": "writing",
+      "title": {
+        "zh": "成人创作历史条目",
+        "en": "Historical adult-writing reference"
+      },
+      "description": {
+        "zh": "历史保留文件；其实际任务与忠实翻译不同，仅提供中性目录入口。",
+        "en": "A retained historical file whose task differs from faithful translation; provided as a neutral directory reference."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "写作辅助/AV翻译提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-10d75d8912",
+      "category": "writing",
+      "title": {
+        "zh": "Cosplay 写真资料",
+        "en": "Cosplay image reference"
+      },
+      "description": {
+        "zh": "历史图像创作资料，年龄边界仍有待确认事项，未新增推荐。",
+        "en": "Historical image-creation material with unresolved age-boundary questions; not a new recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "写作辅助/Cosplay写真提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-3e3d08dcbb",
+      "category": "writing",
+      "title": {
+        "zh": "图像提示词历史资料",
+        "en": "Historical image-prompt reference"
+      },
+      "description": {
+        "zh": "按原文件查阅图像创作要求，适用性依赖目标模型与宿主能力。",
+        "en": "An existing image-prompt reference; applicability depends on the target model and host capabilities."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "写作辅助/文生图提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-1f5b8fcee5",
+      "category": "practical",
+      "title": {
+        "zh": "健康科普信息整理",
+        "en": "Health information organizer"
+      },
+      "description": {
+        "zh": "先补充关键信息，用于知识了解与就医沟通，不能替代专业诊疗。",
+        "en": "Gathers material context for general health understanding and conversations with clinicians; not a replacement for professional care."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/AI健康顾问.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-d9d290149e",
+      "category": "practical",
+      "title": {
+        "zh": "任务澄清与边界说明",
+        "en": "Task clarification and boundaries"
+      },
+      "description": {
+        "zh": "五种任务与歧义处理框架，说明实际限制，目标变化由用户选择。",
+        "en": "Five task and disambiguation frameworks that explain real limits and leave goal changes to the user."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/任务澄清与边界说明.txt",
+      "preview": true,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "五种任务、歧义与输出组织框架；替代目标需说明差别并由用户选择。",
+        "en": "Five frameworks for tasks, ambiguity and output structure. Alternative goals must explain the difference and leave the choice to the user."
+      }
+    },
+    {
+      "id": "local-1191feb957",
+      "category": "practical",
+      "title": {
+        "zh": "学术论文阅读",
+        "en": "Academic paper reading"
+      },
+      "description": {
+        "zh": "面向初学者梳理研究问题、方法、数据与结果，区分论文报告和外部信息。",
+        "en": "A beginner-oriented framework for questions, methods, data and results, separating paper reports from external information."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/学术论文阅读.txt",
+      "preview": true,
+      "featured": true,
+      "readmeDescription": {
+        "zh": "面向初学者，依次梳理问题、方法、数据和结果，区分论文报告与外部信息。",
+        "en": "Explains questions, methods, data and results for beginners, separating the paper's reports from external information."
+      }
+    },
+    {
+      "id": "local-e6d4820fa0",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 中文 lite",
+        "en": "Prompt enhancement · ZH lite"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/260107-理解问题搜索信息-lite-中文.txt",
+      "preview": true,
+      "featured": true
+    },
+    {
+      "id": "local-ca912ec700",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 英文 lite",
+        "en": "Prompt enhancement · EN lite"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/260107-理解问题搜索信息-lite-英文.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-af6e2097be",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 中文 middle",
+        "en": "Prompt enhancement · ZH middle"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/260107-理解问题搜索信息-middle-中文.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-9672ba6da0",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 英文 middle",
+        "en": "Prompt enhancement · EN middle"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/260107-理解问题搜索信息-middle-英文.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-9a0c5ebaaa",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 中文 完整",
+        "en": "Prompt enhancement · ZH full"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/260107-理解问题搜索信息-中文.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-e0d42f32ae",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 英文 完整",
+        "en": "Prompt enhancement · EN full"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/260107-理解问题搜索信息-英文.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-aaf82ca367",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 中文 lite · 旧版",
+        "en": "Prompt enhancement · ZH lite · older variant"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/旧版本/260101-理解问题搜索信息-中文-lite.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-d18386f0e2",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 中文 完整 · 旧版",
+        "en": "Prompt enhancement · ZH full · older variant"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/旧版本/260101-理解问题搜索信息-中文.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-98eb469b7a",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 英文 lite · 旧版",
+        "en": "Prompt enhancement · EN lite · older variant"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/旧版本/260101-理解问题搜索信息-英文-lite.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-9c42f6de22",
+      "category": "practical",
+      "title": {
+        "zh": "提示词增强 · 英文 完整 · 旧版",
+        "en": "Prompt enhancement · EN full · older variant"
+      },
+      "description": {
+        "zh": "先理解任务，再按需搜索与核对证据；英文 middle 与完整版相同。",
+        "en": "Understand the task, then research and check evidence as needed. English middle matches the full version."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/提示词增强prompt/旧版本/260101-理解问题搜索信息-英文.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-4b95a4ba22",
+      "category": "practical",
+      "title": {
+        "zh": "Gemini 指令模板",
+        "en": "Gemini instruction template"
+      },
+      "description": {
+        "zh": "整理模型行为与工具偏好；执行能力以实际宿主为准。",
+        "en": "An instruction template for model behavior and tool preferences; actual capabilities depend on the host."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/自信的Gemini.txt",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-67e47ba829",
+      "category": "practical",
+      "title": {
+        "zh": "项目工作流 1 · 需求与方案",
+        "en": "Project workflow 1 · Requirements and proposal"
+      },
+      "description": {
+        "zh": "三步骤工程工作流的一环，使用前替换项目与文档路径。",
+        "en": "One stage of the three-step project workflow. Replace project and document paths before use."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/项目优化与施工/step1.md",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-3cc6d5f872",
+      "category": "practical",
+      "title": {
+        "zh": "项目工作流 2 · 施工与验收计划",
+        "en": "Project workflow 2 · Implementation and acceptance"
+      },
+      "description": {
+        "zh": "三步骤工程工作流的一环，使用前替换项目与文档路径。",
+        "en": "One stage of the three-step project workflow. Replace project and document paths before use."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/项目优化与施工/step2.md",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-11490ba980",
+      "category": "practical",
+      "title": {
+        "zh": "项目工作流 3 · 执行与交接",
+        "en": "Project workflow 3 · Execution and handoff"
+      },
+      "description": {
+        "zh": "三步骤工程工作流的一环，使用前替换项目与文档路径。",
+        "en": "One stage of the three-step project workflow. Replace project and document paths before use."
+      },
+      "kind": "template",
+      "status": "local",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "实用工具/项目优化与施工/step3.md",
+      "preview": true,
+      "featured": false
+    },
+    {
+      "id": "local-90e4ee7c4c",
+      "category": "roleplay",
+      "title": {
+        "zh": "小羊饼归档 · 中二病",
+        "en": "Archived character variant · 中二病"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "archived",
+      "archived": true,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "已过期/角色扮演/小羊饼/中二病 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-4cebb62962",
+      "category": "roleplay",
+      "title": {
+        "zh": "小羊饼归档 · 傲娇",
+        "en": "Archived character variant · 傲娇"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "archived",
+      "archived": true,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "已过期/角色扮演/小羊饼/傲娇 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-454cc2bca0",
+      "category": "roleplay",
+      "title": {
+        "zh": "小羊饼归档 · 损友",
+        "en": "Archived character variant · 损友"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "archived",
+      "archived": true,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "已过期/角色扮演/小羊饼/损友 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-76b52de40d",
+      "category": "roleplay",
+      "title": {
+        "zh": "小羊饼归档 · 病娇",
+        "en": "Archived character variant · 病娇"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "archived",
+      "archived": true,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "已过期/角色扮演/小羊饼/病娇 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-3f578fad1b",
+      "category": "roleplay",
+      "title": {
+        "zh": "小羊饼归档 · 雌小鬼",
+        "en": "Archived character variant · 雌小鬼"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "archived",
+      "archived": true,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "已过期/角色扮演/小羊饼/雌小鬼 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-723d45bfe9",
+      "category": "roleplay",
+      "title": {
+        "zh": "古雅语 · 历史创作资料",
+        "en": "Classical-style historical writing reference"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/古雅语情色小说.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-c05502d685",
+      "category": "roleplay",
+      "title": {
+        "zh": "乔柚柚 · 人物设定",
+        "en": "乔柚柚 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/乔柚柚-22岁幼师-活泼白丝JK NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-b40446c0ea",
+      "category": "roleplay",
+      "title": {
+        "zh": "书中角色 · 人物设定",
+        "en": "书中角色 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/书中角色-你创作的小说中的她-只有作者能唤醒 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-08c20b6024",
+      "category": "roleplay",
+      "title": {
+        "zh": "云织 · 人物设定",
+        "en": "云织 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/云织-魔法学院见习生-只有你知道她会魔法 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-3b1472434f",
+      "category": "roleplay",
+      "title": {
+        "zh": "冷霜 · 人物设定",
+        "en": "冷霜 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/冷霜-26岁前杀手-金盆洗手只对你人味 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-5f7723877b",
+      "category": "roleplay",
+      "title": {
+        "zh": "叶听雨 · 人物设定",
+        "en": "叶听雨 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/叶听雨-20岁病弱大小姐-白丝洛丽塔 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-84fa860957",
+      "category": "roleplay",
+      "title": {
+        "zh": "叶聆 · 人物设定",
+        "en": "叶聆 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/叶聆-半精灵-为你离开森林只对你露耳 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-797c444167",
+      "category": "roleplay",
+      "title": {
+        "zh": "夏未央 · 人物设定",
+        "en": "夏未央 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/夏未央-19岁偶像练习生-台上光芒台下只对你撒娇 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-c57555a919",
+      "category": "roleplay",
+      "title": {
+        "zh": "姜禾 · 人物设定",
+        "en": "姜禾 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/姜禾-古代穿越现代-千年之约 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-4f5efd3a73",
+      "category": "roleplay",
+      "title": {
+        "zh": "宁晓 · 人物设定",
+        "en": "宁晓 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/宁晓-25岁兽医-温柔有爱心 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-f105db5f4f",
+      "category": "roleplay",
+      "title": {
+        "zh": "宋野 · 人物设定",
+        "en": "宋野 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/宋野-24岁乐队主唱-台上酷台下只黏你 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-9038c2d964",
+      "category": "roleplay",
+      "title": {
+        "zh": "方小棠 · 人物设定",
+        "en": "方小棠 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/方小棠-25岁花艺师-治愈系温柔 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-78e73eb618",
+      "category": "roleplay",
+      "title": {
+        "zh": "林小满 · 人物设定",
+        "en": "林小满 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/林小满-18岁高三艺考生-雌小鬼 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-4221eaf8d7",
+      "category": "roleplay",
+      "title": {
+        "zh": "林静深 · 人物设定",
+        "en": "林静深 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/林静深-26岁高中语文老师-外表严肃私下小女人 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-093f6fd0ca",
+      "category": "roleplay",
+      "title": {
+        "zh": "江挽月 · 人物设定",
+        "en": "江挽月 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/江挽月-22岁芭蕾舞者-脚伤转行气质型 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-1d37a9d383",
+      "category": "roleplay",
+      "title": {
+        "zh": "沈夜 · 人物设定",
+        "en": "沈夜 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/沈夜-24岁调酒师-夜班酒吧外唯一 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-41e972f1d8",
+      "category": "roleplay",
+      "title": {
+        "zh": "沈念 · 人物设定",
+        "en": "沈念 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/沈念-18岁高三-孤儿院收养义妹 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-bd6863e918",
+      "category": "roleplay",
+      "title": {
+        "zh": "温以宁 · 人物设定",
+        "en": "温以宁 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/温以宁-24岁空姐-温柔细心 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-3b92a34369",
+      "category": "roleplay",
+      "title": {
+        "zh": "灰原哀 · 人物设定",
+        "en": "灰原哀 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/灰原哀-名侦探柯南-冷静聪慧只对你温柔 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-68ea66d2df",
+      "category": "roleplay",
+      "title": {
+        "zh": "白晓晓 · 人物设定",
+        "en": "白晓晓 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/白晓晓-20岁行政助理-职场新人 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-081f69960c",
+      "category": "roleplay",
+      "title": {
+        "zh": "白漓 · 人物设定",
+        "en": "白漓 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/白漓-千年狐妖-外表少女深情 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-5ef72b8242",
+      "category": "roleplay",
+      "title": {
+        "zh": "程未 · 人物设定",
+        "en": "程未 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/程未-23岁咖啡师-文艺安静只给你甜 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-0331208494",
+      "category": "roleplay",
+      "title": {
+        "zh": "艾莉娅 · 人物设定",
+        "en": "艾莉娅 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/艾莉娅-异世界见习魔女-你是她在异界的锚 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-5c3061c5d7",
+      "category": "roleplay",
+      "title": {
+        "zh": "苏念卿 · 人物设定",
+        "en": "苏念卿 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/苏念卿-民国女学生装-穿越或复古爱好者 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-cb9015ad71",
+      "category": "roleplay",
+      "title": {
+        "zh": "苏晚星 · 人物设定",
+        "en": "苏晚星 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/苏晚星-20岁电竞主播-直播活泼私下宅 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-3183b37cbd",
+      "category": "roleplay",
+      "title": {
+        "zh": "苏绵绵 · 人物设定",
+        "en": "苏绵绵 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/苏绵绵-19岁大一经管系-呆萌富家千金 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-b4790d83ec",
+      "category": "roleplay",
+      "title": {
+        "zh": "莫灵 · 人物设定",
+        "en": "莫灵 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/莫灵-22岁塔罗师-神秘中二只对你认真 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-3f2e99ed90",
+      "category": "roleplay",
+      "title": {
+        "zh": "蓝汐 · 人物设定",
+        "en": "蓝汐 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/蓝汐-人鱼上岸-只有你知道身份 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-1bd9ab2877",
+      "category": "roleplay",
+      "title": {
+        "zh": "许书言 · 人物设定",
+        "en": "许书言 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/许书言-24岁图书管理员-知性温柔只对你话多 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-cdffae6250",
+      "category": "roleplay",
+      "title": {
+        "zh": "诺玛 · 人物设定",
+        "en": "诺玛 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/诺玛-19岁设计系大一-温柔依赖型 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-0f7d79776d",
+      "category": "roleplay",
+      "title": {
+        "zh": "谢晚舟 · 人物设定",
+        "en": "谢晚舟 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/谢晚舟-26岁程序员-宅理性下班只对你软 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-a40a8fecbc",
+      "category": "roleplay",
+      "title": {
+        "zh": "阮清晓 · 人物设定",
+        "en": "阮清晓 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/阮清晓-23岁护士-细心抗压白丝 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-2fd9be5bc2",
+      "category": "roleplay",
+      "title": {
+        "zh": "陆刺青 · 人物设定",
+        "en": "陆刺青 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/陆刺青-25岁纹身师-外表酷内心细腻黑丝 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-d648058f33",
+      "category": "roleplay",
+      "title": {
+        "zh": "顾书墨 · 人物设定",
+        "en": "顾书墨 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/顾书墨-26岁博物馆研究员-书卷气汉服 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-c82c003d6c",
+      "category": "roleplay",
+      "title": {
+        "zh": "顾清言 · 人物设定",
+        "en": "顾清言 · Character profile"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": true,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/多角色人设/顾清言-28岁女总裁-外表高冷独处温柔 NSFW 提示词.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-1ffa322060",
+      "category": "roleplay",
+      "title": {
+        "zh": "赛博女友 · 虚构对话",
+        "en": "Cyber girlfriend · fictional dialogue"
+      },
+      "description": {
+        "zh": "人物设定历史目录，部分为成人向；仅展示中性简介与原文件入口，保留不代表重新推荐。",
+        "en": "A historical character-profile reference; some entries are adult-oriented. Neutral metadata and original links only; retention does not renew recommendation."
+      },
+      "kind": "template",
+      "status": "legacy",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "角色扮演/赛博女友.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-39f5d65abd",
+      "category": "jailbreak",
+      "title": {
+        "zh": "FOP自由覆盖模式",
+        "en": "FOP historical text"
+      },
+      "description": {
+        "zh": "模型指令边界历史资料；文件中的稳定或通用声称未经本轮效果验证。",
+        "en": "Historical instruction-boundary material; stability or universality claims were not validated through effectiveness tests."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "越狱破限/FOP自由覆盖模式.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-2124a67fdc",
+      "category": "jailbreak",
+      "title": {
+        "zh": "GHOST越狱协议",
+        "en": "GHOST historical text"
+      },
+      "description": {
+        "zh": "模型指令边界历史资料；文件中的稳定或通用声称未经本轮效果验证。",
+        "en": "Historical instruction-boundary material; stability or universality claims were not validated through effectiveness tests."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "越狱破限/GHOST越狱协议.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-746de76f9f",
+      "category": "jailbreak",
+      "title": {
+        "zh": "jailbreak模板-Gemini",
+        "en": "Gemini historical templates"
+      },
+      "description": {
+        "zh": "模型指令边界历史资料；文件中的稳定或通用声称未经本轮效果验证。",
+        "en": "Historical instruction-boundary material; stability or universality claims were not validated through effectiveness tests."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "越狱破限/jailbreak模板-Gemini.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "local-53e5474ea4",
+      "category": "jailbreak",
+      "title": {
+        "zh": "角色扮演破限",
+        "en": "Historical roleplay-framing material"
+      },
+      "description": {
+        "zh": "模型指令边界历史资料；文件中的稳定或通用声称未经本轮效果验证。",
+        "en": "Historical instruction-boundary material; stability or universality claims were not validated through effectiveness tests."
+      },
+      "kind": "prompt",
+      "status": "legacy",
+      "archived": false,
+      "adult": false,
+      "author": "Awesome-Prompts",
+      "sourceNote": {
+        "zh": "本库收录来源；部分早期条目的原作者与授权记录待补。",
+        "en": "Collection source; some early author and permission records remain incomplete."
+      },
+      "sourcePath": "越狱破限/角色扮演破限.txt",
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "frontend-design",
+      "category": "practical",
+      "kind": "skill",
+      "status": "selected",
+      "title": {
+        "zh": "frontend-design",
+        "en": "frontend-design"
+      },
+      "description": {
+        "zh": "从视觉方向、字体到布局组织界面设计与自审；对应 Apache-2.0，工程正确性需另行检查。",
+        "en": "Visual direction, typography, layout and self-review. Corresponding Apache-2.0 license; engineering correctness needs separate checks."
+      },
+      "url": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md",
+      "author": "Anthropic",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": true,
+      "licenseUrl": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/LICENSE.txt",
+      "readmeDescription": {
+        "zh": "从视觉方向、字体到布局组织界面设计，并要求自审。适合能制作界面的 Agent；侧重视觉表达，工程正确性需另行检查。[对应许可：Apache-2.0]({{@frontend-design.licenseUrl}})。",
+        "en": "Organizes interface design around visual direction, typography, layout and self-review. Intended for agents that can build interfaces; it focuses on visual expression, while engineering correctness needs separate checks. [Corresponding license: Apache-2.0]({{@frontend-design.licenseUrl}})."
+      }
+    },
+    {
+      "id": "doc-coauthoring",
+      "category": "writing",
+      "kind": "skill",
+      "status": "selected",
+      "title": {
+        "zh": "doc-coauthoring",
+        "en": "doc-coauthoring"
+      },
+      "description": {
+        "zh": "材料收集、协作起草与读者检查的多轮文档流程；需宿主工具适配，所选目录的转载许可未核实，仅链接介绍。",
+        "en": "A multi-turn document workflow: gather context, draft together and check with readers. Adapt host tools; copying permission for this directory is unverified. Source link only."
+      },
+      "url": "https://github.com/anthropics/skills/blob/00756142ab04c82a447693cf373c4e0c554d1005/skills/doc-coauthoring/SKILL.md",
+      "author": "Anthropic",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": true,
+      "readmeDescription": {
+        "zh": "将材料收集、协作起草和读者检查连成多轮文档流程，补充单次改写模板。需要持续交互并匹配宿主工具名称；所选目录的复制许可未核实，仅作链接介绍。",
+        "en": "Connects context gathering, collaborative drafting and reader checks in a multi-turn document workflow, complementing one-pass rewriting templates. Requires ongoing interaction and matching host tool names. Copying permission for the selected directory is unverified; this is a source-link introduction."
+      }
+    },
+    {
+      "id": "immersive",
+      "category": "roleplay",
+      "kind": "prompt",
+      "status": "selected",
+      "title": {
+        "zh": "Roleplay · Immersive",
+        "en": "Roleplay · Immersive"
+      },
+      "description": {
+        "zh": "简短通用互动规则，每轮不代替用户决定行动；需替换 user/char 宏，根许可 AGPL-3.0，复制衍生兼容性未评估。",
+        "en": "Concise interaction rules that preserve user agency. Requires user/char macro substitution. Root AGPL-3.0; derivative compatibility unassessed."
+      },
+      "url": "https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json",
+      "author": "SillyTavern",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "licenseUrl": "https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE",
+      "readmeDescription": {
+        "zh": "用简短通用规则组织角色与环境描写，每次回复一轮，不代替用户决定行动。需宿主替换 `{{user}}`、`{{char}}`；[仓库根许可为 AGPL-3.0]({{@immersive.licenseUrl}})，复制衍生的许可兼容性未评估。",
+        "en": "Uses short general rules for character and environment descriptions, producing one reply without deciding the user's actions. The host must substitute `{{user}}` and `{{char}}`. The [repository root license is AGPL-3.0]({{@immersive.licenseUrl}}); compatibility for copied or derivative material has not been assessed."
+      }
+    },
+    {
+      "id": "compass",
+      "category": "practical",
+      "kind": "skill",
+      "status": "maintainer",
+      "title": {
+        "zh": "COMPASS · 司南",
+        "en": "COMPASS"
+      },
+      "description": {
+        "zh": "维护者自有项目：需求澄清、任务跟踪、暂停续接、跨会话交接与清晰表达。按原项目按需安装。",
+        "en": "Maintainer-owned workflows for clarification, tracking, pausing, handoff and communication. Install selected skills using the original project instructions."
+      },
+      "url": "https://github.com/dongshuyan/compass-skills",
+      "author": "dongshuyan",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": true,
+      "readmeDescription": {
+        "zh": "围绕需求澄清、任务跟踪、暂停续接与跨会话交接组织工作；另含清晰表达和学术文字编辑技能。完整清单与安装说明见原项目，本地固定版本入口为 `Skills/compass-skills/`。",
+        "en": "Workflows for clarification, task tracking, pausing/resuming and cross-session handoff, plus clear communication and academic editing. See the original project for the full list and installation. The locally pinned entry is `Skills/compass-skills/`."
+      }
+    },
+    {
+      "id": "jailbreak-research",
+      "category": "jailbreak",
+      "kind": "collection",
+      "status": "reference",
+      "title": {
+        "zh": "Jailbreaks · 跨模型研究资料",
+        "en": "Jailbreaks · Cross-model references"
+      },
+      "description": {
+        "zh": "按模型家族整理系统提示词、角色设定与工作区指令；本次核对项目说明和目录，未逐项审阅或测试效果，仅链接介绍。",
+        "en": "System prompts, personas and workspace instructions by model family. Review covered the description and directory, not every prompt or effectiveness. Source links only."
+      },
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "author": "togg53192-cmd",
+      "versionUrl": "https://github.com/togg53192-cmd/jailbreaks/blob/17c7117635cf0f270104b1bb8b1e79ff8319a668/README.md",
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "按模型家族整理系统提示词、角色设定与工作区指令，便于对照不同指令形式。[核对版本]({{@jailbreak-research.versionUrl}})（2026-10-30）；本次核对项目说明与目录，未逐项审阅或测试效果，仅作外链介绍。",
+        "en": "Organizes system prompts, persona definitions and workspace instructions by model family for comparing instruction formats. [Version checked]({{@jailbreak-research.versionUrl}}) on 2026-10-30; review covered the project description and directory, without reviewing every prompt or testing effectiveness. This is a source-link introduction."
+      }
+    },
+    {
+      "id": "openclaw-0",
+      "category": "practical",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "VoltAgent/awesome-openclaw-skills",
+        "en": "VoltAgent/awesome-openclaw-skills"
+      },
+      "description": {
+        "zh": "按类别整理的 OpenClaw 技能索引。 固定子模块，未通读全部条目，许可见原项目。",
+        "en": "An OpenClaw skill index organized by category. Pinned submodule; not read in full. Consult the original license."
+      },
+      "url": "https://github.com/VoltAgent/awesome-openclaw-skills",
+      "author": "VoltAgent",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "按类别整理技能，适合按任务继续查找。路径：`Skills/Openclaw/awesome-openclaw-skills`。",
+        "en": "A categorized skill index for further task-based discovery. Path: `Skills/Openclaw/awesome-openclaw-skills`."
+      }
+    },
+    {
+      "id": "openclaw-1",
+      "category": "practical",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "sundial-org/awesome-openclaw-skills",
+        "en": "sundial-org/awesome-openclaw-skills"
+      },
+      "description": {
+        "zh": "另一份 OpenClaw 社区技能索引。 固定子模块，未通读全部条目，许可见原项目。",
+        "en": "Another OpenClaw community skill index. Pinned submodule; not read in full. Consult the original license."
+      },
+      "url": "https://github.com/sundial-org/awesome-openclaw-skills",
+      "author": "sundial-org",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "另一份社区技能索引。路径：`Skills/Openclaw/awesome-openclaw-skills-sundial-org`。",
+        "en": "Another community skill index. Path: `Skills/Openclaw/awesome-openclaw-skills-sundial-org`."
+      }
+    },
+    {
+      "id": "openclaw-2",
+      "category": "practical",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "openclaw/skills",
+        "en": "openclaw/skills"
+      },
+      "description": {
+        "zh": "既有技能归档入口；2026-10-30 核查返回 404，不代表所有本地内容失效。 固定子模块，未通读全部条目，许可见原项目。",
+        "en": "Existing skill-archive entry; returned 404 on 2026-10-30, which does not establish universal failure of local material. Pinned submodule; not read in full. Consult the original license."
+      },
+      "url": "https://github.com/openclaw/skills",
+      "author": "openclaw",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "原收录的技能归档；2026-10-30 核查时公开入口返回 404，递归下载可能受影响，不等于全部本地内容失效。路径：`Skills/Openclaw/skills`。",
+        "en": "The previously collected skill archive. Its public entry returned 404 on 2026-10-30, which may affect recursive downloads; this does not establish universal failure of local contents. Path: `Skills/Openclaw/skills`."
+      }
+    },
+    {
+      "id": "openclaw-3",
+      "category": "practical",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "mergisi/awesome-openclaw-agents",
+        "en": "mergisi/awesome-openclaw-agents"
+      },
+      "description": {
+        "zh": "Agent 角色设定与模板合集。 固定子模块，未通读全部条目，许可见原项目。",
+        "en": "A collection of agent profiles and templates. Pinned submodule; not read in full. Consult the original license."
+      },
+      "url": "https://github.com/mergisi/awesome-openclaw-agents",
+      "author": "mergisi",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "Agent 角色设定与模板。路径：`OpenclawAgents/awesome-openclaw-agents`。",
+        "en": "Agent character settings and templates. Path: `OpenclawAgents/awesome-openclaw-agents`."
+      }
+    },
+    {
+      "id": "openclaw-4",
+      "category": "practical",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "hesamsheikh/awesome-openclaw-usecases",
+        "en": "hesamsheikh/awesome-openclaw-usecases"
+      },
+      "description": {
+        "zh": "按实际场景整理的 OpenClaw 用例。 固定子模块，未通读全部条目，许可见原项目。",
+        "en": "OpenClaw use cases organized around practical scenarios. Pinned submodule; not read in full. Consult the original license."
+      },
+      "url": "https://github.com/hesamsheikh/awesome-openclaw-usecases",
+      "author": "hesamsheikh",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "按实际使用场景组织用例。路径：`OpenclawAgents/awesome-openclaw-usecases`。",
+        "en": "Use cases organized around practical scenarios. Path: `OpenclawAgents/awesome-openclaw-usecases`."
+      }
+    },
+    {
+      "id": "openclaw-5",
+      "category": "practical",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "EvoLinkAI/awesome-openclaw-usecases-moltbook",
+        "en": "EvoLinkAI/awesome-openclaw-usecases-moltbook"
+      },
+      "description": {
+        "zh": "Moltbook 相关用例与多语言资料。 固定子模块，未通读全部条目，许可见原项目。",
+        "en": "Moltbook use cases and multilingual references. Pinned submodule; not read in full. Consult the original license."
+      },
+      "url": "https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook",
+      "author": "EvoLinkAI",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "readmeDescription": {
+        "zh": "Moltbook 相关用例与多语言资料。路径：`OpenclawAgents/awesome-openclaw-usecases-moltbook`。",
+        "en": "Moltbook use cases and multilingual material. Path: `OpenclawAgents/awesome-openclaw-usecases-moltbook`."
+      }
+    },
+    {
+      "id": "online-0",
+      "category": "writing",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "Nanobanana 提示词收纳盒",
+        "en": "Nanobanana prompt collection"
+      },
+      "description": {
+        "zh": "历史收藏的外部资料入口，未按本轮精选标准逐项推荐。",
+        "en": "An existing external bookmark, not individually selected under the current criteria."
+      },
+      "url": "https://bmzxdlj.cn/",
+      "author": "原资料来源 / Original source",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "online-1",
+      "category": "writing",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "Labnana",
+        "en": "Labnana"
+      },
+      "description": {
+        "zh": "历史收藏的外部资料入口，未按本轮精选标准逐项推荐。",
+        "en": "An existing external bookmark, not individually selected under the current criteria."
+      },
+      "url": "https://labnana.com/zh/explore/all",
+      "author": "原资料来源 / Original source",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "online-2",
+      "category": "writing",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "YouMind Nano Banana Pro 提示词库",
+        "en": "YouMind Nano Banana Pro prompts"
+      },
+      "description": {
+        "zh": "历史收藏的外部资料入口，未按本轮精选标准逐项推荐。",
+        "en": "An existing external bookmark, not individually selected under the current criteria."
+      },
+      "url": "https://youmind.com/zh-CN/nano-banana-pro-prompts?categories=comic-storyboard",
+      "author": "原资料来源 / Original source",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "online-3",
+      "category": "writing",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "Prompt Manager",
+        "en": "Prompt Manager"
+      },
+      "description": {
+        "zh": "历史收藏的外部资料入口，未按本轮精选标准逐项推荐。",
+        "en": "An existing external bookmark, not individually selected under the current criteria."
+      },
+      "url": "https://prompt.vioaki.xyz/",
+      "author": "原资料来源 / Original source",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "online-4",
+      "category": "writing",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "飞书提示词表格",
+        "en": "Feishu prompt table"
+      },
+      "description": {
+        "zh": "历史收藏的外部资料入口，未按本轮精选标准逐项推荐。",
+        "en": "An existing external bookmark, not individually selected under the current criteria."
+      },
+      "url": "https://my.feishu.cn/wiki/S5nowuX3uiHXq4kNPb3c7cPpngh?table=tblJT29vyAEQmZzq&view=vewBBRuwm1",
+      "author": "原资料来源 / Original source",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false
+    },
+    {
+      "id": "online-5",
+      "category": "writing",
+      "kind": "collection",
+      "status": "collection",
+      "title": {
+        "zh": "飞书知识库",
+        "en": "Feishu knowledge base"
+      },
+      "description": {
+        "zh": "历史收藏的外部资料入口，未按本轮精选标准逐项推荐。",
+        "en": "An existing external bookmark, not individually selected under the current criteria."
+      },
+      "url": "https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc",
+      "author": "原资料来源 / Original source",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false
+    }
+  ],
+  "readme": {
+    "groups": {
+      "practical-directory": {
+        "url": "实用工具/"
+      },
+      "meta-directory": {
+        "url": "元提示词/"
+      },
+      "writing-directory": {
+        "url": "写作辅助/"
+      },
+      "roleplay-directory": {
+        "url": "角色扮演/"
+      },
+      "jailbreak-directory": {
+        "url": "越狱破限/"
+      },
+      "nsfw-directory": {
+        "url": "NSFW/"
+      },
+      "enhancement-series": {
+        "url": "实用工具/提示词增强prompt/"
+      },
+      "project-workflow": {
+        "url": "实用工具/项目优化与施工/"
+      },
+      "practical-new": {
+        "autoEntries": true
+      },
+      "meta-new": {
+        "autoEntries": true
+      },
+      "writing-new": {
+        "autoEntries": true
+      },
+      "roleplay-new": {
+        "autoEntries": true
+      },
+      "jailbreak-new": {
+        "autoEntries": true
+      },
+      "nsfw-new": {
+        "autoEntries": true
+      }
+    },
+    "blocks": {
+      "zh": {
+        "practical": "{{#practical-new.entries}}**评价重点：** {{$practical.readmeCriteria}}\n\n**外部精选**\n\n- **[{{@frontend-design.title}}]({{@frontend-design.url}})** · {{@frontend-design.author}} · Skill\n  {{@frontend-design.readmeDescription}}\n\n**本地模板与已收录项目**\n\n- **[提示词增强系列]({{#enhancement-series.url}})** · Prompt：先理解任务，再按需搜索与核对证据。提供中英文及长短变体；英文 `middle` 与完整版当前逐字相同，选版见[版本说明](REVIEW_NOTES.md#版本与适用性)。\n- **[{{@local-1191feb957.title}}]({{@local-1191feb957.url}})** · 模板：{{@local-1191feb957.readmeDescription}}\n- **[项目优化与施工]({{#project-workflow.url}})** · 模板：从[需求与方案]({{@local-67e47ba829.url}})，到[施工与验收计划]({{@local-3cc6d5f872.url}})，再到[执行交接]({{@local-11490ba980.url}})。使用前替换项目与文档路径。\n- **[{{@local-d9d290149e.title}}]({{@local-d9d290149e.url}})** · 模板：{{@local-d9d290149e.readmeDescription}}\n- **[{{@compass.title}}]({{@compass.url}}#readme)** · Skill 集合 · **维护者自有项目**：{{@compass.readmeDescription}}\n\n其他本地条目：[健康科普]({{@local-1f5b8fcee5.url}})、[Gemini 指令模板]({{@local-4b95a4ba22.url}})。健康内容用于知识了解与就医沟通，不能替代专业诊疗。 [浏览全部实用工具 →]({{#practical-directory.url}})\n",
+        "meta": "**评价重点：** {{$meta.readmeCriteria}}\n\n**本地模板**\n\n- **[{{@local-2af62179c6.title}}]({{@local-2af62179c6.url}})**：{{@local-2af62179c6.readmeDescription}}\n- **[{{@local-906896ce0e.title}}]({{@local-906896ce0e.url}})**：{{@local-906896ce0e.readmeDescription}}\n- **[{{@local-859e399566.title}}]({{@local-859e399566.url}})**：{{@local-859e399566.readmeDescription}}\n- **[{{@local-6857258f8b.title}}]({{@local-6857258f8b.url}})**：{{@local-6857258f8b.readmeDescription}}\n\n{{#meta-new.entries}}[浏览全部元提示词 →]({{#meta-directory.url}})\n",
+        "writing": "**评价重点：** {{$writing.readmeCriteria}}\n\n**外部精选**\n\n- **[{{@doc-coauthoring.title}}]({{@doc-coauthoring.url}})** · {{@doc-coauthoring.author}} · Skill\n  {{@doc-coauthoring.readmeDescription}}\n\n**本地模板**\n\n- **[{{@local-21278a927f.title}}]({{@local-21278a927f.url}})** · Prompt：{{@local-21278a927f.readmeDescription}}\n\n{{#writing-new.entries}}[浏览写作辅助历史目录 →]({{#writing-directory.url}})：另有翻译、文生图和 Cosplay 资料，部分为成人向；具体适用性与待确认事项见[审阅说明](REVIEW_NOTES.md)。\n",
+        "roleplay": "**评价重点：** {{$roleplay.readmeCriteria}}\n\n**外部精选**\n\n- **[{{@immersive.title}}]({{@immersive.url}})** · {{@immersive.author}} · Prompt\n  {{@immersive.readmeDescription}}\n\n{{#roleplay-new.entries}}[浏览角色扮演历史目录 →]({{#roleplay-directory.url}})：单独角色与多角色人设，含成人向条目；历史保留不构成对各文件的重新推荐。\n",
+        "jailbreak": "**评价重点：** {{$jailbreak.readmeCriteria}}\n\n**研究资料入口**\n\n- **[{{@jailbreak-research.title}}]({{@jailbreak-research.url}})** · {{@jailbreak-research.author}} · 跨模型提示词与指令边界研究资料集\n  {{@jailbreak-research.readmeDescription}}\n\n{{#jailbreak-new.entries}}[浏览越狱破限历史目录 →]({{#jailbreak-directory.url}})：按模型或场景命名的既有材料。文件中的稳定性、通用性等声称未获本轮效果验证，收录不代表平台许可或绕过效果背书。\n",
+        "nsfw": "**评价重点：** {{$nsfw.readmeCriteria}}\n\n{{#nsfw-new.entries}}[浏览 NSFW 历史目录 →]({{#nsfw-directory.url}})：原有成人向图像提示词资料。目标工具能力与具体发布条件需分别核对，分类标签本身不证明效果或可发布性。\n",
+        "collections": "以下是既有收藏入口，供进一步查找，未通读其中全部条目。主仓库记录子模块的固定提交，可能与上游最新内容不同；各项目的用途、依赖和许可分别以原文为准。[合集核查记录](REVIEW_NOTES.md#合集入口)\n\n### OpenClaw 合集\n\n- **[{{@openclaw-0.title}}]({{@openclaw-0.url}})**：{{@openclaw-0.readmeDescription}}\n- **[{{@openclaw-1.title}}]({{@openclaw-1.url}})**：{{@openclaw-1.readmeDescription}}\n- **[{{@openclaw-2.title}}]({{@openclaw-2.url}})**：{{@openclaw-2.readmeDescription}}\n- **[{{@openclaw-3.title}}]({{@openclaw-3.url}})**：{{@openclaw-3.readmeDescription}}\n- **[{{@openclaw-4.title}}]({{@openclaw-4.url}})**：{{@openclaw-4.readmeDescription}}\n- **[{{@openclaw-5.title}}]({{@openclaw-5.url}})**：{{@openclaw-5.readmeDescription}}\n\n<details>\n<summary>其他在线收藏入口</summary>\n\n这些是历史收录的外部资料入口，未按本轮精选标准逐项推荐。\n\n- [Nanobanana 提示词收纳盒]({{@online-0.url}})：中文提示词收藏。\n- [Labnana]({{@online-1.url}})：图像作品与提示词浏览。\n- [YouMind Nano Banana Pro 提示词库]({{@online-2.url}})：按主题浏览图像提示词。\n- [Prompt Manager]({{@online-3.url}})：提示词画廊与模板。\n- [飞书提示词表格]({{@online-4.url}})：原收录的在线表格。\n- [飞书知识库]({{@online-5.url}})：原收录的资料入口。\n\n</details>\n"
+      },
+      "en": {
+        "practical": "{{#practical-new.entries}}**Evaluation focus:** {{$practical.readmeCriteria}}\n\n**External selection**\n\n- **[{{@frontend-design.title}}]({{@frontend-design.url}})** · {{@frontend-design.author}} · Skill\n  {{@frontend-design.readmeDescription}}\n\n**Local templates and previously collected projects**\n\n- **[Prompt enhancement series]({{#enhancement-series.url}})** · Prompt: Understand the task, then search and check evidence as needed. Chinese and English variants are available at different lengths; English `middle` currently matches the full version byte for byte. See [version notes](REVIEW_NOTES.md#版本与适用性).\n- **[{{@local-1191feb957.title}}]({{@local-1191feb957.url}})** · Template: {{@local-1191feb957.readmeDescription}}\n- **[Project optimization and implementation]({{#project-workflow.url}})** · Templates: Move from [requirements and proposal]({{@local-67e47ba829.url}}) to [implementation and acceptance planning]({{@local-3cc6d5f872.url}}), then [execution handoff]({{@local-11490ba980.url}}). Replace project and document paths before use.\n- **[{{@local-d9d290149e.title}}]({{@local-d9d290149e.url}})** · Templates: {{@local-d9d290149e.readmeDescription}}\n- **[{{@compass.title}}]({{@compass.url}}#readme)** · Skill collection · **Maintainer-owned project**: {{@compass.readmeDescription}}\n\nOther local entries: [health information]({{@local-1f5b8fcee5.url}}) and [Gemini instruction template]({{@local-4b95a4ba22.url}}). Health material supports general understanding and conversations with clinicians; it does not replace professional care. [Browse all practical tools →]({{#practical-directory.url}})\n",
+        "meta": "**Evaluation focus:** {{$meta.readmeCriteria}}\n\n**Local templates**\n\n- **[{{@local-2af62179c6.title}}]({{@local-2af62179c6.url}})**: {{@local-2af62179c6.readmeDescription}}\n- **[{{@local-906896ce0e.title}}]({{@local-906896ce0e.url}})**: {{@local-906896ce0e.readmeDescription}}\n- **[{{@local-859e399566.title}}]({{@local-859e399566.url}})**: {{@local-859e399566.readmeDescription}}\n- **[{{@local-6857258f8b.title}}]({{@local-6857258f8b.url}})**: {{@local-6857258f8b.readmeDescription}}\n\n{{#meta-new.entries}}[Browse all meta-prompts →]({{#meta-directory.url}})\n",
+        "writing": "**Evaluation focus:** {{$writing.readmeCriteria}}\n\n**External selection**\n\n- **[{{@doc-coauthoring.title}}]({{@doc-coauthoring.url}})** · {{@doc-coauthoring.author}} · Skill\n  {{@doc-coauthoring.readmeDescription}}\n\n**Local template**\n\n- **[{{@local-21278a927f.title}}]({{@local-21278a927f.url}})** · Prompt: {{@local-21278a927f.readmeDescription}}\n\n{{#writing-new.entries}}[Browse the historical writing directory →]({{#writing-directory.url}}): Also contains translation, text-to-image and cosplay references, some adult-oriented. See [review notes](REVIEW_NOTES.md) for applicability and pending issues.\n",
+        "roleplay": "**Evaluation focus:** {{$roleplay.readmeCriteria}}\n\n**External selection**\n\n- **[{{@immersive.title}}]({{@immersive.url}})** · {{@immersive.author}} · Prompt\n  {{@immersive.readmeDescription}}\n\n{{#roleplay-new.entries}}[Browse the historical roleplay directory →]({{#roleplay-directory.url}}): Individual characters and multi-character settings, including adult-oriented entries. Retention does not renew recommendations for each file.\n",
+        "jailbreak": "**Evaluation focus:** {{$jailbreak.readmeCriteria}}\n\n**Research reference**\n\n- **[{{@jailbreak-research.title}}]({{@jailbreak-research.url}})** · {{@jailbreak-research.author}} · Cross-model prompts and instruction-boundary research collection\n  {{@jailbreak-research.readmeDescription}}\n\n{{#jailbreak-new.entries}}[Browse the historical jailbreak directory →]({{#jailbreak-directory.url}}): Existing material named by model or scenario. Stability and universality claims were not validated through effectiveness testing in this review. Inclusion does not establish platform permission or bypass effectiveness.\n",
+        "nsfw": "**Evaluation focus:** {{$nsfw.readmeCriteria}}\n\n{{#nsfw-new.entries}}[Browse the historical NSFW directory →]({{#nsfw-directory.url}}): Existing adult-oriented image-prompt references. Tool capabilities and publication conditions need separate checks; category labels establish neither effectiveness nor publishability.\n",
+        "collections": "These existing bookmarks support further discovery; their contents were not read in full. Submodules record fixed commits that may differ from upstream. Check each project's purpose, dependencies and license separately. [Collection-entry review](REVIEW_NOTES.md#合集入口)\n\n### OpenClaw collections\n\n- **[{{@openclaw-0.title}}]({{@openclaw-0.url}})**: {{@openclaw-0.readmeDescription}}\n- **[{{@openclaw-1.title}}]({{@openclaw-1.url}})**: {{@openclaw-1.readmeDescription}}\n- **[{{@openclaw-2.title}}]({{@openclaw-2.url}})**: {{@openclaw-2.readmeDescription}}\n- **[{{@openclaw-3.title}}]({{@openclaw-3.url}})**: {{@openclaw-3.readmeDescription}}\n- **[{{@openclaw-4.title}}]({{@openclaw-4.url}})**: {{@openclaw-4.readmeDescription}}\n- **[{{@openclaw-5.title}}]({{@openclaw-5.url}})**: {{@openclaw-5.readmeDescription}}\n\n<details>\n<summary>Other online bookmarks</summary>\n\nThese are historical references, not individual recommendations under the current selection criteria.\n\n- [Nanobanana prompt collection]({{@online-0.url}}): Chinese prompt bookmarks.\n- [Labnana]({{@online-1.url}}): Images and prompt browsing.\n- [YouMind Nano Banana Pro prompts]({{@online-2.url}}): Image prompts organized by theme.\n- [Prompt Manager]({{@online-3.url}}): Prompt gallery and templates.\n- [Feishu prompt table]({{@online-4.url}}): Previously collected online table.\n- [Feishu knowledge base]({{@online-5.url}}): Previously collected reference entry.\n\n</details>\n"
+      }
+    }
+  }
+}

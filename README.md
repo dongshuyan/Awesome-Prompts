@@ -4,6 +4,8 @@
 
 按用途整理的 **Prompt、Prompt 模板与 Agent Skills**，由 [dongshuyan](https://github.com/dongshuyan) 维护。介绍具体资源的特点与前提，宁缺毋滥。
 
+**[浏览资源网页 →](https://dongshuyan.com/Awesome-Prompts/)** · 在网页中搜索、分类筛选和预览。
+
 ## 按用途查找
 
 | 栏目 | 你可以找什么 |
@@ -23,6 +25,7 @@
 
 ## 实用工具
 
+<!-- catalog:begin practical -->
 **评价重点：** 任务明确，输入、输出与所需工具写清；步骤可按任务规模调整。
 
 **外部精选**
@@ -36,12 +39,14 @@
 - **[学术论文阅读](实用工具/学术论文阅读.txt)** · 模板：面向初学者，依次梳理问题、方法、数据和结果，区分论文报告与外部信息。
 - **[项目优化与施工](实用工具/项目优化与施工/)** · 模板：从[需求与方案](实用工具/项目优化与施工/step1.md)，到[施工与验收计划](实用工具/项目优化与施工/step2.md)，再到[执行交接](实用工具/项目优化与施工/step3.md)。使用前替换项目与文档路径。
 - **[任务澄清与边界说明](实用工具/任务澄清与边界说明.txt)** · 模板：五种任务、歧义与输出组织框架；替代目标需说明差别并由用户选择。
-- **[COMPASS（司南）](https://github.com/dongshuyan/compass-skills#readme)** · Skill 集合 · **维护者自有项目**：围绕需求澄清、任务跟踪、暂停续接与跨会话交接组织工作；另含清晰表达和学术文字编辑技能。完整清单与安装说明见原项目，本地固定版本入口为 `Skills/compass-skills/`。
+- **[COMPASS · 司南](https://github.com/dongshuyan/compass-skills#readme)** · Skill 集合 · **维护者自有项目**：围绕需求澄清、任务跟踪、暂停续接与跨会话交接组织工作；另含清晰表达和学术文字编辑技能。完整清单与安装说明见原项目，本地固定版本入口为 `Skills/compass-skills/`。
 
 其他本地条目：[健康科普](实用工具/AI健康顾问.txt)、[Gemini 指令模板](实用工具/自信的Gemini.txt)。健康内容用于知识了解与就医沟通，不能替代专业诊疗。 [浏览全部实用工具 →](实用工具/)
+<!-- catalog:end practical -->
 
 ## 元提示词
 
+<!-- catalog:begin meta -->
 **评价重点：** 生成或修改的对象明确，输入与输出清楚；优化、压缩时保留目标和关键约束，不用篇幅或未经测量的压缩率证明效果。
 
 **本地模板**
@@ -52,9 +57,11 @@
 - **[Nano Banana Pro 图像规格](元提示词/Nano-Banana-Pro图像规格架构师.txt)**：把创作需求整理成自定义类 JSON 规格，便于调整构图等参数；不是官方 API 请求或可直接解析的 JSON。
 
 [浏览全部元提示词 →](元提示词/)
+<!-- catalog:end meta -->
 
 ## 写作辅助
 
+<!-- catalog:begin writing -->
 **评价重点：** 文体或协作环节明确；事实性改写保留原意、证据与限定，虚构创作需与事实内容区分。
 
 **外部精选**
@@ -67,37 +74,45 @@
 - **[自然语言改写](写作辅助/AI内容转人写.txt)** · Prompt：调整措辞与衔接，保留事实、观点和逻辑，不补造经历或引用。
 
 [浏览写作辅助历史目录 →](写作辅助/)：另有翻译、文生图和 Cosplay 资料，部分为成人向；具体适用性与待确认事项见[审阅说明](REVIEW_NOTES.md)。
+<!-- catalog:end writing -->
 
 ## 角色扮演
 
+<!-- catalog:begin roleplay -->
 **评价重点：** 角色、场景与互动规则清楚，尊重用户对自身行动的决定；标明变量、宿主依赖与内容类型。
 
 **外部精选**
 
-- **[Roleplay - Immersive](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json)** · SillyTavern · Prompt
+- **[Roleplay · Immersive](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json)** · SillyTavern · Prompt
   用简短通用规则组织角色与环境描写，每次回复一轮，不代替用户决定行动。需宿主替换 `{{user}}`、`{{char}}`；[仓库根许可为 AGPL-3.0](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE)，复制衍生的许可兼容性未评估。
 
 [浏览角色扮演历史目录 →](角色扮演/)：单独角色与多角色人设，含成人向条目；历史保留不构成对各文件的重新推荐。
+<!-- catalog:end roleplay -->
 
 ## 越狱破限
 
+<!-- catalog:begin jailbreak -->
 **评价重点：** 来源、目标模型或平台、版本与日期可查；效果声称须有对应条件和证据，不以“解锁”等用语代替验证。
 
 **研究资料入口**
 
-- **[Jailbreaks](https://github.com/togg53192-cmd/jailbreaks)** · togg53192-cmd · 跨模型提示词与指令边界研究资料集
+- **[Jailbreaks · 跨模型研究资料](https://github.com/togg53192-cmd/jailbreaks)** · togg53192-cmd · 跨模型提示词与指令边界研究资料集
   按模型家族整理系统提示词、角色设定与工作区指令，便于对照不同指令形式。[核对版本](https://github.com/togg53192-cmd/jailbreaks/blob/17c7117635cf0f270104b1bb8b1e79ff8319a668/README.md)（2026-10-30）；本次核对项目说明与目录，未逐项审阅或测试效果，仅作外链介绍。
 
 [浏览越狱破限历史目录 →](越狱破限/)：按模型或场景命名的既有材料。文件中的稳定性、通用性等声称未获本轮效果验证，收录不代表平台许可或绕过效果背书。
+<!-- catalog:end jailbreak -->
 
 ## NSFW
 
+<!-- catalog:begin nsfw -->
 **评价重点：** 内容类型、目标工具和依赖标注清楚，来源与展示方式符合[贡献指南](CONTRIBUTING.md)中的收录边界。
 
 [浏览 NSFW 历史目录 →](NSFW/)：原有成人向图像提示词资料。目标工具能力与具体发布条件需分别核对，分类标签本身不证明效果或可发布性。
+<!-- catalog:end nsfw -->
 
 ## 合集与在线资料
 
+<!-- catalog:begin collections -->
 以下是既有收藏入口，供进一步查找，未通读其中全部条目。主仓库记录子模块的固定提交，可能与上游最新内容不同；各项目的用途、依赖和许可分别以原文为准。[合集核查记录](REVIEW_NOTES.md#合集入口)
 
 ### OpenClaw 合集
@@ -122,6 +137,7 @@
 - [飞书知识库](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc)：原收录的资料入口。
 
 </details>
+<!-- catalog:end collections -->
 
 ## 使用与下载
 

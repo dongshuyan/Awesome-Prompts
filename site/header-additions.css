@@ -1,0 +1,69 @@
+body[data-layout='deck'] .masthead > .brand { position: relative; }
+
+body[data-layout='deck'] .header-github-star {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent2);
+  border-color: var(--accent2);
+  color: var(--bg);
+  font-weight: 600;
+  text-decoration: none;
+}
+body[data-layout='deck'] .header-github-star:hover { text-decoration: underline; }
+
+#header-hex {
+  --bg: #0b0f14;
+  --surface: #111a24;
+  --raised: #162230;
+  --line: #243446;
+  --text: #e4ebf2;
+  --muted: #93a1b1;
+  --accent: #3ddbc6;
+  --accent2: #c9a66b;
+  position: absolute;
+  top: -36px;
+  right: 0;
+  width: 264px;
+  height: 196px;
+}
+#header-hex .orbit {
+  position: absolute;
+  left: 42px;
+  top: 16px;
+  width: 180px;
+  height: 180px;
+  aspect-ratio: 1;
+  container-type: inline-size;
+  --r: 72px;
+}
+@supports (width: 1cqi) { #header-hex .orbit { --r: 40cqi; } }
+#header-hex .orbit-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 0; }
+#header-hex .ring { fill: none; stroke-width: 1.5; }
+#header-hex .ring-in { stroke: rgba(201,166,107,.28); }
+#header-hex .ring-mid { stroke: rgba(147,161,177,.16); }
+#header-hex .ring-outer { stroke: rgba(61,219,198,.42); stroke-dasharray: 2 7; }
+#header-hex .ring-ticks { fill: none; stroke: rgba(147,161,177,.22); stroke-width: 8; stroke-dasharray: 2 16; }
+#header-hex .track { fill: rgba(61,219,198,.05); stroke: rgba(61,219,198,.5); stroke-width: 2; }
+#header-hex .spoke { stroke: rgba(201,166,107,.25); stroke-width: 1.5; }
+#header-hex .orbit::after { content: ''; position: absolute; inset: 14%; border-radius: 50%; background: conic-gradient(from 0deg, rgba(61,219,198,0), rgba(61,219,198,.14) 22deg, rgba(61,219,198,0) 46deg); pointer-events: none; z-index: 0; animation: header-hex-sweep 24s linear infinite; }
+@keyframes header-hex-sweep { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { #header-hex .orbit::after { animation: none; } }
+#header-hex .orbit-core { position: absolute; left: 50%; top: 50%; z-index: 1; width: 40%; transform: translate(-50%, -50%); text-align: center; pointer-events: none; }
+#header-hex .core-num { margin: 0; font-size: 22px; font-weight: 800; line-height: 1; color: var(--accent); font-variant-numeric: tabular-nums; }
+@supports (width: 1cqi) { #header-hex .core-num { font-size: 12cqi; } }
+#header-hex .core-label { margin: 4px 0 0; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+#header-hex .orbit-nodes { position: absolute; inset: 0; z-index: 2; margin: 0; padding: 0; list-style: none; pointer-events: none; }
+#header-hex .orbit-node { position: absolute; left: 50%; top: 50%; width: 84px; height: 34px; min-height: 0; margin: -17px 0 0 -42px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 1px; padding: 4px 8px; border-radius: 10px; border: 1px solid var(--line); background: linear-gradient(160deg, var(--raised), var(--surface)); color: var(--text); font: inherit; text-align: left; text-decoration: none; cursor: pointer; pointer-events: auto; transform: rotate(calc(var(--i) * 60deg)) translateY(calc(var(--r) * -1)) rotate(calc(var(--i) * -60deg)); transition: border-color .2s ease, box-shadow .2s ease; }
+#header-hex .orbit-node:hover { border-color: var(--accent); box-shadow: 0 12px 32px rgba(0,0,0,.45), 0 0 0 1px rgba(61,219,198,.25); }
+#header-hex .orbit-node:hover .node-label { color: var(--accent); }
+#header-hex .orbit-node:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+#header-hex .orbit-node[aria-pressed='true'] { border-color: var(--accent2); background: var(--raised); }
+#header-hex .orbit-node[aria-pressed='true'] .node-label { color: var(--accent2); }
+#header-hex .node-index { font-size: 9px; font-weight: 700; line-height: 1; letter-spacing: .14em; font-variant-numeric: tabular-nums; }
+#header-hex .orbit-node:nth-child(odd) .node-index { color: var(--accent); }
+#header-hex .orbit-node:nth-child(even) .node-index { color: var(--accent2); }
+#header-hex .node-label { font-size: 11px; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+
+@media (max-width: 1199px) {
+  #header-hex { position: relative; top: auto; right: auto; height: 196px; margin: 16px 0 0 auto; }
+}

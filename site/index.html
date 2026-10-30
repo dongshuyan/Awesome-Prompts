@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang='zh-CN'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='icon' href='favicon.svg' type='image/svg+xml'>
+<title data-zh='Awesome-Prompts · 舱室检视' data-en='Awesome-Prompts · Cabin Inspection'>Awesome-Prompts · 舱室检视</title>
+<meta name='description' content='Awesome-Prompts 资源目录：按类别、用途与来源检视可复制资源。'>
+<link rel='stylesheet' href='shared/base.css'>
+<link rel='stylesheet' href='styles.css'>
+<link rel='stylesheet' href='header-additions.css'>
+<script defer src='catalog.js'></script>
+<script defer src='shared/core.js'></script>
+<script defer src='shared/copy.js'></script>
+<script defer src='shared/app.js'></script>
+<script defer src='header-additions.js'></script>
+</head>
+<body data-layout='deck'>
+<noscript><p>搜索与预览需要 JavaScript。<a href='https://github.com/dongshuyan/Awesome-Prompts'>浏览原仓库 / Browse the repository</a></p></noscript>
+<a class='skip-link' href='#catalog' data-zh='跳到结果账本' data-en='Skip to results'>跳到结果账本</a>
+
+<header class='masthead'>
+  <div class='brand'>
+    <p class='eyebrow' data-zh='舱室检视 · 资源台账' data-en='Cabin inspection · Resource ledger'>舱室检视 · 资源台账</p>
+    <h1 class='brand-name'>Awesome-Prompts</h1>
+    <p class='brand-line' data-zh='先看用途、来源与状态，再决定是否预览或复制。' data-en='Check purpose, source and status first, then preview or copy.'>先看用途、来源与状态，再决定是否预览或复制。</p>
+    <div id='header-hex' class='header-hex'>
+    <div class='orbit'>
+    <svg class='orbit-svg' viewBox='0 0 600 600' aria-hidden='true' focusable='false'>
+    <circle class='ring-ticks' cx='300' cy='300' r='290'>
+    </circle>
+    <circle class='ring ring-in' cx='300' cy='300' r='84'>
+    </circle>
+    <circle class='ring ring-mid' cx='300' cy='300' r='150'>
+    </circle>
+    <circle class='ring ring-outer' cx='300' cy='300' r='228'>
+    </circle>
+    <polygon class='track' points='300,72 497,186 497,414 300,528 103,414 103,186'>
+    </polygon>
+    <line class='spoke' x1='300' y1='300' x2='300' y2='72'>
+    </line>
+    <line class='spoke' x1='300' y1='300' x2='497' y2='186'>
+    </line>
+    <line class='spoke' x1='300' y1='300' x2='497' y2='414'>
+    </line>
+    <line class='spoke' x1='300' y1='300' x2='300' y2='528'>
+    </line>
+    <line class='spoke' x1='300' y1='300' x2='103' y2='414'>
+    </line>
+    <line class='spoke' x1='300' y1='300' x2='103' y2='186'>
+    </line>
+    </svg>
+    <div class='orbit-core'>
+    <p class='core-num'>6</p>
+    <p class='core-label' data-zh='六条轨道' data-en='Six tracks'>六条轨道</p>
+    </div>
+    <nav class='orbit-nodes' aria-label='Categories · 资源类别'>
+    <button type='button' class='orbit-node' data-header-category='practical' aria-pressed='false' style='--i:0'>
+    <span class='node-index'>01</span>
+    <span class='node-label' data-zh='实用工具' data-en='Practical'>实用工具</span>
+    </button>
+    <button type='button' class='orbit-node' data-header-category='meta' aria-pressed='false' style='--i:1'>
+    <span class='node-index'>02</span>
+    <span class='node-label' data-zh='元提示词' data-en='Meta'>元提示词</span>
+    </button>
+    <button type='button' class='orbit-node' data-header-category='writing' aria-pressed='false' style='--i:2'>
+    <span class='node-index'>03</span>
+    <span class='node-label' data-zh='写作辅助' data-en='Writing'>写作辅助</span>
+    </button>
+    <button type='button' class='orbit-node' data-header-category='roleplay' aria-pressed='false' style='--i:3'>
+    <span class='node-index'>04</span>
+    <span class='node-label' data-zh='角色扮演' data-en='Roleplay'>角色扮演</span>
+    </button>
+    <button type='button' class='orbit-node' data-header-category='jailbreak' aria-pressed='false' style='--i:4'>
+    <span class='node-index'>05</span>
+    <span class='node-label' data-zh='越狱破限' data-en='Jailbreak'>越狱破限</span>
+    </button>
+    <button type='button' class='orbit-node' data-header-category='nsfw' aria-pressed='false' style='--i:5'>
+    <span class='node-index'>06</span>
+    <span class='node-label' data-zh='NSFW' data-en='NSFW'>NSFW</span>
+    </button>
+    </nav>
+    </div>
+    </div>
+  </div>
+  <div class='masthead-tools'>
+    <button id='lang' type='button' class='tool' data-zh='English' data-en='中文'>English</button>
+    <button id='scope' type='button' class='tool' data-zh='切换归档' data-en='Toggle archived'>切换归档</button>
+    <a class='tool header-github-star' href='https://github.com/dongshuyan/Awesome-Prompts' target='_blank' rel='noopener noreferrer'>GitHub Star ↗</a>
+  </div>
+  <div class='scale' aria-hidden='true'></div>
+  <dl class='readout'>
+    <div><dt data-zh='当前' data-en='Current'>当前</dt><dd data-total='current'>—</dd></div>
+    <div><dt data-zh='本地' data-en='Local'>本地</dt><dd data-total='local'>—</dd></div>
+    <div><dt data-zh='外部' data-en='External'>外部</dt><dd data-total='external'>—</dd></div>
+    <div><dt data-zh='可预览' data-en='Previewable'>可预览</dt><dd data-total='previewable'>—</dd></div>
+    <div><dt data-zh='归档' data-en='Archived'>归档</dt><dd data-total='archived'>—</dd></div>
+    <div><dt data-zh='类别' data-en='Categories'>类别</dt><dd data-total='categories'>—</dd></div>
+  </dl>
+</header>
+
+<div class='shell'>
+  <aside class='rail' aria-labelledby='rail-title'>
+    <h2 id='rail-title' class='rail-title' data-zh='类别' data-en='Categories'>类别</h2>
+    <p class='rail-note' data-zh='六类同级，按用途查找。' data-en='Six categories, organized by purpose.'>六类同级，按用途查找。</p>
+    <nav id='category-nav' class='category-nav' aria-labelledby='rail-title'></nav>
+    <div class='rail-filters'>
+      <h2 class='rail-title' data-zh='过滤' data-en='Filters'>过滤</h2>
+      <label class='field' for='kind'><span data-zh='资源类型' data-en='Type'>资源类型</span>
+        <select id='kind'>
+          <option value='all' data-zh='全部' data-en='All'>全部</option>
+          <option value='prompt' data-zh='提示词' data-en='Prompt'>提示词</option>
+          <option value='template' data-zh='模板' data-en='Template'>模板</option>
+          <option value='skill' data-zh='技能' data-en='Skill'>技能</option>
+          <option value='collection' data-zh='合集' data-en='Collection'>合集</option>
+        </select>
+      </label>
+      <label class='field' for='status'><span data-zh='来源状态' data-en='Source status'>来源状态</span>
+        <select id='status'>
+          <option value='all' data-zh='全部' data-en='All'>全部</option>
+          <option value='selected' data-zh='外部精选' data-en='Selected'>外部精选</option>
+          <option value='local' data-zh='本地' data-en='Local'>本地</option>
+          <option value='legacy' data-zh='历史保留' data-en='Retained'>历史保留</option>
+          <option value='maintainer' data-zh='维护者' data-en='Maintainer'>维护者</option>
+          <option value='reference' data-zh='参考' data-en='Reference'>参考</option>
+          <option value='collection' data-zh='合集' data-en='Collection'>合集</option>
+          <option value='archived' data-zh='归档' data-en='Archived'>归档</option>
+        </select>
+      </label>
+      <button id='reset' type='button' class='tool-wide' data-zh='清除筛选' data-en='Clear filters'>清除筛选</button>
+    </div>
+  </aside>
+
+  <main class='ledger-col'>
+    <div class='search-bar' role='search'>
+      <label class='search-label' for='search' data-zh='搜索标题、描述或作者' data-en='Search title, description or author'>搜索标题、描述或作者</label>
+      <input id='search' type='search' autocomplete='off' spellcheck='false'>
+    </div>
+    <p id='app-error' class='app-error' role='alert' hidden></p>
+
+    <section id='featured-section' class='featured' hidden>
+      <h2 data-zh='从这里开始' data-en='Start here'>从这里开始</h2>
+      <div id='featured' class='featured-list'></div>
+    </section>
+
+    <section id='catalog' class='ledger corners' tabindex='-1'>
+      <header class='ledger-head'>
+        <div>
+          <p class='ledger-kicker' data-zh='提示词 / 模板 / Skills' data-en='Prompts / Templates / Skills'>提示词 / 模板 / Skills</p>
+          <h2 id='catalog-title' data-zh='全部资源' data-en='All resources'>全部资源</h2>
+        </div>
+        <p id='count' class='count' aria-live='polite'></p>
+      </header>
+      <p class='criteria-line'><span class='crit-label' data-zh='评价重点' data-en='Criteria'>评价重点</span><span id='criteria'></span></p>
+      <div id='results' class='results'></div>
+    </section>
+  </main>
+
+  <div class='inspector'>
+    <p class='frame-cap' data-zh='资源检视器' data-en='Resource inspector'>资源检视器</p>
+    <p id='detail-status' class='visually-hidden' role='status'></p>
+    <aside id='detail-pane' class='detail-pane corners' aria-label='资源详情 · Resource details'></aside>
+  </div>
+</div>
+
+<dialog id='detail-dialog' aria-label='资源详情 · Resource details'>
+  <div class='dialog-bar'>
+    <span class='dialog-tag' data-zh='检视' data-en='Inspect'>检视</span>
+    <button id='dialog-close' type='button' data-zh='关闭 (Esc)' data-en='Close (Esc)'>关闭 (Esc)</button>
+  </div>
+  <div id='dialog-content' class='dialog-body'></div>
+</dialog>
+
+<footer class='foot' id='site-foot'>
+  <div class='foot-links'>
+    <a href='https://github.com/dongshuyan/Awesome-Prompts' target='_blank' rel='noopener' data-zh='原仓库' data-en='Repository'>原仓库</a>
+    <a href='https://github.com/dongshuyan' target='_blank' rel='noopener' data-zh='关注维护者' data-en='Follow maintainer'>关注维护者</a>
+    <a href='https://github.com/dongshuyan/Awesome-Prompts/blob/master/CONTRIBUTING.md' target='_blank' rel='noopener' data-zh='贡献指南' data-en='Contributing'>贡献指南</a>
+    <a href='https://github.com/dongshuyan/Awesome-Prompts/blob/master/REVIEW_NOTES.md' target='_blank' rel='noopener' data-zh='审阅说明' data-en='Review notes'>审阅说明</a>
+  </div>
+  <p class='foot-note' data-zh='可预览条目保留原文，其余提供简介与来源。历史保留不等于重新推荐。' data-en='Previewable entries retain their original text; other entries provide descriptions and sources. Historical retention does not renew recommendation.'>可预览条目保留原文，其余提供简介与来源。历史保留不等于重新推荐。</p>
+</footer>
+</body>
+</html>
