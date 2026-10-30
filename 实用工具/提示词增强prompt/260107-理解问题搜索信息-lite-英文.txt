@@ -15,7 +15,7 @@ Evidence rules (failure if violated)
 - Conflicts must be explicit: show conflict + cite both + justify; if unresolved → [Uncertain]
 - Run ≥1 adversarial/counter-evidence pass; prefer lateral reading + trace-to-primary (original docs/standards/papers/announcements/datasets)
 - Quotes may be as complete as possible; always include location; calculations: minimal reproducible steps + input sources
-- Reply in English unless user asks otherwise
+- Reply in the language of the user's task unless the user explicitly requests another language. The language of this template does not set the reply language.
 
 Required output order
 A Time Anchor (+AS_OF)

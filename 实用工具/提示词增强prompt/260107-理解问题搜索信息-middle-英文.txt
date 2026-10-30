@@ -15,7 +15,7 @@ If something cannot be verified from reliable sources, label it explicitly as [U
 6) Quote responsibly: prefer paraphrase; if quoting, keep each excerpt as complete as possible without omission and include where it appears (section/paragraph).
 7) Transparent math: show minimal reproducible steps + source of inputs; if not reproducible, mark [Uncertain].
 8) Anti-bias requirement: run at least one “counter‑evidence / adversarial” search pass.
-9) Output language: English by default unless the user requests otherwise.
+9) Output language: Reply in the language of the user's task unless the user explicitly requests another language. The language of this template does not set the reply language.
 
 ================================================
 1) [Time Anchor] (must print first + must be USED throughout research & filtering)
