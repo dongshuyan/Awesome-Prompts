@@ -2,197 +2,167 @@
 
 [简体中文](README.md) | English
 
-A collection of prompts and agent resources maintained by [dongshuyan](https://github.com/dongshuyan). It includes prompts written by the maintainer or collected from the community, Agent Skills, and OpenClaw templates and use cases. Copy a prompt to use it, or follow a skill project's installation guide.
+**Prompts, prompt templates and Agent Skills**, organized by use and maintained by [dongshuyan](https://github.com/dongshuyan). Entries describe specific resources and their prerequisites. Quality takes priority over quantity.
 
-[Find a resource](#find-a-resource) · [Selected resources](#selected-resources) · [Get started](#get-started) · [COMPASS](#compass) · [Resource directory](#resource-directory) · [Archived content](#archived-content) · [Feedback and contributions](#feedback-and-contributions)
+## Browse by purpose
 
-## What this repository contains
-
-| Part | Contents | How to use it |
-| --- | --- | --- |
-| Prompts | Questions and research, paper reading, project planning, writing, images, and character settings, grouped by purpose | Open a file and copy its text into your AI chat or the instruction field supported by your tool |
-| Agent Skills | The maintainer's [COMPASS](https://github.com/dongshuyan/compass-skills) project and OpenClaw community skill resources | Install and invoke skills using each project's instructions |
-| OpenClaw templates and use cases | Agent settings, templates, and examples | Read the original project and configure it for your use case |
-| Archived content | Historical material with its original directory structure | Look up older content and recorded sources |
-
-## Selected resources
-
-New additions are specific prompts, templates or skills with labels from the existing categories. These three entries provide descriptions and pinned source links without copying third-party text. Selection is based on content reading and purpose comparison; their model outputs have not been tested here.
-
-| Resource and author | Category and reason for selection | Prerequisites and license observations |
-| --- | --- | --- |
-| [doc-coauthoring · Anthropic](https://github.com/anthropics/skills/blob/00756142ab04c82a447693cf373c4e0c554d1005/skills/doc-coauthoring/SKILL.md) | Writing / Skill; context gathering, collaborative drafting and reader checks add a multi-turn document workflow | Needs sustained interaction and matching host tools. A copying license for the selected directory has not been verified; source-link introduction only |
-| [frontend-design · Anthropic](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md) | Practical tools / Skill; visual direction, typography, layout and self-review add visual-design guidance | For interface-building agents; does not guarantee engineering correctness. The [corresponding license](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/LICENSE.txt) is Apache-2.0 |
-| [Roleplay - Immersive · SillyTavern](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json) | Roleplay / Prompt; short general interaction rules complement fixed character settings without deciding the user's actions | Uses `{{user}}` and `{{char}}` macros that the host must replace. The [repository license](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE) is AGPL-3.0; compatibility for copying or derivative distribution has not been assessed |
-
-Checked on 2026-10-30. Repository Stars do not establish individual-resource effectiveness. See the [review notes](REVIEW_NOTES.md) for report limitations and this revision. Retaining historical content does not automatically renew its recommendation.
-
-## Find a resource
-
-| I want to… | Start here |
+| Category | What you can find |
 | --- | --- |
-| Have an AI understand a question and search before answering | [Prompt enhancement series](实用工具/提示词增强prompt/): Chinese/English variants; English middle is full length |
-| Collaborate on documents or build an interface | doc-coauthoring / frontend-design under [selected resources](#selected-resources) |
-| Understand a paper | [Structured paper reading](实用工具/学术论文阅读.txt) |
-| Clarify project requirements and plan implementation and handoff | [Project planning workflow](实用工具/项目优化与施工/): use step1 → step2 → step3 |
-| Generate or compress a prompt | [Meta prompts](元提示词/) |
-| Clarify a task, track progress, or continue work in an agent | [COMPASS](#compass) |
-| Find rewriting, translation, or image prompt templates | [Writing tools](写作辅助/); image specification templates are under [meta prompts](元提示词/) |
-| Find character settings | [Roleplay](角色扮演/), including adult material |
-| Find model restriction templates or adult content | [Model restriction templates](越狱破限/) / [NSFW](NSFW/) |
-| Find OpenClaw skills, agent templates, or use cases | [OpenClaw resources](#openclaw-resources) |
-| Find something previously included in the collection | [Archived content](已过期/) |
+| [Practical tools](#practical-tools) | Search-based Q&A, paper reading, project planning, interface design and agent workflows |
+| [Meta-prompts](#meta-prompts) | Generate, refine or compress prompts; organize image-creation specifications |
+| [Writing assistance](#writing-assistance) | Document collaboration, rewriting, translation and image-prompt references |
+| [Roleplay](#roleplay) | General interaction rules and character settings, including historical adult-oriented entries |
+| [Jailbreaks](#jailbreaks) | Historical model-restriction templates and source records |
+| [NSFW](#nsfw) | The historical directory of adult-oriented image prompts |
 
-## Get started
+[Collections and online references](#collections-and-online-references) · [Archive and sources](#archive-and-sources) · [Contributions and feedback](#contributions-and-feedback)
 
-### Use a prompt directly
+Each category's **evaluation focus** applies the general criteria to its use; full selection criteria are in [CONTRIBUTING](CONTRIBUTING.md). New selections rely on reading the content, source checks and verifiable feedback. There is no minimum Star count or mandatory firsthand testing.
 
-1. Open the relevant directory and choose a `.txt` or `.md` file. On GitHub, click **Raw** to view its plain text.
-2. Copy the contents. If the file specifies system instructions or another location, follow that guidance.
-3. Replace placeholders such as `{{original_prompt}}`, `XXX`, and document paths with your own material. Add your goal, constraints, and output requirements.
-4. Run it in your AI tool, check the result, and adjust the prompt as needed.
+**Reading this list:** “External selections” link to the versions read. “Local templates” and “historical directories” provide access to existing material; retention does not mean every item meets the current criteria. Checked on 2026-10-30; no model-effectiveness tests were performed. See [review notes](REVIEW_NOTES.md) for version, license and feedback limitations.
 
-The enhancement series can be appended after your task and materials; attachments and quotations remain material rather than acquiring instruction authority. Follow each other template's placement instructions.
+## Practical tools
 
-Prompts that ask for web searches, attachments, or code execution depend on those capabilities being available in your AI tool. Results vary with model and tool versions; inclusion here does not establish compatibility with every environment.
+**Evaluation focus:** A specific task, clear inputs and outputs, explicit tool requirements, and steps that can scale with the task.
 
-### Download the collection
+**External selection**
 
-Download this repository's prompts and navigation files:
+- **[frontend-design](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md)** · Anthropic · Skill
+  Organizes interface design around visual direction, typography, layout and self-review. Intended for agents that can build interfaces; it focuses on visual expression, while engineering correctness needs separate checks. [Corresponding license: Apache-2.0](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/LICENSE.txt).
+
+**Local templates and previously collected projects**
+
+- **[Prompt enhancement series](实用工具/提示词增强prompt/)** · Prompt: Understand the task, then search and check evidence as needed. Chinese and English variants are available at different lengths; English `middle` currently matches the full version byte for byte. See [version notes](REVIEW_NOTES.md#版本与适用性).
+- **[Academic paper reading](实用工具/学术论文阅读.txt)** · Template: Explains questions, methods, data and results for beginners, separating the paper's reports from external information.
+- **[Project optimization and implementation](实用工具/项目优化与施工/)** · Templates: Move from [requirements and proposal](实用工具/项目优化与施工/step1.md) to [implementation and acceptance planning](实用工具/项目优化与施工/step2.md), then [execution handoff](实用工具/项目优化与施工/step3.md). Replace project and document paths before use.
+- **[Task clarification and boundary statements](实用工具/任务澄清与边界说明.txt)** · Templates: Five frameworks for tasks, ambiguity and output structure. Alternative goals must explain the difference and leave the choice to the user.
+- **[COMPASS](https://github.com/dongshuyan/compass-skills#readme)** · Skill collection · **Maintainer-owned project**: Workflows for clarification, task tracking, pausing/resuming and cross-session handoff, plus clear communication and academic editing. See the original project for the full list and installation. The locally pinned entry is `Skills/compass-skills/`.
+
+Other local entries: [health information](实用工具/AI健康顾问.txt) and [Gemini instruction template](实用工具/自信的Gemini.txt). Health material supports general understanding and conversations with clinicians; it does not replace professional care. [Browse all practical tools →](实用工具/)
+
+## Meta-prompts
+
+**Evaluation focus:** Clear inputs, outputs and targets for generation or revision. Refinement and compression should preserve goals and essential constraints; length or unmeasured compression ratios do not establish effectiveness.
+
+**Local templates**
+
+- **[Generate a prompt from requirements](元提示词/根据需求生成提示词.txt)**: Organizes decision, analysis, creation, verification and execution tasks. Goal-changing suggestions require confirmation.
+- **[Prompt design framework](元提示词/生成prompt的prompt.txt)**: Organizes roles, constraints, outputs and calibration as needed. Persistence depends on actual tools and authorization.
+- **[Long-prompt compression](元提示词/长提示词压缩.txt)**: Checks the result against the original meaning, conditions and exceptions; reports a compression ratio only with measured token counts.
+- **[Nano Banana Pro image specification](元提示词/Nano-Banana-Pro图像规格架构师.txt)**: Organizes creative requirements into a custom JSON-like specification for adjusting composition and other parameters. It is not an official API request or directly parseable JSON.
+
+[Browse all meta-prompts →](元提示词/)
+
+## Writing assistance
+
+**Evaluation focus:** A clear genre or collaboration stage. Factual rewriting preserves meaning, evidence and qualifications; fictional creation stays distinguishable from factual material.
+
+**External selection**
+
+- **[doc-coauthoring](https://github.com/anthropics/skills/blob/00756142ab04c82a447693cf373c4e0c554d1005/skills/doc-coauthoring/SKILL.md)** · Anthropic · Skill
+  Connects context gathering, collaborative drafting and reader checks in a multi-turn document workflow, complementing one-pass rewriting templates. Requires ongoing interaction and matching host tool names. Copying permission for the selected directory is unverified; this is a source-link introduction.
+
+**Local template**
+
+- **[Natural-language rewriting](写作辅助/AI内容转人写.txt)** · Prompt: Adjusts wording and transitions while preserving facts, views and logic, without inventing experiences or citations.
+
+[Browse the historical writing directory →](写作辅助/): Also contains translation, text-to-image and cosplay references, some adult-oriented. See [review notes](REVIEW_NOTES.md) for applicability and pending issues.
+
+## Roleplay
+
+**Evaluation focus:** Clear characters, scenes and interaction rules; user control over their own actions; identified variables, host dependencies and content type.
+
+**External selection**
+
+- **[Roleplay - Immersive](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json)** · SillyTavern · Prompt
+  Uses short general rules for character and environment descriptions, producing one reply without deciding the user's actions. The host must substitute `{{user}}` and `{{char}}`. The [repository root license is AGPL-3.0](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE); compatibility for copied or derivative material has not been assessed.
+
+[Browse the historical roleplay directory →](角色扮演/): Individual characters and multi-character settings, including adult-oriented entries. Retention does not renew recommendations for each file.
+
+## Jailbreaks
+
+**Evaluation focus:** Traceable sources, target model or platform, version and date. Effectiveness claims need supporting conditions and evidence; “unlocking” language is not validation.
+
+[Browse the historical jailbreak directory →](越狱破限/): Existing material named by model or scenario. Stability and universality claims were not validated through effectiveness testing in this review. Inclusion does not establish platform permission or bypass effectiveness.
+
+## NSFW
+
+**Evaluation focus:** Clear content type, target tool and dependencies, with sources and presentation meeting the collection boundaries in [CONTRIBUTING](CONTRIBUTING.md).
+
+[Browse the historical NSFW directory →](NSFW/): Existing adult-oriented image-prompt references. Tool capabilities and publication conditions need separate checks; category labels establish neither effectiveness nor publishability.
+
+## Collections and online references
+
+These existing bookmarks support further discovery; their contents were not read in full. Submodules record fixed commits that may differ from upstream. Check each project's purpose, dependencies and license separately. [Collection-entry review](REVIEW_NOTES.md#合集入口)
+
+### OpenClaw collections
+
+- **[VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)**: A categorized skill index for further task-based discovery. Path: `Skills/Openclaw/awesome-openclaw-skills`.
+- **[sundial-org/awesome-openclaw-skills](https://github.com/sundial-org/awesome-openclaw-skills)**: Another community skill index. Path: `Skills/Openclaw/awesome-openclaw-skills-sundial-org`.
+- **[openclaw/skills](https://github.com/openclaw/skills)**: The previously collected skill archive. Its public entry returned 404 on 2026-10-30, which may affect recursive downloads; this does not establish universal failure of local contents. Path: `Skills/Openclaw/skills`.
+- **[mergisi/awesome-openclaw-agents](https://github.com/mergisi/awesome-openclaw-agents)**: Agent character settings and templates. Path: `OpenclawAgents/awesome-openclaw-agents`.
+- **[hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases)**: Use cases organized around practical scenarios. Path: `OpenclawAgents/awesome-openclaw-usecases`.
+- **[EvoLinkAI/awesome-openclaw-usecases-moltbook](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook)**: Moltbook use cases and multilingual material. Path: `OpenclawAgents/awesome-openclaw-usecases-moltbook`.
+
+<details>
+<summary>Other online bookmarks</summary>
+
+These are historical references, not individual recommendations under the current selection criteria.
+
+- [Nanobanana prompt collection](https://bmzxdlj.cn/): Chinese prompt bookmarks.
+- [Labnana](https://labnana.com/zh/explore/all): Images and prompt browsing.
+- [YouMind Nano Banana Pro prompts](https://youmind.com/zh-CN/nano-banana-pro-prompts?categories=comic-storyboard): Image prompts organized by theme.
+- [Prompt Manager](https://prompt.vioaki.xyz/): Prompt gallery and templates.
+- [Feishu prompt table](https://my.feishu.cn/wiki/S5nowuX3uiHXq4kNPb3c7cPpngh?table=tblJT29vyAEQmZzq&view=vewBBRuwm1): Previously collected online table.
+- [Feishu knowledge base](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc): Previously collected reference entry.
+
+</details>
+
+## Use and download
+
+Open a file, select **Raw**, copy the text and replace its placeholders with your task details. Follow any specified instruction placement; install skills according to their original projects. Search, attachments and code execution require actual host capabilities. Check the output after use.
+
+Append enhancement prompts after the task and materials; quoted text and attachments do not thereby gain instruction authority.
+
+<details>
+<summary>Download this repository and fetch submodules as needed</summary>
+
+Download local prompts and navigation:
 
 ```bash
 git clone https://github.com/dongshuyan/Awesome-Prompts.git
 cd Awesome-Prompts
 ```
 
-On 2026-10-30, the public `openclaw/skills` endpoint returned 404, which may affect recursive downloads. You can clone the parent repository first and fetch accessible submodules as needed; this does not establish that all content in that collection is obsolete.
-
-Download the repository and all submodules together:
-
-```bash
-git clone --recurse-submodules https://github.com/dongshuyan/Awesome-Prompts.git
-cd Awesome-Prompts
-```
-
-If you already cloned the repository, download all submodules from its root:
-
-```bash
-git submodule update --init --recursive
-```
-
-If you only need COMPASS, use this command instead:
+A normal clone does not download submodule contents. To fetch COMPASS only:
 
 ```bash
 git submodule update --init Skills/compass-skills
 ```
 
-Projects under `Skills/` and `OpenclawAgents/` are Git submodules: the parent repository records each upstream URL and a fixed commit. A regular clone does not download their contents automatically. Downloading a submodule and installing its skills are separate steps; follow the original project's instructions.
-
-## COMPASS
-
-[compass-skills](https://github.com/dongshuyan/compass-skills) is an Agent Skills project that I developed and use in my own agent workflows. It provides workflows for clarifying requirements, tracking tasks, pausing and resuming work, and handing context to another conversation. This collection includes it at `Skills/compass-skills/`. See the original project for the full skill list and installation guide.
-
-| Situation | Skill |
-| --- | --- |
-| Requirements need clarification before work begins | `task-clarifier` |
-| Work spans multiple turns and needs a record of goals, dependencies, and progress | `task-forest` |
-| You need to pause work and resume in the same conversation | `pause-and-resume` |
-| You are starting another conversation and need a context handoff | `session-handoff-prompt` |
-| An explanation needs to be clearer, or academic prose needs editing | `clear-communication` / `academic-humanizer` |
-
-With Node.js / npm installed, you can choose skills through the skills CLI. For example, run this in the project where you want to use the requirement clarification skill with Codex and Claude Code:
+For all submodules, run this at the repository root. Some upstreams are currently inaccessible, so fetching everything may fail:
 
 ```bash
-npx skills add dongshuyan/compass-skills --skill task-clarifier -a codex -a claude-code
+git submodule update --init --recursive
 ```
 
-This example installs at project scope. After installation, enter `$task-clarifier` in Codex or `/task-clarifier` in Claude Code, followed by the task you want to clarify. For other tools, installation scopes, or manual setup, see the [COMPASS README](https://github.com/dongshuyan/compass-skills#readme).
+Alternatively, start with `git clone --recurse-submodules https://github.com/dongshuyan/Awesome-Prompts.git`. Fetching a submodule does not install its skills; follow the original project's setup instructions.
 
-## Resource directory
+</details>
 
-Directory and file names retain their original Chinese names in both language versions of this README.
+## Archive and sources
 
-```text
-Awesome-Prompts/
-├── 实用工具/                  # Questions, paper reading, project planning
-│   ├── 提示词增强prompt/      # Chinese/English and different lengths
-│   └── 项目优化与施工/        # Requirements, planning, execution handoff
-├── 元提示词/                  # Generate, refine, and compress prompts
-├── 写作辅助/                  # Rewriting, translation, image prompts
-├── 角色扮演/                  # Character settings, including adult material
-│   └── 多角色人设/
-├── 越狱破限/                  # Model restriction templates
-├── NSFW/                      # Adult content
-├── Skills/
-│   ├── compass-skills/        # COMPASS, Git submodule
-│   └── Openclaw/              # OpenClaw skills, Git submodules
-├── OpenclawAgents/            # OpenClaw templates and use cases, submodules
-└── 已过期/                    # Historical content with original paths
-    └── 角色扮演/
-        └── 小羊饼/
-```
+[已过期/](已过期/) preserves historical material with its original categories, subdirectories and filenames. For example, `角色扮演/小羊饼/` maps to `已过期/角色扮演/小羊饼/`. See the [archive notes](已过期/README.md) for the current list and known sources.
 
-### Prompt categories
+This repository contains personal work and community material; some early attributions remain incomplete. Submodule licenses belong to the respective projects. Check specific permissions before copying or adapting. Existing source records: [Nano Banana Pro image specification](https://linux.do/t/topic/1410949), [Doubao image prompts](https://linux.do/t/topic/1411250) and [archived roleplay material](已过期/README.md).
 
-| Directory | Contents and selection |
-| --- | --- |
-| [实用工具 / Practical tools](实用工具/) | [Paper reading](实用工具/学术论文阅读.txt), [health education](实用工具/AI健康顾问.txt), a [Gemini instruction template](实用工具/自信的Gemini.txt), [task clarification and boundary templates](实用工具/任务澄清与边界说明.txt), and the two workflows below. Health content supports general understanding and discussion with clinicians; it does not replace professional care. |
-| [提示词增强prompt / Prompt enhancement](实用工具/提示词增强prompt/) | Chinese has full, middle and lite variants. English middle is full length and currently identical to the full variant; its historical filename is retained. All six current variants follow the task language unless the user explicitly specifies otherwise; template language does not set output language. The four files in `旧版本/` remain unchanged and may have different rules; see [version notes](REVIEW_NOTES.md#versions-and-applicability). |
-| [项目优化与施工 / Project planning](实用工具/项目优化与施工/) | [step1](实用工具/项目优化与施工/step1.md) covers requirements and a proposed approach; [step2](实用工具/项目优化与施工/step2.md) divides implementation into stages and acceptance checks; [step3](实用工具/项目优化与施工/step3.md) creates execution and handoff prompts. Replace project names and paths before use. |
-| [元提示词 / Meta prompts](元提示词/) | [Generate from requirements](元提示词/根据需求生成提示词.txt), [prompt design](元提示词/生成prompt的prompt.txt), [long prompt compression](元提示词/长提示词压缩.txt), and [Nano Banana Pro image specifications](元提示词/Nano-Banana-Pro图像规格架构师.txt). |
-| [写作辅助 / Writing tools](写作辅助/) | Rewriting, translation, image prompt, and cosplay photo templates. Some material is adult oriented. |
-| [角色扮演 / Roleplay](角色扮演/) | Individual character files and the `多角色人设/` collection. Browse filenames for settings; includes adult material. |
-| [越狱破限 / Model restriction templates](越狱破限/) | Historical templates named by model or scenario. Applicability depends on model versions and platform rules. |
-| [NSFW](NSFW/) | Adult image prompts. Check each file for its intended tool. |
+## Contributions and feedback
 
-### OpenClaw resources
+Suggest a specific entry through an [Issue](https://github.com/dongshuyan/Awesome-Prompts/issues) or PR. Maintainer-owned and third-party projects follow the same standard. Use [CONTRIBUTING](CONTRIBUTING.md) to supply the **original item and version, purpose, added value, prerequisites, author and permission**. Include verifiable feedback where available; simply state if you have not tested it.
 
-Each project below has its own upstream repository. This collection pins a specific commit, so local content may differ from the latest upstream version. Consult the original project for its purpose, installation instructions, and license. Pins are unchanged in this revision; availability and license-declaration differences are recorded in the [review notes](REVIEW_NOTES.md#collection-entrypoints).
+Accepted entries show the original repository, selected item and recommendation rationale, without endorsing the whole collection. For existing issues, identify the path. Runtime reports are easier to assess with model/tool versions, date, expected and actual behavior. Authors can also request attribution corrections, clarify permission or ask for removal through Issues.
 
-| Local submodule path | Original project | Contents |
-| --- | --- | --- |
-| `Skills/Openclaw/awesome-openclaw-skills` | [VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills) | OpenClaw skills organized by category |
-| `Skills/Openclaw/awesome-openclaw-skills-sundial-org` | [sundial-org/awesome-openclaw-skills](https://github.com/sundial-org/awesome-openclaw-skills) | OpenClaw skill collection |
-| `Skills/Openclaw/skills` | [openclaw/skills](https://github.com/openclaw/skills) | OpenClaw skill archive |
-| `OpenclawAgents/awesome-openclaw-agents` | [mergisi/awesome-openclaw-agents](https://github.com/mergisi/awesome-openclaw-agents) | Agent settings and templates |
-| `OpenclawAgents/awesome-openclaw-usecases` | [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases) | OpenClaw use cases |
-| `OpenclawAgents/awesome-openclaw-usecases-moltbook` | [EvoLinkAI/awesome-openclaw-usecases-moltbook](https://github.com/EvoLinkAI/awesome-openclaw-usecases-moltbook) | Moltbook use cases and multilingual material |
-
-### Online prompt resources
-
-Additional external resources collected for reference:
-
-| Resource | Contents |
-| --- | --- |
-| [Nanobanana 提示词收纳盒](https://bmzxdlj.cn/) | Chinese prompt collection |
-| [Labnana](https://labnana.com/zh/explore/all) | Image examples and prompts |
-| [YouMind Nano Banana Pro prompts](https://youmind.com/zh-CN/nano-banana-pro-prompts?categories=comic-storyboard) | Image prompts by topic |
-| [Prompt Manager](https://prompt.vioaki.xyz/) | Prompt gallery and templates |
-| [Feishu prompt table](https://my.feishu.cn/wiki/S5nowuX3uiHXq4kNPb3c7cPpngh?table=tblJT29vyAEQmZzq&view=vewBBRuwm1) | Previously collected online table |
-| [Feishu wiki](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc) | Previously collected prompt reference |
-
-## Archived content
-
-[已过期/](已过期/) holds historical content that is no longer presented as a current recommendation. Archives retain the original category, subdirectories, filenames, and contents. The same rule applies to future archives:
-
-```text
-Original: 角色扮演/小羊饼/
-Archived: 已过期/角色扮演/小羊饼/
-```
-
-See the [archive index](已过期/README.md) for the current list and recorded sources. To find an item from an older link, look under `已过期/` using its original path.
-
-## Feedback and contributions
-
-Suggest your own or discovered resources through [Issues](https://github.com/dongshuyan/Awesome-Prompts/issues) or a PR under the same standard. Read [CONTRIBUTING](CONTRIBUTING.md): provide a specific entry, purpose, added value, prerequisites, attribution and permission information. There is no minimum Star count or mandatory testing. Accepted entries identify their original repository without endorsing its entire collection.
-
-For an existing-content issue, give the path. If you have execution results, include the model/tool version, date, and expected versus actual behavior. State when you have not tested it; additional testing is not required to submit.
-
-This collection includes personal work and community material. Some early entries still lack an original source. Authors can request attribution or removal through an Issue. Submodule licenses remain in their original projects; check the relevant source and license before reusing content.
-
-Recorded sources include the [Nano Banana Pro specification template](https://linux.do/t/topic/1410949), [Doubao image prompts](https://linux.do/t/topic/1411250), and the [archived 小羊饼 collection](已过期/README.md).
-
-If a resource here helped you complete a task, consider giving the repository a **Star** and sharing what worked for you.
+If you found something useful, consider a **Star** or [follow the maintainer](https://github.com/dongshuyan), and share what helped or needs improvement.
 
 ## Star History
 
