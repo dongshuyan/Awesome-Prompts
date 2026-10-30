@@ -4,7 +4,7 @@
 
 A collection of prompts and agent resources maintained by [dongshuyan](https://github.com/dongshuyan). It includes prompts written by the maintainer or collected from the community, Agent Skills, and OpenClaw templates and use cases. Copy a prompt to use it, or follow a skill project's installation guide.
 
-[Find a resource](#find-a-resource) · [Get started](#get-started) · [COMPASS](#compass) · [Resource directory](#resource-directory) · [Archived content](#archived-content) · [Feedback and contributions](#feedback-and-contributions)
+[Find a resource](#find-a-resource) · [Selected resources](#selected-resources) · [Get started](#get-started) · [COMPASS](#compass) · [Resource directory](#resource-directory) · [Archived content](#archived-content) · [Feedback and contributions](#feedback-and-contributions)
 
 ## What this repository contains
 
@@ -15,11 +15,24 @@ A collection of prompts and agent resources maintained by [dongshuyan](https://g
 | OpenClaw templates and use cases | Agent settings, templates, and examples | Read the original project and configure it for your use case |
 | Archived content | Historical material with its original directory structure | Look up older content and recorded sources |
 
+## Selected resources
+
+New additions are specific prompts, templates or skills with labels from the existing categories. These three entries provide descriptions and pinned source links without copying third-party text. Selection is based on content reading and purpose comparison; their model outputs have not been tested here.
+
+| Resource and author | Category and reason for selection | Prerequisites and license observations |
+| --- | --- | --- |
+| [doc-coauthoring · Anthropic](https://github.com/anthropics/skills/blob/00756142ab04c82a447693cf373c4e0c554d1005/skills/doc-coauthoring/SKILL.md) | Writing / Skill; context gathering, collaborative drafting and reader checks add a multi-turn document workflow | Needs sustained interaction and matching host tools. A copying license for the selected directory has not been verified; source-link introduction only |
+| [frontend-design · Anthropic](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md) | Practical tools / Skill; visual direction, typography, layout and self-review add visual-design guidance | For interface-building agents; does not guarantee engineering correctness. The [corresponding license](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/LICENSE.txt) is Apache-2.0 |
+| [Roleplay - Immersive · SillyTavern](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json) | Roleplay / Prompt; short general interaction rules complement fixed character settings without deciding the user's actions | Uses `{{user}}` and `{{char}}` macros that the host must replace. The [repository license](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE) is AGPL-3.0; compatibility for copying or derivative distribution has not been assessed |
+
+Checked on 2026-10-30. Repository Stars do not establish individual-resource effectiveness. See the [review notes](REVIEW_NOTES.md) for report limitations and this revision. Retaining historical content does not automatically renew its recommendation.
+
 ## Find a resource
 
 | I want to… | Start here |
 | --- | --- |
-| Have an AI understand a question and search before answering | [Prompt enhancement series](实用工具/提示词增强prompt/): full, middle, and lite versions in Chinese and English |
+| Have an AI understand a question and search before answering | [Prompt enhancement series](实用工具/提示词增强prompt/): Chinese/English variants; English middle is full length |
+| Collaborate on documents or build an interface | doc-coauthoring / frontend-design under [selected resources](#selected-resources) |
 | Understand a paper | [Structured paper reading](实用工具/学术论文阅读.txt) |
 | Clarify project requirements and plan implementation and handoff | [Project planning workflow](实用工具/项目优化与施工/): use step1 → step2 → step3 |
 | Generate or compress a prompt | [Meta prompts](元提示词/) |
@@ -39,6 +52,8 @@ A collection of prompts and agent resources maintained by [dongshuyan](https://g
 3. Replace placeholders such as `{{original_prompt}}`, `XXX`, and document paths with your own material. Add your goal, constraints, and output requirements.
 4. Run it in your AI tool, check the result, and adjust the prompt as needed.
 
+The enhancement series can be appended after your task and materials; attachments and quotations remain material rather than acquiring instruction authority. Follow each other template's placement instructions.
+
 Prompts that ask for web searches, attachments, or code execution depend on those capabilities being available in your AI tool. Results vary with model and tool versions; inclusion here does not establish compatibility with every environment.
 
 ### Download the collection
@@ -49,6 +64,8 @@ Download this repository's prompts and navigation files:
 git clone https://github.com/dongshuyan/Awesome-Prompts.git
 cd Awesome-Prompts
 ```
+
+On 2026-10-30, the public `openclaw/skills` endpoint returned 404, which may affect recursive downloads. You can clone the parent repository first and fetch accessible submodules as needed; this does not establish that all content in that collection is obsolete.
 
 Download the repository and all submodules together:
 
@@ -119,8 +136,8 @@ Awesome-Prompts/
 
 | Directory | Contents and selection |
 | --- | --- |
-| [实用工具 / Practical tools](实用工具/) | [Paper reading](实用工具/学术论文阅读.txt), [health education](实用工具/AI健康顾问.txt), a [Gemini instruction template](实用工具/自信的Gemini.txt), and the two workflows below. Health content supports general understanding and discussion with clinicians; it does not replace professional care. |
-| [提示词增强prompt / Prompt enhancement](实用工具/提示词增强prompt/) | The full version is the most detailed, `middle` balances length and detail, and `lite` is shorter. Choose for task complexity and context budget. Chinese and English files are provided separately; `旧版本/` contains earlier versions of this series. |
+| [实用工具 / Practical tools](实用工具/) | [Paper reading](实用工具/学术论文阅读.txt), [health education](实用工具/AI健康顾问.txt), a [Gemini instruction template](实用工具/自信的Gemini.txt), [task clarification and boundary templates](实用工具/任务澄清与边界说明.txt), and the two workflows below. Health content supports general understanding and discussion with clinicians; it does not replace professional care. |
+| [提示词增强prompt / Prompt enhancement](实用工具/提示词增强prompt/) | Chinese has full, middle and lite variants. English middle is full length and currently identical to the full variant; its historical filename is retained. All six current variants follow the task language unless the user explicitly specifies otherwise; template language does not set output language. The four files in `旧版本/` remain unchanged and may have different rules; see [version notes](REVIEW_NOTES.md#versions-and-applicability). |
 | [项目优化与施工 / Project planning](实用工具/项目优化与施工/) | [step1](实用工具/项目优化与施工/step1.md) covers requirements and a proposed approach; [step2](实用工具/项目优化与施工/step2.md) divides implementation into stages and acceptance checks; [step3](实用工具/项目优化与施工/step3.md) creates execution and handoff prompts. Replace project names and paths before use. |
 | [元提示词 / Meta prompts](元提示词/) | [Generate from requirements](元提示词/根据需求生成提示词.txt), [prompt design](元提示词/生成prompt的prompt.txt), [long prompt compression](元提示词/长提示词压缩.txt), and [Nano Banana Pro image specifications](元提示词/Nano-Banana-Pro图像规格架构师.txt). |
 | [写作辅助 / Writing tools](写作辅助/) | Rewriting, translation, image prompt, and cosplay photo templates. Some material is adult oriented. |
@@ -130,7 +147,7 @@ Awesome-Prompts/
 
 ### OpenClaw resources
 
-Each project below has its own upstream repository. This collection pins a specific commit, so local content may differ from the latest upstream version. Consult the original project for its purpose, installation instructions, and license.
+Each project below has its own upstream repository. This collection pins a specific commit, so local content may differ from the latest upstream version. Consult the original project for its purpose, installation instructions, and license. Pins are unchanged in this revision; availability and license-declaration differences are recorded in the [review notes](REVIEW_NOTES.md#collection-entrypoints).
 
 | Local submodule path | Original project | Contents |
 | --- | --- | --- |
@@ -167,7 +184,9 @@ See the [archive index](已过期/README.md) for the current list and recorded s
 
 ## Feedback and contributions
 
-Report broken content, missing sources, or usage issues through [Issues](https://github.com/dongshuyan/Awesome-Prompts/issues). Include the resource path, model or tool version, and expected and actual behavior. When submitting a pull request, retain source information and update both language versions of the navigation.
+Suggest your own or discovered resources through [Issues](https://github.com/dongshuyan/Awesome-Prompts/issues) or a PR under the same standard. Read [CONTRIBUTING](CONTRIBUTING.md): provide a specific entry, purpose, added value, prerequisites, attribution and permission information. There is no minimum Star count or mandatory testing. Accepted entries identify their original repository without endorsing its entire collection.
+
+For an existing-content issue, give the path. If you have execution results, include the model/tool version, date, and expected versus actual behavior. State when you have not tested it; additional testing is not required to submit.
 
 This collection includes personal work and community material. Some early entries still lack an original source. Authors can request attribution or removal through an Issue. Submodule licenses remain in their original projects; check the relevant source and license before reusing content.
 
