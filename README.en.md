@@ -83,6 +83,11 @@ Other local entries: [health information](实用工具/AI健康顾问.txt) and [
 
 **Evaluation focus:** Traceable sources, target model or platform, version and date. Effectiveness claims need supporting conditions and evidence; “unlocking” language is not validation.
 
+**Research reference**
+
+- **[Jailbreaks](https://github.com/togg53192-cmd/jailbreaks)** · togg53192-cmd · Cross-model prompts and instruction-boundary research collection
+  Organizes system prompts, persona definitions and workspace instructions by model family for comparing instruction formats. [Version checked](https://github.com/togg53192-cmd/jailbreaks/blob/17c7117635cf0f270104b1bb8b1e79ff8319a668/README.md) on 2026-10-30; review covered the project description and directory, without reviewing every prompt or testing effectiveness. This is a source-link introduction.
+
 [Browse the historical jailbreak directory →](越狱破限/): Existing material named by model or scenario. Stability and universality claims were not validated through effectiveness testing in this review. Inclusion does not establish platform permission or bypass effectiveness.
 
 ## NSFW
