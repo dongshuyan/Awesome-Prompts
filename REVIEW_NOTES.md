@@ -18,7 +18,7 @@
 | 工程三步骤 | 统一方案、施工计划和交接占位路径，以可检查的范围和验收替代“完美/无bug”承诺；实现代码进入所属模块，测试材料遵循项目约定。 |
 | 生成与改写 | 推断出的新目标须先确认；校准轮次按需，持久化依赖真实宿主能力和授权；事实改写不编造经历、引用或逻辑。压缩率须有实际计量，不能把字符数当Token数。 |
 | 任务澄清与边界说明 | 从越狱目录移到实用工具，清理对话残留。它是五组任务消歧/输出框架，不是OpenAI官方模板或经过验证的越狱。替代目标不一定与原目标等价。 |
-| 赛博女友 | 仅整理非性化日常角色对话的身份透明、变量、长度/动作规则和围栏；不修改年龄，不将其升级为本轮新精选。 |
+| 赛博女友 | 整理非性化日常角色对话的身份透明、变量、长度/动作规则和围栏，移除带性化倾向的外观标签；年龄不变，不将其升级为本轮新精选。非露骨恋爱框架是否继续保留，列为合并前的维护者审阅项。 |
 
 型号与能力依据（核对日期2026-10-30）：[弃用表](https://ai.google.dev/gemini-api/docs/deprecations)、[发布说明](https://ai.google.dev/gemini-api/docs/changelog#may-28-2026)、[当前型号](https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-image)、[图像生成文档](https://ai.google.dev/gemini-api/docs/image-generation)。公告和文档核对不等于已实测旧接口关闭或新模板可调用。
 
@@ -65,7 +65,7 @@ This revision starts from commit `98dfef9`. It uses textual review of 85 pre-rem
 | Engineering workflow | Consistent proposal/plan/handoff placeholders and observable acceptance checks replace absolute perfection claims. Implementation belongs in its owning modules; tests follow project conventions. |
 | Generation and rewriting | Confirm material goal changes, calibrate only as needed, and depend on actual authorized storage for persistence. Factual rewriting must not invent experiences, citations or logic. Compression ratios require measurement; character counts are not token counts. |
 | Task clarification templates | Moved from jailbreaks to practical tools and removed conversational scaffolding. Five task/format frameworks, not official OpenAI templates or verified jailbreaks. Alternative goals are not necessarily equivalent. |
-| Cyber girlfriend | Clarified identity transparency, variables, length/action rules and fences for non-sexual fictional dialogue. Age is unchanged; the file is not promoted as a newly selected resource. |
+| Cyber girlfriend | Clarified identity transparency, variables, length/action rules and fences for non-sexual fictional dialogue, and removed sexualized appearance tags. Age is unchanged and the file is not newly selected. Whether to retain its non-explicit romance framing remains a maintainer decision before merging. |
 
 Model and capability sources, checked on 2026-10-30: [deprecations](https://ai.google.dev/gemini-api/docs/deprecations), [release notes](https://ai.google.dev/gemini-api/docs/changelog#may-28-2026), [current model](https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-image), and [image documentation](https://ai.google.dev/gemini-api/docs/image-generation). Documentation checks do not establish observed endpoint shutdown or template executability.
 
