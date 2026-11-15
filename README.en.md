@@ -21,7 +21,7 @@
 
 Each category's **evaluation focus** applies the general criteria to its use; full selection criteria are in [CONTRIBUTING](CONTRIBUTING.md). New selections rely on reading the content, source checks and verifiable feedback. There is no minimum Star count or mandatory firsthand testing.
 
-**Reading this list:** “External selections” link to the versions read. “Local templates” and “historical directories” provide access to existing material; retention does not mean every item meets the current criteria. Checked on 2026-10-30; no model-effectiveness tests were performed. See [review notes](REVIEW_NOTES.md) for version, license and feedback limitations.
+**Reading this list:** “External selections” link to the versions read. “Local templates” and “historical directories” provide access to existing material; retention does not mean every item meets the current criteria. Existing entries were checked on 2026-10-30; the eight additions were checked on 2026-11-15; no model-effectiveness tests were performed. See [review notes](REVIEW_NOTES.md) for version, license and feedback limitations.
 
 ## Practical tools
 
@@ -30,8 +30,26 @@ Each category's **evaluation focus** applies the general criteria to its use; fu
 
 **External selection**
 
-- **[frontend-design](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md)** · Anthropic · Skill
-  Organizes interface design around visual direction, typography, layout and self-review. Intended for agents that can build interfaces; it focuses on visual expression, while engineering correctness needs separate checks. [Corresponding license: Apache-2.0](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/LICENSE.txt).
+- **[frontend-design](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md)** · Anthropic
+  Skill: Organizes interface design around visual direction, typography, layout and self-review. Intended for agents that can build interfaces; it focuses on visual expression, while engineering correctness needs separate checks. [Corresponding license: Apache-2.0](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/LICENSE.txt).
+
+- **[Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/command.md)** · Vercel
+  Prompt: Reviews frontend code for keyboard, focus, form, media and interaction rules, reporting file and line locations. Complements frontend-design. Examples lean toward React/Next; replace the file argument, adapt typography conventions to the project and verify the actual page. The pinned file embeds its rules. [MIT](https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/LICENSE).
+
+- **[systematic-debugging](https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/skills/systematic-debugging/SKILL.md)** · Jesse Vincent / Superpowers
+  Skill: Structures reproduction, root-cause tracing, single-hypothesis checks and regression verification, complementing implementation templates. Requires source, logs and runnable checks; some steps refer to TDD and completion-verification skills in the Superpowers repository. The workflow is prescriptive. [MIT](https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/LICENSE).
+
+- **[logo-design](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/skills/logo-design/SKILL.md)** · kaankiziltug
+  Skill: Moves from a brand brief and SVG concepts through small-size, monochrome and rendering checks to variants of the chosen mark. Adds brand graphics beyond interface design. Requires the bundled Python scripts and a renderer; [MIT](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/LICENSE) excludes [reference trademarks](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/TRADEMARKS.md). Trademark clearance requires a separate search.
+
+- **[literature-review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5/skills/literature-review/SKILL.md)** · K-Dense
+  Skill: Covers scoping, database searches, screening, synthesis, citation checks and document output, complementing single-paper reading. Scripts need Python 3.10+, requests and network access. Optional search/schematic services need authentication or an API key; PDF export needs Pandoc/XeLaTeX. DOI checks do not replace source review. [MIT](https://github.com/K-Dense-AI/scientific-agent-skills/blob/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5/LICENSE.md).
+
+- **[obsidian-markdown](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/obsidian-markdown/SKILL.md)** · Obsidian / kepano
+  Skill: Creates and edits Obsidian wikilinks, embeds, callouts and properties for knowledge-base notes. Requires file access, supporting references and a rendering check in Obsidian's reading view; other renderers may not support this dialect. [MIT](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/LICENSE).
+
+- **[json-canvas](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/json-canvas/SKILL.md)** · Obsidian / kepano
+  Skill: Creates and edits .canvas nodes, edges and groups, checking JSON, unique IDs and edge references for visual knowledge organization. Requires file access and JSON parsing, plus a layout check in a compatible host. [MIT](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/LICENSE).
 
 **Local templates and previously collected projects**
 
@@ -48,6 +66,14 @@ Other local entries: [health information](实用工具/AI健康顾问.txt) and [
 
 <!-- catalog:begin meta -->
 **Evaluation focus:** Clear inputs, outputs and targets for generation or revision. Refinement and compression should preserve goals and essential constraints; length or unmeasured compression ratios do not establish effectiveness.
+
+**External selection**
+
+- **[prompt-optimizer](https://github.com/getsentry/skills/blob/a582c51ee29d0f35e6ac321340796f77d43da733/skills/prompt-optimizer/SKILL.md)** · Sentry
+  Skill: Define targets, constraints and failure cases, compare prompt revisions, then check held-out cases. Complements this collection's generation and compression templates for reusable agent or system prompts. Measured evaluation requires model calls. [Apache-2.0](https://github.com/getsentry/skills/blob/a582c51ee29d0f35e6ac321340796f77d43da733/LICENSE).
+
+- **[skill-creator](https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator/SKILL.md)** · Anthropic
+  Skill: Connects requirements, drafts, with/without-skill comparisons, human review and trigger-description optimization. Use the bundled scripts and references. Full evaluation uses a Claude environment and subagents; follow the documented fallback otherwise. Trigger evaluation requires the Claude CLI. [Directory license: Apache-2.0](https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator/LICENSE.txt).
 
 **Local templates**
 

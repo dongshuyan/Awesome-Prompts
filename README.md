@@ -21,7 +21,7 @@
 
 每类的**评价重点**按用途展开通用标准，完整收录规则见[贡献指南](CONTRIBUTING.md)。新增以内容阅读、来源和可核查反馈为依据，不设最低 Star，也不强制亲测。
 
-**选用说明：**“外部精选”链接到阅读时的固定版本；“本地模板”与“历史目录”提供已有资源入口，保留不代表全部通过现行收录标准。核对日期：2026-10-30；未做模型效果测试，具体版本、许可与反馈边界见[审阅说明](REVIEW_NOTES.md)。
+**选用说明：**“外部精选”链接到阅读时的固定版本；“本地模板”与“历史目录”提供已有资源入口，保留不代表全部通过现行收录标准。既有条目核对日期：2026-10-30；本次新增八条核对日期：2026-11-15；未做模型效果测试，具体版本、许可与反馈边界见[审阅说明](REVIEW_NOTES.md)。
 
 ## 实用工具
 
@@ -30,8 +30,26 @@
 
 **外部精选**
 
-- **[frontend-design](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md)** · Anthropic · Skill
-  从视觉方向、字体到布局组织界面设计，并要求自审。适合能制作界面的 Agent；侧重视觉表达，工程正确性需另行检查。[对应许可：Apache-2.0](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/LICENSE.txt)。
+- **[frontend-design](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/SKILL.md)** · Anthropic
+  Skill：从视觉方向、字体到布局组织界面设计，并要求自审。适合能制作界面的 Agent；侧重视觉表达，工程正确性需另行检查。[对应许可：Apache-2.0](https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/LICENSE.txt)。
+
+- **[Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/command.md)** · Vercel
+  Prompt：按键盘操作、焦点、表单、媒体与交互规则审查前端代码，输出文件与行号，补充 frontend-design 的视觉流程。示例偏 React/Next；替换文件参数，按项目调整排版约定，并结合实际页面验收。固定版本正文内嵌规则。[MIT](https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/LICENSE)。
+
+- **[systematic-debugging](https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/skills/systematic-debugging/SKILL.md)** · Jesse Vincent / Superpowers
+  Skill：按复现、根因追踪、单假设验证和回归检查组织调试，补充项目施工模板。需要源码、日志与可运行的检查；部分步骤引用同一 Superpowers 仓库中的 TDD 和完成验证技能，流程约束较强。[MIT](https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/LICENSE)。
+
+- **[logo-design](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/skills/logo-design/SKILL.md)** · kaankiziltug
+  Skill：从品牌简报、多概念 SVG，到小尺寸、单色与渲染复核，再按选定方向交付标志变体，补充界面设计之外的品牌图形任务。需要配套 Python 脚本与可用渲染工具；[MIT](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/LICENSE) 不覆盖[参考商标素材](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/TRADEMARKS.md)。商标可用性需另行检索。
+
+- **[literature-review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5/skills/literature-review/SKILL.md)** · K-Dense
+  Skill：从问题界定、多库检索与筛选，到综合、引文核对和文档输出，补充单篇论文阅读。脚本需 Python 3.10+、requests 和网络；可选检索/示意图服务需认证或 API Key，PDF 导出需 Pandoc/XeLaTeX。DOI 检查不能替代原文核查。[MIT](https://github.com/K-Dense-AI/scientific-agent-skills/blob/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5/LICENSE.md)。
+
+- **[obsidian-markdown](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/obsidian-markdown/SKILL.md)** · Obsidian / kepano
+  Skill：生成与编辑 Obsidian 双链（wikilink）、嵌入、提示块和属性，补充知识库笔记任务。需文件读写能力、配套参考文件，并在 Obsidian 阅读视图检查；其他渲染器未必支持这些方言语法。[MIT](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/LICENSE)。
+
+- **[json-canvas](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/json-canvas/SKILL.md)** · Obsidian / kepano
+  Skill：创建与编辑 .canvas 节点、连线和分组，检查 JSON、唯一 ID 与连线引用，补充可视化知识组织。需文件读写和 JSON 解析能力，并在兼容宿主中检查布局。[MIT](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/LICENSE)。
 
 **本地模板与已收录项目**
 
@@ -48,6 +66,14 @@
 
 <!-- catalog:begin meta -->
 **评价重点：** 生成或修改的对象明确，输入与输出清楚；优化、压缩时保留目标和关键约束，不用篇幅或未经测量的压缩率证明效果。
+
+**外部精选**
+
+- **[prompt-optimizer](https://github.com/getsentry/skills/blob/a582c51ee29d0f35e6ac321340796f77d43da733/skills/prompt-optimizer/SKILL.md)** · Sentry
+  Skill：先定义目标、约束与失败样例，再比较候选提示词并用保留样例复核，补充本库的生成与压缩模板。适合反复复用的 Agent 或系统提示词；实际评测需要模型调用。[Apache-2.0](https://github.com/getsentry/skills/blob/a582c51ee29d0f35e6ac321340796f77d43da733/LICENSE)。
+
+- **[skill-creator](https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator/SKILL.md)** · Anthropic
+  Skill：将需求、草稿、有无 Skill 的对照、人工评阅和触发描述优化连成编写流程。需配套脚本和参考文件；完整评测使用 Claude 环境与子代理，无此能力时按文中降级流程使用；触发评测依赖 Claude CLI。[目录许可 Apache-2.0](https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator/LICENSE.txt)。
 
 **本地模板**
 

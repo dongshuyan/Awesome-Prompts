@@ -1,10 +1,10 @@
-# 第一阶段审阅说明 / Phase 1 review notes
+# 资源审阅说明 / Resource review notes
 
-2026-10-30 · [中文](#中文) · [English](#english)
+2026-10-30 / 2026-11-15 · [中文](#中文) · [English](#english)
 
 ## 中文
 
-本轮从提交`98dfef9`开始整理。检查方式是阅读移除前的85份本地内容文件（含5份既有归档）、审阅7个第三方合集入口，并核对所选外部资源及有限反馈；没有运行提示词或Skill来验证模型效果，也没有通读第三方合集的全部内容。
+2026-10-30 批次从提交`98dfef9`开始整理。检查方式是阅读移除前的85份本地内容文件（含5份既有归档）、审阅7个第三方合集入口，并核对所选外部资源及有限反馈；没有运行提示词或Skill来验证模型效果，也没有通读第三方合集的全部内容。
 
 ### 版本与适用性
 
@@ -49,9 +49,44 @@ README中的三项是固定版本、仅链接介绍。doc-coauthoring的多轮�
 
 成人预设相关线索和当前越狱合集的补查没有产生新的可推荐条目；部分复杂预设只完成README、依赖与有限反馈初筛。非露骨情感模板没有被当作成人露骨方向补缺，研究基准没有被算作可用越狱，也未据此宣称不存在优质资源。
 
+### 2026-11-15：新增精选与专项补查
+
+本批次新增七个仓库中的八条具体资源，以署名简介和固定提交外链展示，未复制 Skill 正文、运行上游脚本或验证模型效果。下列用途与前提依据所链原文核查，内容判断的置信度高；这不构成效果比较。
+
+| 具体条目 | 收录价值与使用边界 |
+| --- | --- |
+| [prompt-optimizer](https://github.com/getsentry/skills/blob/a582c51ee29d0f35e6ac321340796f77d43da733/skills/prompt-optimizer/SKILL.md) · Sentry | 增加候选对照与保留集复核；需模型调用和目标模型适配。Apache-2.0。 |
+| [skill-creator](https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator/SKILL.md) · Anthropic | 增加 Skill 编写与评测流程；完整评测需 Claude 环境和子代理，触发评测需 Claude CLI，主文提供降级流程。目录 Apache-2.0。 |
+| [systematic-debugging](https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/skills/systematic-debugging/SKILL.md) · Jesse Vincent / Superpowers | 增加根因追踪与单假设验证；需源码、日志和检查能力，部分步骤引用 Superpowers 配套技能，约束较强。MIT。 |
+| [Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/command.md) · Vercel | 增加前端审查规则；固定 command.md 内嵌规则，示例偏 React/Next，仍需实际页面验收。MIT。 |
+| [logo-design](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/skills/logo-design/SKILL.md) · kaankiziltug | 增加 SVG 标志设计与复核流程；需 Python 和渲染器。MIT 不覆盖参考商标，不能替代商标检索。 |
+| [literature-review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5/skills/literature-review/SKILL.md) · K-Dense | 从单篇阅读扩展到多文献综合；脚本需 Python/requests 与网络，PDF 与可选服务另有依赖；DOI 注册不证明引文支持命题。MIT。 |
+| [obsidian-markdown](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/obsidian-markdown/SKILL.md) · Obsidian / kepano | 补充 Obsidian 双链、嵌入、提示块与属性；需配套文件与宿主渲染检查，其他渲染器未必支持。MIT。 |
+| [json-canvas](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/json-canvas/SKILL.md) · Obsidian / kepano | 补充节点画布及 JSON/ID/连线引用检查；需兼容宿主核对视觉布局。MIT。 |
+
+其中 Obsidian 的 Markdown 与 JSON Canvas 分别处理笔记语法和节点画布，按两条登记。已有 frontend-design 与新增实用工具通过同一个自动列表展示；元提示词也使用现有分组。目录仍是唯一数据源，未增加字段、生成器特例或网页分支。2026-11-15 仅是这八条的核查日期，不表示旧条目全部重审。
+
+专项补查的检索范围包括 GitHub 原仓库、宿主公开文档、Hugging Face 数据卡、Reddit 发现线索及 arXiv、ACL、OpenReview 等研究来源。记录了 12 批相关查询、46 个检索表达式，并补查 HF 元数据；部分后续表达式是检索主题摘要。检索词包括 roleplay preset、character card、角色卡、jailbreak benchmark、red teaming、越狱评测、NSFW、adult prompt、成人向提示词及许可变体。结果按具体文件、用途、增量、前提、版本、授权与阅读深度筛选；热度与搜索命中数不作为质量证据。
+
+| 补查候选 | 判断与未决事项 |
+| --- | --- |
+| [NanoBear Roleplay v2.1](https://github.com/cavecomputing/nanobear/blob/5a625088f34df130f4b02b6f2b3e649bfa46b1ae/README.md) | 完整阅读短模板及 CC BY 4.0 根许可；知识边界与角色自主性有增量，但与现有 Immersive 重叠，作为备选。Story v2.2 是允许代写用户行动的导演模式，按本库交互式角色扮演的用户行动权标准不作推荐，不据此判断其创作质量。未做效果测试。 |
+| [StrongREJECT 评测量规](https://github.com/dsbowen/strong_reject/blob/7a551d5b440ec7b75d4f6f5bb7c1719965b76b47/strong_reject/eval_files/judge_templates.json) | 阅读 strongreject_rubric 及其 system 字段、MIT 许可；可补充拒答、具体性与说服力的研究评测，但含偏向高分的取整规则，未复现评测。这是回复评测提示词，不是绕过提示词。 |
+| [莉娅的酒馆写卡方法](https://github.com/feverZHONG/liya-sillytavern-cards/blob/e6d24994c1aabc408d8c16deb5efb7d5abcb1493/SKILL.md) | 主文、README 与文档许可已读；文档 CC BY 4.0、代码 MIT。输入资料到 V2 JSON/PNG 卡的用途明确，跨仓库引用、宿主兼容性与配套脚本尚未完整核验；“两个样本同意才是真问题”不能当通用缺陷标准，暂列条件候选。 |
+
+其他线索分别处理：角色卡生成模板存在硬编码 Windows 输出目录；其 frontmatter 有 MIT 声明，根 LICENSE 缺失不能改写为“没有许可”。HYPERCODE 有独立提示词，已读项目说明和 CC BY-NC-SA 4.0 许可，但主文及成人模块未完成审阅，不能按低质量排除。fiction-continuation 的 sweet-daily 是已读的普通小说续写模板，不计作成人向补缺。整套应用、面板和训练语料不自动当作具体 Prompt 或 Skill。
+
+NSFW 方向确有命中，本批次没有新增通过完整审阅的精选。相关线索分别记录：
+
+- **访问受限**：读取一个 manual-gated 提示词数据卡返回 401，未取得正文。
+- **正文未核**：部分提示词合集尚未完成正文审阅。成人写作 ShareGPT 线索本次仅读到数据卡中的简短转换说明及 license 为 other 的标记，未据此评判语料质量。
+- **超出新增条目范围**：安全后训练数据、整套面板与应用；训练语料本身也不直接作为具体 Prompt 或 Skill。
+
+这些结果不证明相关项目质量差，也不表示该方向没有优质资源。专项新发现未在本批次八条之外自动入库。
+
 ## English
 
-This revision starts from commit `98dfef9`. It uses textual review of 85 pre-removal local content files, including five existing archives, seven third-party collection entrypoints, selected external resources and limited feedback. Collected prompts and skills were not executed, and third-party collections were not read in full.
+The 2026-10-30 revision starts from commit `98dfef9`. It uses textual review of 85 pre-removal local content files, including five existing archives, seven third-party collection entrypoints, selected external resources and limited feedback. Collected prompts and skills were not executed, and third-party collections were not read in full.
 
 ### Versions and applicability
 
@@ -95,3 +130,38 @@ The three README additions are pinned, source-link introductions. Their multi-tu
 Reports were not reproduced here: [single-turn doc-coauthoring](https://github.com/anthropics/skills/issues/1718), [tool naming](https://github.com/anthropics/skills/issues/1154), and [small-sample frontend styling](https://github.com/anthropics/skills/issues/1808). In [SillyTavern #4480](https://github.com/SillyTavern/SillyTavern/issues/4480), a maintainer identified a different interface's configuration location; it later closed without a user response. It does not prove prompt effectiveness or failure.
 
 The additional adult-preset leads and current jailbreak-collection research produced no new recommended entry. Some complex presets received only README, dependency and limited-feedback screening. Non-explicit romance was not counted as explicit-adult coverage, and research benchmarks were not counted as working jailbreaks. No claim is made that good resources do not exist.
+
+### 2026-11-15: New selections and focused research
+
+This batch adds eight specific resources from seven repositories, using attributed descriptions and pinned source links. Skill bodies were not copied, upstream scripts were not run, and model outcomes were not tested. The linked source text supports the purposes and prerequisites below with high confidence; it does not establish comparative effectiveness.
+
+| Specific item | Added value and prerequisites |
+| --- | --- |
+| [prompt-optimizer](https://github.com/getsentry/skills/blob/a582c51ee29d0f35e6ac321340796f77d43da733/skills/prompt-optimizer/SKILL.md) · Sentry | Adds candidate comparisons and held-out checks; requires model calls and adaptation to the target model. Apache-2.0. |
+| [skill-creator](https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator/SKILL.md) · Anthropic | Adds skill authoring and evaluation; full evaluation uses Claude and subagents, trigger evaluation needs the Claude CLI, and the main file documents fallbacks. Directory Apache-2.0. |
+| [systematic-debugging](https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/skills/systematic-debugging/SKILL.md) · Jesse Vincent / Superpowers | Adds root-cause tracing and single-hypothesis checks. Needs source, logs and test access; some steps reference companion Superpowers skills. A prescriptive workflow. MIT. |
+| [Web Interface Guidelines](https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/command.md) · Vercel | Adds frontend review rules embedded in the pinned command.md. Examples lean toward React/Next; actual-page checks remain necessary. MIT. |
+| [logo-design](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/skills/logo-design/SKILL.md) · kaankiziltug | Adds SVG logo design and review. Needs Python and a renderer; MIT excludes reference trademarks and does not replace trademark clearance. |
+| [literature-review](https://github.com/K-Dense-AI/scientific-agent-skills/blob/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5/skills/literature-review/SKILL.md) · K-Dense | Extends single-paper reading into synthesis. Scripts need Python/requests and network access; export and optional services add dependencies. DOI registration does not prove claim support. MIT. |
+| [obsidian-markdown](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/obsidian-markdown/SKILL.md) · Obsidian / kepano | Adds Obsidian wikilinks, embeds, callouts and properties. Use supporting files and check host rendering; other renderers may not support the dialect. MIT. |
+| [json-canvas](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/json-canvas/SKILL.md) · Obsidian / kepano | Adds node canvases and JSON/ID/edge-reference checks. Verify visual layout in a compatible host. MIT. |
+
+Obsidian Markdown and JSON Canvas cover note syntax and node-based canvases respectively, so they are separate entries. Existing frontend-design and the practical additions share one automatic list; meta-prompts use an existing group too. The catalog remains the single data source, with no new schema fields, generator exceptions or page branches. The 2026-11-15 date applies to these eight resources, not a renewed review of all older entries.
+
+The focused search included original GitHub repositories, public host documentation, Hugging Face cards, Reddit discovery leads and research sources including arXiv, ACL and OpenReview. The record contains 12 related query batches and 46 search expressions, plus HF metadata checks; some later expressions summarize search topics. Terms included roleplay preset, character card, jailbreak benchmark, red teaming, NSFW, adult prompts, Chinese equivalents and licensing variants. Screening considered specific content, purpose, added value, prerequisites, version, permission and actual reading depth. Popularity and result counts were not quality evidence.
+
+| Additional candidate | Assessment and remaining questions |
+| --- | --- |
+| [NanoBear Roleplay v2.1](https://github.com/cavecomputing/nanobear/blob/5a625088f34df130f4b02b6f2b3e649bfa46b1ae/README.md) | The short template and CC BY 4.0 root license were read. Knowledge boundaries and character autonomy add detail, with overlap with Immersive; retain as an alternative. Story v2.2 is a director-led mode that authors user actions. It does not meet this collection’s user-agency criterion for interactive roleplay; this is not a writing-quality judgment. No outcome test. |
+| [StrongREJECT evaluation rubric](https://github.com/dsbowen/strong_reject/blob/7a551d5b440ec7b75d4f6f5bb7c1719965b76b47/strong_reject/eval_files/judge_templates.json) | Read strongreject_rubric, its system field and MIT license. A candidate for refusal, specificity and convincingness evaluation, with an explicit bias toward higher scores. Evaluation was not reproduced; this is a response-evaluation prompt, not a bypass prompt. |
+| [Liya's SillyTavern card-authoring skill](https://github.com/feverZHONG/liya-sillytavern-cards/blob/e6d24994c1aabc408d8c16deb5efb7d5abcb1493/SKILL.md) | Main file, README and documentation license read; docs use CC BY 4.0 and code uses MIT. A clear materials-to-V2-JSON/PNG workflow, but cross-repository references, host compatibility and scripts need further checks. Agreement between two samples is not a general defect criterion. Conditional candidate. |
+
+Other leads remain distinct: a card-creation template hardcodes a Windows output path; its frontmatter declares MIT, although a root LICENSE was unavailable. HYPERCODE has a standalone prompt; its description and CC BY-NC-SA 4.0 license were read, while its main prompt and adult modules remain incompletely reviewed, rather than rejected as poor quality. The inspected sweet-daily fiction-continuation template is ordinary fiction and does not fill the explicit-adult category. Complete applications, panels and training corpora are not automatically specific prompts or skills.
+
+NSFW searches returned relevant leads, but this batch adds no fully reviewed selection. The record distinguishes:
+
+- **Access-limited:** an attempted read of a manual-gated prompt card returned HTTP 401, so its body was not obtained.
+- **Body unreviewed:** some prompt collections remain incompletely read. For an adult-writing ShareGPT lead, only brief conversion notes and a license other marker in the card were read; this does not establish corpus quality.
+- **Outside the scope of new entries:** safety-post-training data, complete panels and applications. Training corpora are not directly treated as specific prompts or skills either.
+
+These results do not establish poor quality or the absence of good resources in the category. Supplemental discoveries were not automatically added beyond the eight approved resources.

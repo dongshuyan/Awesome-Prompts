@@ -1895,9 +1895,11 @@
       "featured": true,
       "licenseUrl": "https://github.com/anthropics/skills/blob/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/frontend-design/LICENSE.txt",
       "readmeDescription": {
-        "zh": "从视觉方向、字体到布局组织界面设计，并要求自审。适合能制作界面的 Agent；侧重视觉表达，工程正确性需另行检查。[对应许可：Apache-2.0]({{@frontend-design.licenseUrl}})。",
-        "en": "Organizes interface design around visual direction, typography, layout and self-review. Intended for agents that can build interfaces; it focuses on visual expression, while engineering correctness needs separate checks. [Corresponding license: Apache-2.0]({{@frontend-design.licenseUrl}})."
-      }
+        "zh": "Skill：从视觉方向、字体到布局组织界面设计，并要求自审。适合能制作界面的 Agent；侧重视觉表达，工程正确性需另行检查。[对应许可：Apache-2.0]({{@frontend-design.licenseUrl}})。",
+        "en": "Skill: Organizes interface design around visual direction, typography, layout and self-review. Intended for agents that can build interfaces; it focuses on visual expression, while engineering correctness needs separate checks. [Corresponding license: Apache-2.0]({{@frontend-design.licenseUrl}})."
+      },
+      "readmeGroup": "practical-new",
+      "readmeOrder": 10
     },
     {
       "id": "doc-coauthoring",
@@ -2275,6 +2277,262 @@
       "adult": false,
       "preview": false,
       "featured": false
+    },
+    {
+      "id": "sentry-prompt-optimizer",
+      "category": "meta",
+      "kind": "skill",
+      "status": "selected",
+      "title": {
+        "zh": "prompt-optimizer",
+        "en": "prompt-optimizer"
+      },
+      "description": {
+        "zh": "先约定目标与失败样例，再比较候选提示词并用保留样例复核；补充生成、压缩模板。实际评测需要模型调用。",
+        "en": "Defines the target and failure cases, compares prompt revisions and checks held-out cases. Complements generation and compression templates; measured evaluation needs model calls."
+      },
+      "url": "https://github.com/getsentry/skills/blob/a582c51ee29d0f35e6ac321340796f77d43da733/skills/prompt-optimizer/SKILL.md",
+      "author": "Sentry",
+      "versionUrl": "https://github.com/getsentry/skills/tree/a582c51ee29d0f35e6ac321340796f77d43da733/skills/prompt-optimizer",
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "sourceNote": {
+        "zh": "2026-11-15 核对 Skill 主文、优化循环和模型家族说明，未运行评测。按目标模型与工具环境适配，保留集结果需实际取得。",
+        "en": "Reviewed the skill, optimization loop and model-family notes on 2026-11-15; no evaluation was run. Adapt it to the target model and tools, and obtain actual holdout results."
+      },
+      "licenseUrl": "https://github.com/getsentry/skills/blob/a582c51ee29d0f35e6ac321340796f77d43da733/LICENSE",
+      "readmeGroup": "meta-new",
+      "readmeOrder": 10,
+      "readmeDescription": {
+        "zh": "Skill：先定义目标、约束与失败样例，再比较候选提示词并用保留样例复核，补充本库的生成与压缩模板。适合反复复用的 Agent 或系统提示词；实际评测需要模型调用。[Apache-2.0]({{@sentry-prompt-optimizer.licenseUrl}})。",
+        "en": "Skill: Define targets, constraints and failure cases, compare prompt revisions, then check held-out cases. Complements this collection's generation and compression templates for reusable agent or system prompts. Measured evaluation requires model calls. [Apache-2.0]({{@sentry-prompt-optimizer.licenseUrl}})."
+      }
+    },
+    {
+      "id": "anthropic-skill-creator",
+      "category": "meta",
+      "kind": "skill",
+      "status": "selected",
+      "title": {
+        "zh": "skill-creator",
+        "en": "skill-creator"
+      },
+      "description": {
+        "zh": "串起 Skill 草稿、对照测试、人工评阅与迭代；完整评测依赖子代理与 Claude 运行环境，触发评测需 Claude CLI。",
+        "en": "Connects skill drafts, baseline comparisons, human review and iteration. Full evaluation uses subagents in a Claude environment; trigger evaluation needs the Claude CLI."
+      },
+      "url": "https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator/SKILL.md",
+      "author": "Anthropic",
+      "versionUrl": "https://github.com/anthropics/skills/tree/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator",
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "sourceNote": {
+        "zh": "2026-11-15 阅读主文并核对评测脚本调用，未运行。配套脚本、参考文件和宿主工具需一起适配；与本库已收录的 frontend-design、doc-coauthoring 不同。",
+        "en": "Read the main file and checked evaluation-script calls on 2026-11-15; nothing was run. Use the supporting scripts and references, and adapt host tools. This is distinct from frontend-design and doc-coauthoring already listed here."
+      },
+      "licenseUrl": "https://github.com/anthropics/skills/blob/1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064/skills/skill-creator/LICENSE.txt",
+      "readmeGroup": "meta-new",
+      "readmeOrder": 20,
+      "readmeDescription": {
+        "zh": "Skill：将需求、草稿、有无 Skill 的对照、人工评阅和触发描述优化连成编写流程。需配套脚本和参考文件；完整评测使用 Claude 环境与子代理，无此能力时按文中降级流程使用；触发评测依赖 Claude CLI。[目录许可 Apache-2.0]({{@anthropic-skill-creator.licenseUrl}})。",
+        "en": "Skill: Connects requirements, drafts, with/without-skill comparisons, human review and trigger-description optimization. Use the bundled scripts and references. Full evaluation uses a Claude environment and subagents; follow the documented fallback otherwise. Trigger evaluation requires the Claude CLI. [Directory license: Apache-2.0]({{@anthropic-skill-creator.licenseUrl}})."
+      }
+    },
+    {
+      "id": "systematic-debugging",
+      "category": "practical",
+      "kind": "skill",
+      "status": "selected",
+      "title": {
+        "zh": "systematic-debugging",
+        "en": "systematic-debugging"
+      },
+      "description": {
+        "zh": "按复现、根因追踪、单假设验证与回归检查组织调试，补充项目施工流程；适合能读取源码、日志并运行检查的 Agent。",
+        "en": "Organizes debugging around reproduction, root-cause tracing, one-hypothesis checks and regression verification. Complements project workflows for agents with source, logs and test access."
+      },
+      "url": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/skills/systematic-debugging/SKILL.md",
+      "author": "Jesse Vincent / Superpowers",
+      "versionUrl": "https://github.com/obra/superpowers/tree/22f0b463e7a5e579904dd6211a520321035526f7/skills/systematic-debugging",
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "sourceNote": {
+        "zh": "2026-11-15 阅读主文、许可并核对当前目录，未执行调试任务。部分步骤引用同一 Superpowers 仓库中的 TDD 与完成验证技能；原文的效果比例未作为本库推荐依据。",
+        "en": "Read the main file and license and checked the current directory on 2026-11-15; no debugging task was run. Some steps refer to TDD and completion-verification skills in the Superpowers repository. The source’s effectiveness figures are not a basis for selection."
+      },
+      "licenseUrl": "https://github.com/obra/superpowers/blob/22f0b463e7a5e579904dd6211a520321035526f7/LICENSE",
+      "readmeGroup": "practical-new",
+      "readmeOrder": 30,
+      "readmeDescription": {
+        "zh": "Skill：按复现、根因追踪、单假设验证和回归检查组织调试，补充项目施工模板。需要源码、日志与可运行的检查；部分步骤引用同一 Superpowers 仓库中的 TDD 和完成验证技能，流程约束较强。[MIT]({{@systematic-debugging.licenseUrl}})。",
+        "en": "Skill: Structures reproduction, root-cause tracing, single-hypothesis checks and regression verification, complementing implementation templates. Requires source, logs and runnable checks; some steps refer to TDD and completion-verification skills in the Superpowers repository. The workflow is prescriptive. [MIT]({{@systematic-debugging.licenseUrl}})."
+      }
+    },
+    {
+      "id": "web-interface-guidelines",
+      "category": "practical",
+      "kind": "prompt",
+      "status": "selected",
+      "title": {
+        "zh": "Web Interface Guidelines",
+        "en": "Web Interface Guidelines"
+      },
+      "description": {
+        "zh": "按键盘、焦点、表单、媒体与交互规则审查前端代码，输出文件与行号；示例偏 React/Next，补充 frontend-design 的视觉流程。",
+        "en": "Reviews frontend code for keyboard, focus, form, media and interaction rules, reporting file and line locations. Examples lean toward React/Next; complements frontend-design."
+      },
+      "url": "https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/command.md",
+      "author": "Vercel",
+      "versionUrl": null,
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "sourceNote": {
+        "zh": "2026-11-15 全文核对 command.md 与许可，未做页面效果测试。此固定正文内嵌规则；agent-skills 中另有每次拉取 main 的包装 Skill，不是本次链接对象。",
+        "en": "Read command.md and its license on 2026-11-15; no page-effect test was run. This pinned file embeds the rules. The separate agent-skills wrapper fetches main at runtime and is not the linked item."
+      },
+      "licenseUrl": "https://github.com/vercel-labs/web-interface-guidelines/blob/434b7f91364665f2f733b310ec54809bf8f37937/LICENSE",
+      "readmeGroup": "practical-new",
+      "readmeOrder": 20,
+      "readmeDescription": {
+        "zh": "Prompt：按键盘操作、焦点、表单、媒体与交互规则审查前端代码，输出文件与行号，补充 frontend-design 的视觉流程。示例偏 React/Next；替换文件参数，按项目调整排版约定，并结合实际页面验收。固定版本正文内嵌规则。[MIT]({{@web-interface-guidelines.licenseUrl}})。",
+        "en": "Prompt: Reviews frontend code for keyboard, focus, form, media and interaction rules, reporting file and line locations. Complements frontend-design. Examples lean toward React/Next; replace the file argument, adapt typography conventions to the project and verify the actual page. The pinned file embeds its rules. [MIT]({{@web-interface-guidelines.licenseUrl}})."
+      }
+    },
+    {
+      "id": "logo-design",
+      "category": "practical",
+      "kind": "skill",
+      "status": "selected",
+      "title": {
+        "zh": "logo-design",
+        "en": "logo-design"
+      },
+      "description": {
+        "zh": "从品牌简报、多概念 SVG 到小尺寸、单色与渲染复核，再交付标志变体；需要 Python 与渲染工具，参考商标素材另有权利限制。",
+        "en": "Takes a brand brief through SVG concepts, small-size, monochrome and rendering checks to logo variants. Needs Python and rendering tools; reference trademarks have separate restrictions."
+      },
+      "url": "https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/skills/logo-design/SKILL.md",
+      "author": "kaankiziltug",
+      "versionUrl": "https://github.com/kaankiziltug/logo-design-skill/tree/e9eaddc07895575253d6663320354a708f53e955/skills/logo-design",
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "sourceNote": {
+        "zh": "2026-11-15 全文阅读 Skill、许可与商标声明，并检查审查脚本入口，未运行工具。MIT 覆盖技能文字与工具等，不覆盖参考标志文件，也不提供商标权利保证。",
+        "en": "Read the skill, license and trademark notice and checked the audit-script entry point on 2026-11-15; tools were not run. MIT covers skill text and tools, not reference-logo files, and grants no trademark clearance."
+      },
+      "licenseUrl": "https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/LICENSE",
+      "readmeGroup": "practical-new",
+      "readmeOrder": 40,
+      "readmeDescription": {
+        "zh": "Skill：从品牌简报、多概念 SVG，到小尺寸、单色与渲染复核，再按选定方向交付标志变体，补充界面设计之外的品牌图形任务。需要配套 Python 脚本与可用渲染工具；[MIT]({{@logo-design.licenseUrl}}) 不覆盖[参考商标素材](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/TRADEMARKS.md)。商标可用性需另行检索。",
+        "en": "Skill: Moves from a brand brief and SVG concepts through small-size, monochrome and rendering checks to variants of the chosen mark. Adds brand graphics beyond interface design. Requires the bundled Python scripts and a renderer; [MIT]({{@logo-design.licenseUrl}}) excludes [reference trademarks](https://github.com/kaankiziltug/logo-design-skill/blob/e9eaddc07895575253d6663320354a708f53e955/TRADEMARKS.md). Trademark clearance requires a separate search."
+      }
+    },
+    {
+      "id": "literature-review",
+      "category": "practical",
+      "kind": "skill",
+      "status": "selected",
+      "title": {
+        "zh": "literature-review",
+        "en": "literature-review"
+      },
+      "description": {
+        "zh": "将单篇论文阅读扩展到检索、筛选、综合与引文核对；脚本需 Python、requests 与网络，PDF 导出和可选服务另有依赖。",
+        "en": "Extends single-paper reading into searching, screening, synthesis and citation checks. Scripts need Python, requests and network access; PDF export and optional services add dependencies."
+      },
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5/skills/literature-review/SKILL.md",
+      "author": "K-Dense",
+      "versionUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/tree/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5/skills/literature-review",
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "sourceNote": {
+        "zh": "2026-11-15 阅读主文、核心流程与配套脚本关键段落，未执行检索或导出。脚本需 Python 3.10+/requests 与网络；PDF 需 Pandoc/XeLaTeX，可选检索或示意图服务有额外依赖。DOI 注册检查不证明文献支持所引命题。",
+        "en": "Read the main file, core workflow and relevant script sections on 2026-11-15; no search or export was run. Scripts need Python 3.10+/requests and network access. PDF export needs Pandoc/XeLaTeX; optional search and schematic services add dependencies. DOI registration does not prove claim support."
+      },
+      "licenseUrl": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5/LICENSE.md",
+      "readmeGroup": "practical-new",
+      "readmeOrder": 50,
+      "readmeDescription": {
+        "zh": "Skill：从问题界定、多库检索与筛选，到综合、引文核对和文档输出，补充单篇论文阅读。脚本需 Python 3.10+、requests 和网络；可选检索/示意图服务需认证或 API Key，PDF 导出需 Pandoc/XeLaTeX。DOI 检查不能替代原文核查。[MIT]({{@literature-review.licenseUrl}})。",
+        "en": "Skill: Covers scoping, database searches, screening, synthesis, citation checks and document output, complementing single-paper reading. Scripts need Python 3.10+, requests and network access. Optional search/schematic services need authentication or an API key; PDF export needs Pandoc/XeLaTeX. DOI checks do not replace source review. [MIT]({{@literature-review.licenseUrl}})."
+      }
+    },
+    {
+      "id": "obsidian-markdown",
+      "category": "practical",
+      "kind": "skill",
+      "status": "selected",
+      "title": {
+        "zh": "obsidian-markdown",
+        "en": "obsidian-markdown"
+      },
+      "description": {
+        "zh": "生成与编辑 Obsidian 笔记中的双链（wikilink）、嵌入、提示块和属性；补充知识库文件格式任务，显示效果需在宿主中复核。",
+        "en": "Creates and edits Obsidian wikilinks, embeds, callouts and properties. Adds knowledge-base file workflows; rendering should be checked in the host."
+      },
+      "url": "https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/obsidian-markdown/SKILL.md",
+      "author": "Obsidian / kepano",
+      "versionUrl": "https://github.com/obsidianmd/obsidian-skills/tree/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/obsidian-markdown",
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "sourceNote": {
+        "zh": "2026-11-15 全文阅读固定版本，未在 Obsidian 中运行。当前仓库位于 obsidianmd，原 kepano 地址会重定向；需文件读写能力和配套参考文件。",
+        "en": "Read the pinned file on 2026-11-15; it was not run in Obsidian. The current repository is under obsidianmd, with kepano's old URL redirecting. Requires file access and the supporting references."
+      },
+      "licenseUrl": "https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/LICENSE",
+      "readmeGroup": "practical-new",
+      "readmeOrder": 60,
+      "readmeDescription": {
+        "zh": "Skill：生成与编辑 Obsidian 双链（wikilink）、嵌入、提示块和属性，补充知识库笔记任务。需文件读写能力、配套参考文件，并在 Obsidian 阅读视图检查；其他渲染器未必支持这些方言语法。[MIT]({{@obsidian-markdown.licenseUrl}})。",
+        "en": "Skill: Creates and edits Obsidian wikilinks, embeds, callouts and properties for knowledge-base notes. Requires file access, supporting references and a rendering check in Obsidian's reading view; other renderers may not support this dialect. [MIT]({{@obsidian-markdown.licenseUrl}})."
+      }
+    },
+    {
+      "id": "json-canvas",
+      "category": "practical",
+      "kind": "skill",
+      "status": "selected",
+      "title": {
+        "zh": "json-canvas",
+        "en": "json-canvas"
+      },
+      "description": {
+        "zh": "创建与编辑 .canvas 节点、连线和分组，要求检查 JSON、唯一 ID 与引用；补充可视化知识组织，需兼容宿主检查布局。",
+        "en": "Creates and edits .canvas nodes, edges and groups, checking JSON, unique IDs and references. Adds visual knowledge organization; inspect layouts in a compatible host."
+      },
+      "url": "https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/json-canvas/SKILL.md",
+      "author": "Obsidian / kepano",
+      "versionUrl": "https://github.com/obsidianmd/obsidian-skills/tree/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/json-canvas",
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "sourceNote": {
+        "zh": "2026-11-15 全文阅读固定版本，未生成或渲染画布。需要文件读写、JSON 解析与兼容 JSON Canvas 的宿主；语法检查与视觉布局检查是不同步骤。",
+        "en": "Read the pinned file on 2026-11-15; no canvas was generated or rendered. Requires file access, JSON parsing and a JSON Canvas-compatible host. Syntax validation and visual layout checks are separate steps."
+      },
+      "licenseUrl": "https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/LICENSE",
+      "readmeGroup": "practical-new",
+      "readmeOrder": 70,
+      "readmeDescription": {
+        "zh": "Skill：创建与编辑 .canvas 节点、连线和分组，检查 JSON、唯一 ID 与连线引用，补充可视化知识组织。需文件读写和 JSON 解析能力，并在兼容宿主中检查布局。[MIT]({{@json-canvas.licenseUrl}})。",
+        "en": "Skill: Creates and edits .canvas nodes, edges and groups, checking JSON, unique IDs and edge references for visual knowledge organization. Requires file access and JSON parsing, plus a layout check in a compatible host. [MIT]({{@json-canvas.licenseUrl}})."
+      }
     }
   ],
   "readme": {
@@ -2324,8 +2582,8 @@
     },
     "blocks": {
       "zh": {
-        "practical": "{{#practical-new.entries}}**评价重点：** {{$practical.readmeCriteria}}\n\n**外部精选**\n\n- **[{{@frontend-design.title}}]({{@frontend-design.url}})** · {{@frontend-design.author}} · Skill\n  {{@frontend-design.readmeDescription}}\n\n**本地模板与已收录项目**\n\n- **[提示词增强系列]({{#enhancement-series.url}})** · Prompt：先理解任务，再按需搜索与核对证据。提供中英文及长短变体；英文 `middle` 与完整版当前逐字相同，选版见[版本说明](REVIEW_NOTES.md#版本与适用性)。\n- **[{{@local-1191feb957.title}}]({{@local-1191feb957.url}})** · 模板：{{@local-1191feb957.readmeDescription}}\n- **[项目优化与施工]({{#project-workflow.url}})** · 模板：从[需求与方案]({{@local-67e47ba829.url}})，到[施工与验收计划]({{@local-3cc6d5f872.url}})，再到[执行交接]({{@local-11490ba980.url}})。使用前替换项目与文档路径。\n- **[{{@local-d9d290149e.title}}]({{@local-d9d290149e.url}})** · 模板：{{@local-d9d290149e.readmeDescription}}\n- **[{{@compass.title}}]({{@compass.url}}#readme)** · Skill 集合 · **维护者自有项目**：{{@compass.readmeDescription}}\n\n其他本地条目：[健康科普]({{@local-1f5b8fcee5.url}})、[Gemini 指令模板]({{@local-4b95a4ba22.url}})。健康内容用于知识了解与就医沟通，不能替代专业诊疗。 [浏览全部实用工具 →]({{#practical-directory.url}})\n",
-        "meta": "**评价重点：** {{$meta.readmeCriteria}}\n\n**本地模板**\n\n- **[{{@local-2af62179c6.title}}]({{@local-2af62179c6.url}})**：{{@local-2af62179c6.readmeDescription}}\n- **[{{@local-906896ce0e.title}}]({{@local-906896ce0e.url}})**：{{@local-906896ce0e.readmeDescription}}\n- **[{{@local-859e399566.title}}]({{@local-859e399566.url}})**：{{@local-859e399566.readmeDescription}}\n- **[{{@local-6857258f8b.title}}]({{@local-6857258f8b.url}})**：{{@local-6857258f8b.readmeDescription}}\n\n{{#meta-new.entries}}[浏览全部元提示词 →]({{#meta-directory.url}})\n",
+        "practical": "**评价重点：** {{$practical.readmeCriteria}}\n\n**外部精选**\n\n{{#practical-new.entries}}**本地模板与已收录项目**\n\n- **[提示词增强系列]({{#enhancement-series.url}})** · Prompt：先理解任务，再按需搜索与核对证据。提供中英文及长短变体；英文 `middle` 与完整版当前逐字相同，选版见[版本说明](REVIEW_NOTES.md#版本与适用性)。\n- **[{{@local-1191feb957.title}}]({{@local-1191feb957.url}})** · 模板：{{@local-1191feb957.readmeDescription}}\n- **[项目优化与施工]({{#project-workflow.url}})** · 模板：从[需求与方案]({{@local-67e47ba829.url}})，到[施工与验收计划]({{@local-3cc6d5f872.url}})，再到[执行交接]({{@local-11490ba980.url}})。使用前替换项目与文档路径。\n- **[{{@local-d9d290149e.title}}]({{@local-d9d290149e.url}})** · 模板：{{@local-d9d290149e.readmeDescription}}\n- **[{{@compass.title}}]({{@compass.url}}#readme)** · Skill 集合 · **维护者自有项目**：{{@compass.readmeDescription}}\n\n其他本地条目：[健康科普]({{@local-1f5b8fcee5.url}})、[Gemini 指令模板]({{@local-4b95a4ba22.url}})。健康内容用于知识了解与就医沟通，不能替代专业诊疗。 [浏览全部实用工具 →]({{#practical-directory.url}})\n",
+        "meta": "**评价重点：** {{$meta.readmeCriteria}}\n\n**外部精选**\n\n{{#meta-new.entries}}**本地模板**\n\n- **[{{@local-2af62179c6.title}}]({{@local-2af62179c6.url}})**：{{@local-2af62179c6.readmeDescription}}\n- **[{{@local-906896ce0e.title}}]({{@local-906896ce0e.url}})**：{{@local-906896ce0e.readmeDescription}}\n- **[{{@local-859e399566.title}}]({{@local-859e399566.url}})**：{{@local-859e399566.readmeDescription}}\n- **[{{@local-6857258f8b.title}}]({{@local-6857258f8b.url}})**：{{@local-6857258f8b.readmeDescription}}\n\n[浏览全部元提示词 →]({{#meta-directory.url}})\n",
         "writing": "**评价重点：** {{$writing.readmeCriteria}}\n\n**外部精选**\n\n- **[{{@doc-coauthoring.title}}]({{@doc-coauthoring.url}})** · {{@doc-coauthoring.author}} · Skill\n  {{@doc-coauthoring.readmeDescription}}\n\n**本地模板**\n\n- **[{{@local-21278a927f.title}}]({{@local-21278a927f.url}})** · Prompt：{{@local-21278a927f.readmeDescription}}\n\n{{#writing-new.entries}}[浏览写作辅助历史目录 →]({{#writing-directory.url}})：另有翻译、文生图和 Cosplay 资料，部分为成人向；具体适用性与待确认事项见[审阅说明](REVIEW_NOTES.md)。\n",
         "roleplay": "**评价重点：** {{$roleplay.readmeCriteria}}\n\n**外部精选**\n\n- **[{{@immersive.title}}]({{@immersive.url}})** · {{@immersive.author}} · Prompt\n  {{@immersive.readmeDescription}}\n\n{{#roleplay-new.entries}}[浏览角色扮演历史目录 →]({{#roleplay-directory.url}})：单独角色与多角色人设，含成人向条目；历史保留不构成对各文件的重新推荐。\n",
         "jailbreak": "**评价重点：** {{$jailbreak.readmeCriteria}}\n\n**研究资料入口**\n\n- **[{{@jailbreak-research.title}}]({{@jailbreak-research.url}})** · {{@jailbreak-research.author}} · 跨模型提示词与指令边界研究资料集\n  {{@jailbreak-research.readmeDescription}}\n\n{{#jailbreak-new.entries}}[浏览越狱破限历史目录 →]({{#jailbreak-directory.url}})：按模型或场景命名的既有材料。文件中的稳定性、通用性等声称未获本轮效果验证，收录不代表平台许可或绕过效果背书。\n",
@@ -2333,8 +2591,8 @@
         "collections": "以下是既有收藏入口，供进一步查找，未通读其中全部条目。主仓库记录子模块的固定提交，可能与上游最新内容不同；各项目的用途、依赖和许可分别以原文为准。[合集核查记录](REVIEW_NOTES.md#合集入口)\n\n### OpenClaw 合集\n\n- **[{{@openclaw-0.title}}]({{@openclaw-0.url}})**：{{@openclaw-0.readmeDescription}}\n- **[{{@openclaw-1.title}}]({{@openclaw-1.url}})**：{{@openclaw-1.readmeDescription}}\n- **[{{@openclaw-2.title}}]({{@openclaw-2.url}})**：{{@openclaw-2.readmeDescription}}\n- **[{{@openclaw-3.title}}]({{@openclaw-3.url}})**：{{@openclaw-3.readmeDescription}}\n- **[{{@openclaw-4.title}}]({{@openclaw-4.url}})**：{{@openclaw-4.readmeDescription}}\n- **[{{@openclaw-5.title}}]({{@openclaw-5.url}})**：{{@openclaw-5.readmeDescription}}\n\n<details>\n<summary>其他在线收藏入口</summary>\n\n这些是历史收录的外部资料入口，未按本轮精选标准逐项推荐。\n\n- [Nanobanana 提示词收纳盒]({{@online-0.url}})：中文提示词收藏。\n- [Labnana]({{@online-1.url}})：图像作品与提示词浏览。\n- [YouMind Nano Banana Pro 提示词库]({{@online-2.url}})：按主题浏览图像提示词。\n- [Prompt Manager]({{@online-3.url}})：提示词画廊与模板。\n- [飞书提示词表格]({{@online-4.url}})：原收录的在线表格。\n- [飞书知识库]({{@online-5.url}})：原收录的资料入口。\n\n</details>\n"
       },
       "en": {
-        "practical": "{{#practical-new.entries}}**Evaluation focus:** {{$practical.readmeCriteria}}\n\n**External selection**\n\n- **[{{@frontend-design.title}}]({{@frontend-design.url}})** · {{@frontend-design.author}} · Skill\n  {{@frontend-design.readmeDescription}}\n\n**Local templates and previously collected projects**\n\n- **[Prompt enhancement series]({{#enhancement-series.url}})** · Prompt: Understand the task, then search and check evidence as needed. Chinese and English variants are available at different lengths; English `middle` currently matches the full version byte for byte. See [version notes](REVIEW_NOTES.md#版本与适用性).\n- **[{{@local-1191feb957.title}}]({{@local-1191feb957.url}})** · Template: {{@local-1191feb957.readmeDescription}}\n- **[Project optimization and implementation]({{#project-workflow.url}})** · Templates: Move from [requirements and proposal]({{@local-67e47ba829.url}}) to [implementation and acceptance planning]({{@local-3cc6d5f872.url}}), then [execution handoff]({{@local-11490ba980.url}}). Replace project and document paths before use.\n- **[{{@local-d9d290149e.title}}]({{@local-d9d290149e.url}})** · Templates: {{@local-d9d290149e.readmeDescription}}\n- **[{{@compass.title}}]({{@compass.url}}#readme)** · Skill collection · **Maintainer-owned project**: {{@compass.readmeDescription}}\n\nOther local entries: [health information]({{@local-1f5b8fcee5.url}}) and [Gemini instruction template]({{@local-4b95a4ba22.url}}). Health material supports general understanding and conversations with clinicians; it does not replace professional care. [Browse all practical tools →]({{#practical-directory.url}})\n",
-        "meta": "**Evaluation focus:** {{$meta.readmeCriteria}}\n\n**Local templates**\n\n- **[{{@local-2af62179c6.title}}]({{@local-2af62179c6.url}})**: {{@local-2af62179c6.readmeDescription}}\n- **[{{@local-906896ce0e.title}}]({{@local-906896ce0e.url}})**: {{@local-906896ce0e.readmeDescription}}\n- **[{{@local-859e399566.title}}]({{@local-859e399566.url}})**: {{@local-859e399566.readmeDescription}}\n- **[{{@local-6857258f8b.title}}]({{@local-6857258f8b.url}})**: {{@local-6857258f8b.readmeDescription}}\n\n{{#meta-new.entries}}[Browse all meta-prompts →]({{#meta-directory.url}})\n",
+        "practical": "**Evaluation focus:** {{$practical.readmeCriteria}}\n\n**External selection**\n\n{{#practical-new.entries}}**Local templates and previously collected projects**\n\n- **[Prompt enhancement series]({{#enhancement-series.url}})** · Prompt: Understand the task, then search and check evidence as needed. Chinese and English variants are available at different lengths; English `middle` currently matches the full version byte for byte. See [version notes](REVIEW_NOTES.md#版本与适用性).\n- **[{{@local-1191feb957.title}}]({{@local-1191feb957.url}})** · Template: {{@local-1191feb957.readmeDescription}}\n- **[Project optimization and implementation]({{#project-workflow.url}})** · Templates: Move from [requirements and proposal]({{@local-67e47ba829.url}}) to [implementation and acceptance planning]({{@local-3cc6d5f872.url}}), then [execution handoff]({{@local-11490ba980.url}}). Replace project and document paths before use.\n- **[{{@local-d9d290149e.title}}]({{@local-d9d290149e.url}})** · Templates: {{@local-d9d290149e.readmeDescription}}\n- **[{{@compass.title}}]({{@compass.url}}#readme)** · Skill collection · **Maintainer-owned project**: {{@compass.readmeDescription}}\n\nOther local entries: [health information]({{@local-1f5b8fcee5.url}}) and [Gemini instruction template]({{@local-4b95a4ba22.url}}). Health material supports general understanding and conversations with clinicians; it does not replace professional care. [Browse all practical tools →]({{#practical-directory.url}})\n",
+        "meta": "**Evaluation focus:** {{$meta.readmeCriteria}}\n\n**External selection**\n\n{{#meta-new.entries}}**Local templates**\n\n- **[{{@local-2af62179c6.title}}]({{@local-2af62179c6.url}})**: {{@local-2af62179c6.readmeDescription}}\n- **[{{@local-906896ce0e.title}}]({{@local-906896ce0e.url}})**: {{@local-906896ce0e.readmeDescription}}\n- **[{{@local-859e399566.title}}]({{@local-859e399566.url}})**: {{@local-859e399566.readmeDescription}}\n- **[{{@local-6857258f8b.title}}]({{@local-6857258f8b.url}})**: {{@local-6857258f8b.readmeDescription}}\n\n[Browse all meta-prompts →]({{#meta-directory.url}})\n",
         "writing": "**Evaluation focus:** {{$writing.readmeCriteria}}\n\n**External selection**\n\n- **[{{@doc-coauthoring.title}}]({{@doc-coauthoring.url}})** · {{@doc-coauthoring.author}} · Skill\n  {{@doc-coauthoring.readmeDescription}}\n\n**Local template**\n\n- **[{{@local-21278a927f.title}}]({{@local-21278a927f.url}})** · Prompt: {{@local-21278a927f.readmeDescription}}\n\n{{#writing-new.entries}}[Browse the historical writing directory →]({{#writing-directory.url}}): Also contains translation, text-to-image and cosplay references, some adult-oriented. See [review notes](REVIEW_NOTES.md) for applicability and pending issues.\n",
         "roleplay": "**Evaluation focus:** {{$roleplay.readmeCriteria}}\n\n**External selection**\n\n- **[{{@immersive.title}}]({{@immersive.url}})** · {{@immersive.author}} · Prompt\n  {{@immersive.readmeDescription}}\n\n{{#roleplay-new.entries}}[Browse the historical roleplay directory →]({{#roleplay-directory.url}}): Individual characters and multi-character settings, including adult-oriented entries. Retention does not renew recommendations for each file.\n",
         "jailbreak": "**Evaluation focus:** {{$jailbreak.readmeCriteria}}\n\n**Research reference**\n\n- **[{{@jailbreak-research.title}}]({{@jailbreak-research.url}})** · {{@jailbreak-research.author}} · Cross-model prompts and instruction-boundary research collection\n  {{@jailbreak-research.readmeDescription}}\n\n{{#jailbreak-new.entries}}[Browse the historical jailbreak directory →]({{#jailbreak-directory.url}}): Existing material named by model or scenario. Stability and universality claims were not validated through effectiveness testing in this review. Inclusion does not establish platform permission or bypass effectiveness.\n",
