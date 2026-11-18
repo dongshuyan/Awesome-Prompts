@@ -141,6 +141,8 @@
 <!-- catalog:begin collections -->
 以下是既有收藏入口，供进一步查找，未通读其中全部条目。主仓库记录子模块的固定提交，可能与上游最新内容不同；各项目的用途、依赖和许可分别以原文为准。[合集核查记录](REVIEW_NOTES.md#合集入口)
 
+- **[Oppi Digital Products · 自由职业者提示词与 CRM 模板合集](https://github.com/Reggiebro/oppi-digital-products)**：面向自由职业者的提示词与模板合集：线索评估、提案、客户沟通与 Notion CRM 数据库蓝图；作者自荐，完整包付费，仓库内可免费查看样例。[核对版本](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md)（2026-11-18）；本次核对项目说明与样例文件，未逐条审阅全部提示词，仅作外链介绍。
+
 ### OpenClaw 合集
 
 - **[VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)**：按类别整理技能，适合按任务继续查找。路径：`Skills/Openclaw/awesome-openclaw-skills`。
