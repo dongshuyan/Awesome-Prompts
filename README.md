@@ -146,7 +146,7 @@ OpenClaw 合集和折叠栏里的既有收藏供进一步查找，未通读其�
 
 ### 自由职业者提示词与模板合集
 
-- **[Oppi Digital Products · 自由职业者提示词与 CRM 模板合集](https://github.com/Reggiebro/oppi-digital-products)**：面向自由职业者的提示词与模板合集：线索评估、提案、客户沟通与 Notion CRM 数据库蓝图；作者自荐，完整包付费，仓库内可免费查看样例。[核对版本](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md)（2026-11-18）；本次核对项目说明与样例文件，未逐条审阅全部提示词，仅作外链介绍。
+- **[Oppi Digital Products · 自由职业者提示词与 CRM 模板合集](https://github.com/Reggiebro/oppi-digital-products)**：面向自由职业者的提示词与模板合集：线索评估、提案、客户沟通与 Notion CRM 数据库蓝图；作者自荐，完整包付费。免费样例（[接单评分卡](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md)）仅供评估和个人使用。[核对版本](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md)（2026-11-18）；本次核对项目说明与样例文件，未逐条审阅全部提示词，仅作外链介绍。
 
 ### OpenClaw 合集
 

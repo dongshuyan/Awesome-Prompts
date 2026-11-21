@@ -146,7 +146,7 @@ The OpenClaw collections and the bookmarks in the expandable list are starting p
 
 ### Freelancer prompts and templates
 
-- **[Oppi Digital Products · freelancer prompts & CRM template collection](https://github.com/Reggiebro/oppi-digital-products)**: Freelancer prompts and templates: lead qualification, proposals, client communication and Notion CRM database blueprints; author self-submission, full packs are paid, free samples are viewable in the repo. [Version checked](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md) on 2026-11-18; review covered the project description and sample files, not every prompt. This is a source-link introduction.
+- **[Oppi Digital Products · freelancer prompts & CRM template collection](https://github.com/Reggiebro/oppi-digital-products)**: Freelancer prompts and templates: lead qualification, proposals, client communication and Notion CRM database blueprints; author self-submission, full packs are paid. The free sample ([lead-qualification scorecard](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md)) is for evaluation and personal use only. [Version checked](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md) on 2026-11-18; review covered the project description and sample files, not every prompt. This is a source-link introduction.
 
 ### OpenClaw collections
 

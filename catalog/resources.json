@@ -2620,9 +2620,10 @@
       "preview": false,
       "featured": false,
       "readmeDescription": {
-        "zh": "面向自由职业者的提示词与模板合集：线索评估、提案、客户沟通与 Notion CRM 数据库蓝图；作者自荐，完整包付费，仓库内可免费查看样例。[核对版本]({{@oppi-digital-products.versionUrl}})（2026-11-18）；本次核对项目说明与样例文件，未逐条审阅全部提示词，仅作外链介绍。",
-        "en": "Freelancer prompts and templates: lead qualification, proposals, client communication and Notion CRM database blueprints; author self-submission, full packs are paid, free samples are viewable in the repo. [Version checked]({{@oppi-digital-products.versionUrl}}) on 2026-11-18; review covered the project description and sample files, not every prompt. This is a source-link introduction."
-      }
+        "zh": "面向自由职业者的提示词与模板合集：线索评估、提案、客户沟通与 Notion CRM 数据库蓝图；作者自荐，完整包付费。免费样例（[接单评分卡](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md)）仅供评估和个人使用。[核对版本]({{@oppi-digital-products.versionUrl}})（2026-11-18）；本次核对项目说明与样例文件，未逐条审阅全部提示词，仅作外链介绍。",
+        "en": "Freelancer prompts and templates: lead qualification, proposals, client communication and Notion CRM database blueprints; author self-submission, full packs are paid. The free sample ([lead-qualification scorecard](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md)) is for evaluation and personal use only. [Version checked]({{@oppi-digital-products.versionUrl}}) on 2026-11-18; review covered the project description and sample files, not every prompt. This is a source-link introduction."
+      },
+      "sampleUrl": "https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md"
     }
   ],
   "readme": {
