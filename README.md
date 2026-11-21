@@ -142,7 +142,7 @@
 ## 合集与在线资料
 
 <!-- catalog:begin collections -->
-以下是既有收藏入口，供进一步查找，未通读其中全部条目。主仓库记录子模块的固定提交，可能与上游最新内容不同；各项目的用途、依赖和许可分别以原文为准。[合集核查记录](REVIEW_NOTES.md#合集入口)
+OpenClaw 合集和折叠栏里的既有收藏供进一步查找，未通读其中全部条目。主仓库记录子模块的固定提交，可能与上游最新内容不同；各项目的用途、依赖和许可分别以原文为准。[合集核查记录](REVIEW_NOTES.md#合集入口)
 
 ### OpenClaw 合集
 
@@ -166,6 +166,11 @@
 - [飞书知识库](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc)：原收录的资料入口。
 
 </details>
+
+### 视频提示词案例
+
+- **[拉面转焦 · AgentCraft 视频提示词](https://github.com/ai-boost/awesome-image-video-prompts/blob/be8a805d4ca8aa18e5d95f4f6e3ca3c412055071/pages/zh/video-commercial.md#h3-ramen-focus-pull)** · MiniMax
+  以一张家人围桌的照片为参考，八秒内机位不动，焦点从前景的拉面移到后景的家人。[官方样片](https://huggingface.co/MiniMaxAI/MiniMax-H3/resolve/1cc7549f2cf0af8ff2f09b24f3c57303c8aa6317/assets/i2va_2k.mp4) · [AgentCraft 视频提示词合集](https://agentcraft.dev/zh/prompts/video/)。
 <!-- catalog:end collections -->
 
 ## 使用与下载

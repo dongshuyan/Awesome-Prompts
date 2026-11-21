@@ -142,7 +142,7 @@ Other local entries: [health information](实用工具/AI健康顾问.txt) and [
 ## Collections and online references
 
 <!-- catalog:begin collections -->
-These existing bookmarks support further discovery; their contents were not read in full. Submodules record fixed commits that may differ from upstream. Check each project's purpose, dependencies and license separately. [Collection-entry review](REVIEW_NOTES.md#合集入口)
+The OpenClaw collections and the bookmarks in the expandable list are starting points for further browsing. Their contents were not read in full. Submodules record fixed commits that may differ from upstream. Check each project's purpose, dependencies and license separately. [Collection-entry review](REVIEW_NOTES.md#合集入口)
 
 ### OpenClaw collections
 
@@ -166,6 +166,11 @@ These are historical references, not individual recommendations under the curren
 - [Feishu knowledge base](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc): Previously collected reference entry.
 
 </details>
+
+### Video prompt examples
+
+- **[Ramen focus pull · AgentCraft video prompts](https://github.com/ai-boost/awesome-image-video-prompts/blob/be8a805d4ca8aa18e5d95f4f6e3ca3c412055071/pages/en/video-commercial.md#h3-ramen-focus-pull)** · MiniMax
+  An eight-second shot starts from a reference photo of a family meal. The camera stays still as focus shifts from the ramen to the family in the background. [Official clip](https://huggingface.co/MiniMaxAI/MiniMax-H3/resolve/1cc7549f2cf0af8ff2f09b24f3c57303c8aa6317/assets/i2va_2k.mp4) · [AgentCraft video prompt gallery](https://agentcraft.dev/en/prompts/video/).
 <!-- catalog:end collections -->
 
 ## Use and download
