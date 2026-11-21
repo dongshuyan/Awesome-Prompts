@@ -112,6 +112,9 @@
 - **[Roleplay · Immersive](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json)** · SillyTavern · Prompt
   用简短通用规则组织角色与环境描写，每次回复一轮，不代替用户决定行动。需宿主替换 `{{user}}`、`{{char}}`；[仓库根许可为 AGPL-3.0](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE)，复制衍生的许可兼容性未评估。
 
+- **[小遇 · 数字人动作提示词](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/docs/QUICK_ACTIONS.md)** · hsuehly/xiaoyu (repository)
+  模板集：将 106 个数字人动作写成具体描述，按吃喝、装扮、表情、手势和道具分类，补充角色互动中的动作表达；[中英文动作文本](https://github.com/hsuehly/xiaoyu/tree/d5ecb1efffec98500169593fac757ac3c414a8e3/lib/l10n)随附于源码。按原 App 使用需 Vidu 实时调用权限与余额，实际效果取决于平台和形象，未做通话测试。[源码许可 AGPL-3.0-only](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/LICENSE)；动作文本独立授权未核实，仅链接介绍。
+
 [浏览角色扮演历史目录 →](角色扮演/)：单独角色与多角色人设，含成人向条目；历史保留不构成对各文件的重新推荐。
 <!-- catalog:end roleplay -->
 
@@ -139,7 +142,9 @@
 ## 合集与在线资料
 
 <!-- catalog:begin collections -->
-以下是既有收藏入口，供进一步查找，未通读其中全部条目。主仓库记录子模块的固定提交，可能与上游最新内容不同；各项目的用途、依赖和许可分别以原文为准。[合集核查记录](REVIEW_NOTES.md#合集入口)
+OpenClaw 合集和折叠栏里的既有收藏供进一步查找，未通读其中全部条目。主仓库记录子模块的固定提交，可能与上游最新内容不同；各项目的用途、依赖和许可分别以原文为准。[合集核查记录](REVIEW_NOTES.md#合集入口)
+
+### 自由职业者提示词与模板合集
 
 - **[Oppi Digital Products · 自由职业者提示词与 CRM 模板合集](https://github.com/Reggiebro/oppi-digital-products)**：面向自由职业者的提示词与模板合集：线索评估、提案、客户沟通与 Notion CRM 数据库蓝图；作者自荐，完整包付费，仓库内可免费查看样例。[核对版本](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md)（2026-11-18）；本次核对项目说明与样例文件，未逐条审阅全部提示词，仅作外链介绍。
 
@@ -165,6 +170,11 @@
 - [飞书知识库](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc)：原收录的资料入口。
 
 </details>
+
+### 视频提示词案例
+
+- **[拉面转焦 · AgentCraft 视频提示词](https://github.com/ai-boost/awesome-image-video-prompts/blob/be8a805d4ca8aa18e5d95f4f6e3ca3c412055071/pages/zh/video-commercial.md#h3-ramen-focus-pull)** · MiniMax
+  以一张家人围桌的照片为参考，八秒内机位不动，焦点从前景的拉面移到后景的家人。[官方样片](https://huggingface.co/MiniMaxAI/MiniMax-H3/resolve/1cc7549f2cf0af8ff2f09b24f3c57303c8aa6317/assets/i2va_2k.mp4) · [AgentCraft 视频提示词合集](https://agentcraft.dev/zh/prompts/video/)。
 <!-- catalog:end collections -->
 
 ## 使用与下载

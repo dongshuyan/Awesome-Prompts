@@ -112,6 +112,9 @@ Other local entries: [health information](实用工具/AI健康顾问.txt) and [
 - **[Roleplay · Immersive](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json)** · SillyTavern · Prompt
   Uses short general rules for character and environment descriptions, producing one reply without deciding the user's actions. The host must substitute `{{user}}` and `{{char}}`. The [repository root license is AGPL-3.0](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE); compatibility for copied or derivative material has not been assessed.
 
+- **[Xiaoyu · Avatar action prompts](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/docs/QUICK_ACTIONS.md)** · hsuehly/xiaoyu (repository)
+  Template set: Concrete descriptions for 106 avatar actions, grouped by food, styling, expressions, gestures and props. Adds action-level detail to character interactions; [Chinese and English action text](https://github.com/hsuehly/xiaoyu/tree/d5ecb1efffec98500169593fac757ac3c414a8e3/lib/l10n) is included in the source. In-app use needs Vidu real-time access and credit. Results depend on the platform and avatar; no call testing was performed. [Code license: AGPL-3.0-only](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/LICENSE); separate permission for prompt text is unverified. Source links only.
+
 [Browse the historical roleplay directory →](角色扮演/): Individual characters and multi-character settings, including adult-oriented entries. Retention does not renew recommendations for each file.
 <!-- catalog:end roleplay -->
 
@@ -139,7 +142,9 @@ Other local entries: [health information](实用工具/AI健康顾问.txt) and [
 ## Collections and online references
 
 <!-- catalog:begin collections -->
-These existing bookmarks support further discovery; their contents were not read in full. Submodules record fixed commits that may differ from upstream. Check each project's purpose, dependencies and license separately. [Collection-entry review](REVIEW_NOTES.md#合集入口)
+The OpenClaw collections and the bookmarks in the expandable list are starting points for further browsing. Their contents were not read in full. Submodules record fixed commits that may differ from upstream. Check each project's purpose, dependencies and license separately. [Collection-entry review](REVIEW_NOTES.md#合集入口)
+
+### Freelancer prompts and templates
 
 - **[Oppi Digital Products · freelancer prompts & CRM template collection](https://github.com/Reggiebro/oppi-digital-products)**: Freelancer prompts and templates: lead qualification, proposals, client communication and Notion CRM database blueprints; author self-submission, full packs are paid, free samples are viewable in the repo. [Version checked](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md) on 2026-11-18; review covered the project description and sample files, not every prompt. This is a source-link introduction.
 
@@ -165,6 +170,11 @@ These are historical references, not individual recommendations under the curren
 - [Feishu knowledge base](https://uahbgrt760r.feishu.cn/wiki/EOXawAHZ5ixJb6kHUU6cxi3QnXc): Previously collected reference entry.
 
 </details>
+
+### Video prompt examples
+
+- **[Ramen focus pull · AgentCraft video prompts](https://github.com/ai-boost/awesome-image-video-prompts/blob/be8a805d4ca8aa18e5d95f4f6e3ca3c412055071/pages/en/video-commercial.md#h3-ramen-focus-pull)** · MiniMax
+  An eight-second shot starts from a reference photo of a family meal. The camera stays still as focus shifts from the ramen to the family in the background. [Official clip](https://huggingface.co/MiniMaxAI/MiniMax-H3/resolve/1cc7549f2cf0af8ff2f09b24f3c57303c8aa6317/assets/i2va_2k.mp4) · [AgentCraft video prompt gallery](https://agentcraft.dev/en/prompts/video/).
 <!-- catalog:end collections -->
 
 ## Use and download
