@@ -21,7 +21,7 @@
 
 Each category's **evaluation focus** applies the general criteria to its use; full selection criteria are in [CONTRIBUTING](CONTRIBUTING.md). New selections rely on reading the content, source checks and verifiable feedback. There is no minimum Star count or mandatory firsthand testing.
 
-**Reading this list:** “External selections” link to the versions read. “Local templates” and “historical directories” provide access to existing material; retention does not mean every item meets the current criteria. Existing entries were checked on 2026-10-30; the eight additions were checked on 2026-11-15; no model-effectiveness tests were performed. See [review notes](REVIEW_NOTES.md) for version, license and feedback limitations.
+**Reading this list:** “External selections” link to the versions read. “Local templates” and “historical directories” provide access to existing material; retention does not mean every item meets the current criteria. Reviews are recorded by batch on 2026-10-30, 2026-11-15 and 2026-11-21; no model-effectiveness tests were performed. See [review notes](REVIEW_NOTES.md) for version, license and feedback limitations.
 
 ## Practical tools
 
@@ -111,6 +111,9 @@ Other local entries: [health information](实用工具/AI健康顾问.txt) and [
 
 - **[Roleplay · Immersive](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json)** · SillyTavern · Prompt
   Uses short general rules for character and environment descriptions, producing one reply without deciding the user's actions. The host must substitute `{{user}}` and `{{char}}`. The [repository root license is AGPL-3.0](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE); compatibility for copied or derivative material has not been assessed.
+
+- **[Xiaoyu · Avatar action prompts](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/docs/QUICK_ACTIONS.md)** · hsuehly/xiaoyu (repository)
+  Template set: Concrete descriptions for 106 avatar actions, grouped by food, styling, expressions, gestures and props. Adds action-level detail to character interactions; [Chinese and English action text](https://github.com/hsuehly/xiaoyu/tree/d5ecb1efffec98500169593fac757ac3c414a8e3/lib/l10n) is included in the source. In-app use needs Vidu real-time access and credit. Results depend on the platform and avatar; no call testing was performed. [Code license: AGPL-3.0-only](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/LICENSE); separate permission for prompt text is unverified. Source links only.
 
 [Browse the historical roleplay directory →](角色扮演/): Individual characters and multi-character settings, including adult-oriented entries. Retention does not renew recommendations for each file.
 <!-- catalog:end roleplay -->

@@ -2533,6 +2533,38 @@
         "zh": "Skill：创建与编辑 .canvas 节点、连线和分组，检查 JSON、唯一 ID 与连线引用，补充可视化知识组织。需文件读写和 JSON 解析能力，并在兼容宿主中检查布局。[MIT]({{@json-canvas.licenseUrl}})。",
         "en": "Skill: Creates and edits .canvas nodes, edges and groups, checking JSON, unique IDs and edge references for visual knowledge organization. Requires file access and JSON parsing, plus a layout check in a compatible host. [MIT]({{@json-canvas.licenseUrl}})."
       }
+    },
+    {
+      "id": "xiaoyu-quick-actions",
+      "category": "roleplay",
+      "kind": "template",
+      "status": "selected",
+      "title": {
+        "zh": "小遇 · 数字人动作提示词",
+        "en": "Xiaoyu · Avatar action prompts"
+      },
+      "description": {
+        "zh": "106 条数字人动作提示词，按吃喝、装扮、表情、手势和道具整理，附中英文版本。按原 App 使用需 Vidu 实时权限与余额；动作效果未测试。",
+        "en": "106 avatar-action prompts for food, styling, expressions, gestures and props, with Chinese and English versions. In-app use needs Vidu real-time access and credit; effects are untested."
+      },
+      "url": "https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/docs/QUICK_ACTIONS.md",
+      "author": "hsuehly/xiaoyu (repository)",
+      "versionUrl": "https://github.com/hsuehly/xiaoyu/tree/d5ecb1efffec98500169593fac757ac3c414a8e3",
+      "archived": false,
+      "adult": false,
+      "preview": false,
+      "featured": false,
+      "sourceNote": {
+        "zh": "2026-11-21 阅读动作目录、双语动作字段和使用说明，核对 106 个 ID 与文档分类计数（14/13/28/40/11）；未运行 App 或测试通话。文档称动作需求来自项目用户；源码声明 AGPL-3.0-only，动作文本独立授权未核实，仅作外链介绍。",
+        "en": "Read the action catalog, bilingual action fields and usage guide on 2026-11-21; checked 106 IDs and document category counts (14/13/28/40/11). No app or call test was run. The docs attribute action requests to a project user. Code is declared AGPL-3.0-only; separate permission for prompt text is unverified. Source links only."
+      },
+      "licenseUrl": "https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/LICENSE",
+      "readmeGroup": "roleplay-new",
+      "readmeOrder": 10,
+      "readmeDescription": {
+        "zh": "模板集：将 106 个数字人动作写成具体描述，按吃喝、装扮、表情、手势和道具分类，补充角色互动中的动作表达；[中英文动作文本](https://github.com/hsuehly/xiaoyu/tree/d5ecb1efffec98500169593fac757ac3c414a8e3/lib/l10n)随附于源码。按原 App 使用需 Vidu 实时调用权限与余额，实际效果取决于平台和形象，未做通话测试。[源码许可 AGPL-3.0-only]({{@xiaoyu-quick-actions.licenseUrl}})；动作文本独立授权未核实，仅链接介绍。",
+        "en": "Template set: Concrete descriptions for 106 avatar actions, grouped by food, styling, expressions, gestures and props. Adds action-level detail to character interactions; [Chinese and English action text](https://github.com/hsuehly/xiaoyu/tree/d5ecb1efffec98500169593fac757ac3c414a8e3/lib/l10n) is included in the source. In-app use needs Vidu real-time access and credit. Results depend on the platform and avatar; no call testing was performed. [Code license: AGPL-3.0-only]({{@xiaoyu-quick-actions.licenseUrl}}); separate permission for prompt text is unverified. Source links only."
+      }
     }
   ],
   "readme": {

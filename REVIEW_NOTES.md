@@ -1,6 +1,6 @@
 # 资源审阅说明 / Resource review notes
 
-2026-10-30 / 2026-11-15 · [中文](#中文) · [English](#english)
+2026-10-30 / 2026-11-15 / 2026-11-21 · [中文](#中文) · [English](#english)
 
 ## 中文
 
@@ -84,6 +84,12 @@ NSFW 方向确有命中，本批次没有新增通过完整审阅的精选。相
 
 这些结果不证明相关项目质量差，也不表示该方向没有优质资源。专项新发现未在本批次八条之外自动入库。
 
+### 2026-11-21：小遇动作提示词
+
+收录的是 [xiaoyu 的通话快捷动作模板](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/docs/QUICK_ACTIONS.md)，不是整套 Flutter App。动作描述覆盖吃喝、装扮、表情、手势和道具，补充本库角色互动中的动作表达。已阅读全文及中英文 ARB 动作字段，核对文档 106 个唯一 ID 与 Dart 枚举、双语名称/指令键一致，中文指令与目录一致；这支持内容与计数判断（置信度高），不证明动作效果或跨工具适用性。
+
+按原 App 使用需要 Vidu 实时调用权限、余额和可访问 Vidu/Agora 的网络；本次未安装或运行 App，也未测试通话。上游使用说明明确区分本地发送完成与平台实际执行动作。文档称原始动作需求来自项目用户；[README](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/README.md)声明原创代码采用 AGPL-3.0-only，品牌和第三方素材另行处理，不能据此推断所有动作文本的独立授权。本库仅作署名外链介绍，不复制正文或开启预览。
+
 ## English
 
 The 2026-10-30 revision starts from commit `98dfef9`. It uses textual review of 85 pre-removal local content files, including five existing archives, seven third-party collection entrypoints, selected external resources and limited feedback. Collected prompts and skills were not executed, and third-party collections were not read in full.
@@ -165,3 +171,9 @@ NSFW searches returned relevant leads, but this batch adds no fully reviewed sel
 - **Outside the scope of new entries:** safety-post-training data, complete panels and applications. Training corpora are not directly treated as specific prompts or skills either.
 
 These results do not establish poor quality or the absence of good resources in the category. Supplemental discoveries were not automatically added beyond the eight approved resources.
+
+### 2026-11-21: Xiaoyu action prompts
+
+The selected resource is [xiaoyu's call-action template set](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/docs/QUICK_ACTIONS.md), rather than the complete Flutter app. Food, styling, expression, gesture and prop descriptions add action-level detail to character interactions. The complete catalog and action-specific Chinese/English ARB fields were read. Its 106 unique IDs match the Dart enum and both languages' name/prompt keys, and Chinese prompt strings match the document. This supports the content and count with high confidence; it does not establish motion quality or compatibility with other tools.
+
+In-app use requires Vidu real-time permission, credit and network access to Vidu/Agora. The app was not installed or run, and no call testing was performed. The upstream usage guide distinguishes local submission from actual platform execution. The docs attribute original action requests to a project user. The [README](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/README.md) declares original code AGPL-3.0-only, with separate branding and third-party terms; this does not establish a separately verified license for every action text. This collection provides attributed source links without copying prompt bodies or enabling previews.

@@ -21,7 +21,7 @@
 
 每类的**评价重点**按用途展开通用标准，完整收录规则见[贡献指南](CONTRIBUTING.md)。新增以内容阅读、来源和可核查反馈为依据，不设最低 Star，也不强制亲测。
 
-**选用说明：**“外部精选”链接到阅读时的固定版本；“本地模板”与“历史目录”提供已有资源入口，保留不代表全部通过现行收录标准。既有条目核对日期：2026-10-30；本次新增八条核对日期：2026-11-15；未做模型效果测试，具体版本、许可与反馈边界见[审阅说明](REVIEW_NOTES.md)。
+**选用说明：**“外部精选”链接到阅读时的固定版本；“本地模板”与“历史目录”提供已有资源入口，保留不代表全部通过现行收录标准。核对记录按 2026-10-30、2026-11-15 和 2026-11-21 批次分别记录；未做模型效果测试，具体版本、许可与反馈边界见[审阅说明](REVIEW_NOTES.md)。
 
 ## 实用工具
 
@@ -111,6 +111,9 @@
 
 - **[Roleplay · Immersive](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/default/content/presets/sysprompt/Roleplay%20-%20Immersive.json)** · SillyTavern · Prompt
   用简短通用规则组织角色与环境描写，每次回复一轮，不代替用户决定行动。需宿主替换 `{{user}}`、`{{char}}`；[仓库根许可为 AGPL-3.0](https://github.com/SillyTavern/SillyTavern/blob/06bde939fb1e9c4c8d8641d810f0a916b5bce127/LICENSE)，复制衍生的许可兼容性未评估。
+
+- **[小遇 · 数字人动作提示词](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/docs/QUICK_ACTIONS.md)** · hsuehly/xiaoyu (repository)
+  模板集：将 106 个数字人动作写成具体描述，按吃喝、装扮、表情、手势和道具分类，补充角色互动中的动作表达；[中英文动作文本](https://github.com/hsuehly/xiaoyu/tree/d5ecb1efffec98500169593fac757ac3c414a8e3/lib/l10n)随附于源码。按原 App 使用需 Vidu 实时调用权限与余额，实际效果取决于平台和形象，未做通话测试。[源码许可 AGPL-3.0-only](https://github.com/hsuehly/xiaoyu/blob/d5ecb1efffec98500169593fac757ac3c414a8e3/LICENSE)；动作文本独立授权未核实，仅链接介绍。
 
 [浏览角色扮演历史目录 →](角色扮演/)：单独角色与多角色人设，含成人向条目；历史保留不构成对各文件的重新推荐。
 <!-- catalog:end roleplay -->
