@@ -144,6 +144,10 @@ Other local entries: [health information](实用工具/AI健康顾问.txt) and [
 <!-- catalog:begin collections -->
 The OpenClaw collections and the bookmarks in the expandable list are starting points for further browsing. Their contents were not read in full. Submodules record fixed commits that may differ from upstream. Check each project's purpose, dependencies and license separately. [Collection-entry review](REVIEW_NOTES.md#合集入口)
 
+### Freelancer prompts and templates
+
+- **[Oppi Digital Products · freelancer prompts & CRM template collection](https://github.com/Reggiebro/oppi-digital-products)**: Freelancer prompts and templates: lead qualification, proposals, client communication and Notion CRM database blueprints; author self-submission, full packs are paid. The free sample ([lead-qualification scorecard](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md)) is for evaluation and personal use only. [Version checked](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md) on 2026-11-18; review covered the project description and sample files, not every prompt. This is a source-link introduction.
+
 ### OpenClaw collections
 
 - **[VoltAgent/awesome-openclaw-skills](https://github.com/VoltAgent/awesome-openclaw-skills)**: A categorized skill index for further task-based discovery. Path: `Skills/Openclaw/awesome-openclaw-skills`.
