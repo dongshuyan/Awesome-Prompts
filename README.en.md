@@ -51,6 +51,9 @@ Each category's **evaluation focus** applies the general criteria to its use; fu
 - **[json-canvas](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/json-canvas/SKILL.md)** · Obsidian / kepano
   Skill: Creates and edits .canvas nodes, edges and groups, checking JSON, unique IDs and edge references for visual knowledge organization. Requires file access and JSON parsing, plus a layout check in a compatible host. [MIT](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/LICENSE).
 
+- **[Freelance lead qualification scorecard](https://github.com/Reggiebro/oppi-digital-products/blob/bdbdadacad4f5964834d834e91c5489815e13d43/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md)** · Reggiebro
+  Give a chat model a client inquiry, your services, minimum budget and timeline for a recommendation on whether to take the job and why. A risk score of 5 means highest risk. An unstated budget stays unscored until confirmed. The author submitted the sample and sells the full pack separately. [The free sample is for evaluation and personal use only](https://github.com/Reggiebro/oppi-digital-products/blob/bdbdadacad4f5964834d834e91c5489815e13d43/LICENSE-CATALOG.md#2-product-content--commercial-all-rights-reserved).
+
 **Local templates and previously collected projects**
 
 - **[Prompt enhancement series](实用工具/提示词增强prompt/)** · Prompt: Understand the task, then search and check evidence as needed. Chinese and English variants are available at different lengths; English `middle` currently matches the full version byte for byte. See [version notes](REVIEW_NOTES.md#版本与适用性).
@@ -143,10 +146,6 @@ Other local entries: [health information](实用工具/AI健康顾问.txt) and [
 
 <!-- catalog:begin collections -->
 The OpenClaw collections and the bookmarks in the expandable list are starting points for further browsing. Their contents were not read in full. Submodules record fixed commits that may differ from upstream. Check each project's purpose, dependencies and license separately. [Collection-entry review](REVIEW_NOTES.md#合集入口)
-
-### Freelancer prompts and templates
-
-- **[Oppi Digital Products · freelancer prompts & CRM template collection](https://github.com/Reggiebro/oppi-digital-products)**: Freelancer prompts and templates: lead qualification, proposals, client communication and Notion CRM database blueprints; author self-submission, full packs are paid. The free sample ([lead-qualification scorecard](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md)) is for evaluation and personal use only. [Version checked](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md) on 2026-11-18; review covered the project description and sample files, not every prompt. This is a source-link introduction.
 
 ### OpenClaw collections
 

@@ -51,6 +51,9 @@
 - **[json-canvas](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/plugins/obsidian/skills/json-canvas/SKILL.md)** · Obsidian / kepano
   Skill：创建与编辑 .canvas 节点、连线和分组，检查 JSON、唯一 ID 与连线引用，补充可视化知识组织。需文件读写和 JSON 解析能力，并在兼容宿主中检查布局。[MIT](https://github.com/obsidianmd/obsidian-skills/blob/398127736bd4ba42d767b1419fee1a927508370b/LICENSE)。
 
+- **[自由职业者接单评分卡](https://github.com/Reggiebro/oppi-digital-products/blob/bdbdadacad4f5964834d834e91c5489815e13d43/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md)** · Reggiebro
+  把客户询盘、你提供的服务、最低预算和工期填给聊天模型，得到接单建议和理由。风险项 5 分最高，客户未报预算时，预算项标为「待确认」，暂不打分。作者自荐，完整包另售。[免费样例仅供评估和个人使用](https://github.com/Reggiebro/oppi-digital-products/blob/bdbdadacad4f5964834d834e91c5489815e13d43/LICENSE-CATALOG.md#2-product-content--commercial-all-rights-reserved)。
+
 **本地模板与已收录项目**
 
 - **[提示词增强系列](实用工具/提示词增强prompt/)** · Prompt：先理解任务，再按需搜索与核对证据。提供中英文及长短变体；英文 `middle` 与完整版当前逐字相同，选版见[版本说明](REVIEW_NOTES.md#版本与适用性)。
@@ -143,10 +146,6 @@
 
 <!-- catalog:begin collections -->
 OpenClaw 合集和折叠栏里的既有收藏供进一步查找，未通读其中全部条目。主仓库记录子模块的固定提交，可能与上游最新内容不同；各项目的用途、依赖和许可分别以原文为准。[合集核查记录](REVIEW_NOTES.md#合集入口)
-
-### 自由职业者提示词与模板合集
-
-- **[Oppi Digital Products · 自由职业者提示词与 CRM 模板合集](https://github.com/Reggiebro/oppi-digital-products)**：面向自由职业者的提示词与模板合集：线索评估、提案、客户沟通与 Notion CRM 数据库蓝图；作者自荐，完整包付费。免费样例（[接单评分卡](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/previews/freelance-prompt-pack/sample-lead-qualification-scorecard.md)）仅供评估和个人使用。[核对版本](https://github.com/Reggiebro/oppi-digital-products/blob/9c9080cdc5162cfc4339cf1f9000d42968435921/README.md)（2026-11-18）；本次核对项目说明与样例文件，未逐条审阅全部提示词，仅作外链介绍。
 
 ### OpenClaw 合集
 
