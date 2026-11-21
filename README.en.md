@@ -21,7 +21,7 @@
 
 Each category's **evaluation focus** applies the general criteria to its use; full selection criteria are in [CONTRIBUTING](CONTRIBUTING.md). New selections rely on reading the content, source checks and verifiable feedback. There is no minimum Star count or mandatory firsthand testing.
 
-**Reading this list:** “External selections” link to the versions read. “Local templates” and “historical directories” provide access to existing material; retention does not mean every item meets the current criteria. Existing entries were checked on 2026-10-30; the eight additions were checked on 2026-11-15; no model-effectiveness tests were performed. See [review notes](REVIEW_NOTES.md) for version, license and feedback limitations.
+**Reading this list:** “External selections” link to the versions read. “Local templates” and “historical directories” provide access to existing material; retention does not mean every item meets the current criteria. Reviews are recorded by batch on 2026-10-30, 2026-11-15 and 2026-11-21; no model-effectiveness tests were performed. See [review notes](REVIEW_NOTES.md) for version, license and feedback limitations.
 
 ## Practical tools
 
